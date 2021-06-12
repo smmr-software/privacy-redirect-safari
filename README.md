@@ -42,7 +42,7 @@ be found here:
 
 ## License
 
-[GPLv3](LICENSE).
+[GPLv3](COPYING).
 
 ## Permissions
 
