@@ -1,7 +1,7 @@
 {
   "name": "__MSG_extensionName__",
   "description": "__MSG_extensionDescription__",
-  "version": "1.1.47",
+  "version": "0.1.1",
   "manifest_version": 2,
   "background": {
     "page": "pages/background/background.html",
@@ -14,9 +14,9 @@
     "48": "assets/images/icon48.png",
     "128": "assets/images/icon128.png"
   },
-  "permissions": ["storage", "webRequest", "webRequestBlocking", "<all_urls>"],
+  "permissions": ["storage", "<all_urls>"],
   "browser_action": {
-    "default_title": "Privacy Redirect",
+    "default_title": "Privacy Redirect for Safari",
     "default_popup": "pages/popup/popup.html",
     "default_icon": {
       "16": "assets/images/icon16.png",
@@ -34,37 +34,7 @@
         "*://pbs.twimg.com/*",
         "*://video.twimg.com/*"
       ],
-      "js": ["assets/javascripts/remove-twitter-sw.js"],
-      "run_at": "document_start"
-    },
-    {
-      "matches": [
-        "*://invidious.snopyta.org/*",
-        "*://invidious.xyz/*",
-        "*://invidious.kavin.rocks/*",
-        "*://tube.connect.cafe/*",
-        "*://invidious.zapashcanon.fr/*",
-        "*://invidiou.site/*",
-        "*://vid.mint.lgbt/*",
-        "*://invidious.site/*",
-        "*://yewtu.be/*",
-        "*://invidious.tube/*",
-        "*://invidious.silkky.cloud/*",
-        "*://invidious.fdn.fr/*",
-        "*://invidious.himiko.cloud/*",
-        "*://inv.skyn3t.in/*",
-        "*://tube.incognet.io/*",
-        "*://invidious.tinfoil-hat.net/*",
-        "*://invidious.namazso.eu/*",
-        "*://vid.puffyan.us/*",
-        "*://dev.viewtube.io/*",
-        "*://invidious.048596.xyz/*",
-        "*://fz253lmuao3strwbfbmx46yu7acac2jz27iwtorgmbqlkurlclmancad.onion/*",
-        "*://qklhadlycap4cnod.onion/*",
-        "*://c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion/*",
-        "*://w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion/*"
-      ],
-      "js": ["assets/javascripts/persist-invidious-prefs.js"],
+      "js": ["assets/javascripts/twitter.js"],
       "run_at": "document_start"
     }
   ],
@@ -72,11 +42,5 @@
     "page": "pages/options/options.html",
     "open_in_tab": false
   },
-  "web_accessible_resources": ["assets/javascripts/helpers/*"],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "{b7f9d2cd-d772-4302-8c3f-eb941af36f76}",
-      "strict_min_version": "67.0"
-    }
-  }
+  "web_accessible_resources": ["assets/javascripts/helpers/*"]
 }
