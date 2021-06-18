@@ -36,6 +36,17 @@
       ],
       "js": ["assets/javascripts/twitter.js"],
       "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://www.reddit.com/*",
+        "*://np.reddit.com/*",
+        "*://new.reddit.com/*",
+        "*://amp.reddit.com/*",
+        "*://i.redd.it/*"
+      ],
+      "js": ["assets/javascripts/reddit.js"],
+      "run_at": "document_start"
     }
   ],
   "options_ui": {
