@@ -39,7 +39,6 @@ function shouldRedirect(url) {
   return (
     isNotException(url) &&
     !disableNitter &&
-    url.host !== nitterInstance &&
     !url.pathname.includes("/home")
   );
 }

@@ -49,12 +49,10 @@ function shouldRedirect(url) {
   return (
     isNotException(url) &&
     !disableInvidious &&
-    url.host !== invidiousInstance &&
     !(
       url.pathname.match(/iframe_api/) ||
       url.pathname.match(/www-widgetapi/)
-    ) &&
-    url.host.split(".")[0] !== "studio"
+    )
   );
 }
 

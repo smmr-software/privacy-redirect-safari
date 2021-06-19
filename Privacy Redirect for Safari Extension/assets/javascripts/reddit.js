@@ -37,7 +37,6 @@ function shouldRedirect(url) {
   return (
     isNotException(url) &&
     !disableReddit &&
-    url.host !== redditInstances &&
     !url.pathname.match(bypassPaths)
   );
 }
