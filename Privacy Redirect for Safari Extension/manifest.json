@@ -47,6 +47,21 @@
       ],
       "js": ["assets/javascripts/reddit.js"],
       "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://m.youtube.com/*",
+        "*://youtube.com/*",
+        "*://img.youtube.com/*",
+        "*://www.youtube.com/*",
+        "*://youtube-nocookie.com/*",
+        "*://www.youtube-nocookie.com/*",
+        "*://youtu.be/*",
+        "*://s.ytimg.com/*",
+        "*://music.youtube.com/*"
+      ],
+      "js": ["assets/javascripts/youtube.js"],
+      "run_at": "document_start"
     }
   ],
   "options_ui": {
