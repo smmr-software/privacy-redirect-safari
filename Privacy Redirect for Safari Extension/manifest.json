@@ -62,6 +62,13 @@
       ],
       "js": ["assets/javascripts/youtube.js"],
       "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://translate.google.com/*"
+      ],
+      "js": ["assets/javascripts/google-translate.js"],
+      "run_at": "document_start"
     }
   ],
   "options_ui": {
