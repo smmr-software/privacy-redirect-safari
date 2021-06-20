@@ -1,6 +1,6 @@
 "use strict";
 
-const simplyTranslateInstances = ["https://translate.metalune.xyz"]
+const simplyTranslateInstances = ["https://translate.metalune.xyz"];
 let disableSimplyTranslate;
 let simplyTranslateInstance;
 let exceptions;
