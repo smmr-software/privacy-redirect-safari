@@ -1,12 +1,8 @@
 {
   "name": "__MSG_extensionName__",
   "description": "__MSG_extensionDescription__",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "manifest_version": 2,
-  "background": {
-    "page": "pages/background/background.html",
-    "persistent": true
-  },
   "default_locale": "en",
   "icons": {
     "16": "assets/images/full/icon16.png",
