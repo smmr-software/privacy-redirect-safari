@@ -1,7 +1,6 @@
 "use strict";
 
 const mapsInstances = ["https://openstreetmap.org"];
-const googleMapsRegex = /https?:\/\/(((www|maps)\.)?(google\.).*(\/maps)|maps\.(google\.).*)/;
 const mapCentreRegex = /@(-?\d[0-9.]*),(-?\d[0-9.]*),(\d{1,2})[.z]/;
 const dataLatLngRegex = /(!3d|!4d)(-?[0-9]{1,10}.[0-9]{1,10})/g;
 const placeRegex = /\/place\/(.*)\//;
@@ -19,6 +18,7 @@ const layers = {
 };
 let disableOsm;
 let osmInstance;
+let exceptions;
 
 window.browser = window.browser || window.chrome;
 
@@ -58,8 +58,7 @@ function isNotException(url) {
 function shouldRedirect(url) {
   return (
     isNotException(url) &&
-    !disableOsm &&
-    url.href.match(googleMapsRegex)
+    !disableOsm
   );
 }
 
@@ -159,10 +158,16 @@ browser.storage.sync.get(
   [
     "disableOsm",
     "simplyTranslateInstance",
+    "exceptions",
   ],
   (result) => {
     disableOsm = result.disableOsm;
     osmInstance = result.osmInstance || getRandomInstance();
+    exceptions = result.exceptions
+      ? result.exceptions.map((e) => {
+          return new RegExp(e);
+        })
+      : [];
     const url = new URL(window.location);
     if (shouldRedirect(url)) {
       const redirect = redirectGoogleMaps(url);

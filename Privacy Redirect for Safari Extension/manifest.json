@@ -72,12 +72,20 @@
     },
     {
       "matches": [
-        "<all_urls>"
+        "*://google.com/search*",
+        "*://www.google.com/search*",
+        "*://search.google.com/*"
       ],
-      "js": [
-        "assets/javascripts/google-search.js",
-        "assets/javascripts/google-maps.js"
+      "js": ["assets/javascripts/google-search.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://maps.google.com/*",
+        "*://google.com/maps*",
+        "*://www.google.com/maps*",
       ],
+      "js": ["assets/javascripts/google-maps.js"],
       "run_at": "document_start"
     }
   ],

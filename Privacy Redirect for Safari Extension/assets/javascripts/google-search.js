@@ -21,7 +21,6 @@ const searchEngineInstances = [
   { link: "https://whoogle.himiko.cloud", q: "/search" },
   { link: "https://whoogle-search.zeet.app", q: "/search" },
 ];
-const googleSearchRegex = /https?:\/\/(((www|maps)\.)?(google\.).*(\/search)|search\.(google\.).*)/;
 let disableSearchEngine;
 let searchEngineInstance;
 let exceptions;
@@ -40,7 +39,6 @@ function shouldRedirect(url) {
   return (
     isNotException(url) &&
     !disableSearchEngine &&
-    url.href.match(googleSearchRegex) &&
     !url.pathname.includes("/sorry")
   );
 }
