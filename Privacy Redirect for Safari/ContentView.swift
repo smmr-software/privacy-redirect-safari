@@ -23,8 +23,8 @@ struct ContentView: View {
                     Text("The extension is currently")
                     switch(self.appState.extensionEnabledState) {
                     case .enabled:
-                            Text("enabled!")
-                                .bold()
+                        Text("enabled!")
+                            .bold()
                     case _:
                         Text("disabled.")
                             .bold()
@@ -34,9 +34,7 @@ struct ContentView: View {
             .padding()
             Button("Open Safari Extensions Preferences") {
                 SFSafariApplication.showPreferencesForExtension(withIdentifier: appState.identifier) { error in
-                    guard error == nil else {
-                        return
-                    }
+                    guard error == nil else { return }
                     DispatchQueue.main.async {
                         NSApplication.shared.terminate(nil)
                     }
