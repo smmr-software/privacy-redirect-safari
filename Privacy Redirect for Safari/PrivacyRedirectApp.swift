@@ -44,5 +44,6 @@ struct PrivacyRedirectApp: App {
                     maxHeight: 600
                 )
         }
+        .windowStyle(HiddenTitleBarWindowStyle())
     }
 }
