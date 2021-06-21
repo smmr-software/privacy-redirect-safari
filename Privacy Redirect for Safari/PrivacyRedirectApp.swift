@@ -39,8 +39,8 @@ struct PrivacyRedirectApp: App {
                     minWidth: 250,
                     idealWidth: 300,
                     maxWidth: 350,
-                    minHeight: 440,
-                    idealHeight: 460,
+                    minHeight: 500,
+                    idealHeight: 550,
                     maxHeight: 600
                 )
         }
