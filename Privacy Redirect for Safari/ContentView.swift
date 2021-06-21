@@ -13,16 +13,26 @@ struct ContentView: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        VStack(alignment: .center, spacing: 40) {
+        VStack {
             Spacer()
             Image(nsImage: NSImage(named: "AppIcon")!)
-            Group {
-                switch(self.appState.extensionEnabledState) {
-                case .enabled: Text("Privacy Redirect for Safari is enabled!")
-                case _: Text("Privacy Redirect for Safari is off. You can turn it on in Safari Extensions preferences.").multilineTextAlignment(.center)
+            VStack {
+                Text("Privacy Redirect for Safari")
+                    .font(.title)
+                HStack(spacing: 2) {
+                    Text("The extension is currently")
+                    switch(self.appState.extensionEnabledState) {
+                    case .enabled:
+                            Text("enabled!")
+                                .bold()
+                    case _:
+                        Text("disabled.")
+                            .bold()
+                    }
                 }
             }
-            Button("Quit and Open Safari Extensions Preferences…") {
+            .padding()
+            Button("Open Safari Extensions Preferences") {
                 SFSafariApplication.showPreferencesForExtension(withIdentifier: appState.identifier) { error in
                     guard error == nil else {
                         return
@@ -35,7 +45,7 @@ struct ContentView: View {
             Spacer()
         }
         .padding()
-        .frame(maxWidth: 400)
+        .frame(maxWidth: 350)
     }
 }
 

@@ -36,9 +36,9 @@ struct PrivacyRedirectApp: App {
                     refreshEnabledState()
                 }
                 .frame(
-                    minWidth: 320,
-                    idealWidth: 350,
-                    maxWidth: 500,
+                    minWidth: 250,
+                    idealWidth: 300,
+                    maxWidth: 350,
                     minHeight: 440,
                     idealHeight: 460,
                     maxHeight: 600
