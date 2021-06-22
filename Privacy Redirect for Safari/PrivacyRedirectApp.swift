@@ -11,6 +11,7 @@ import SafariServices.SFSafariExtensionManager
 @main
 struct PrivacyRedirectApp: App {
     let appState = AppState(initialExtensionEnabledState: .undetermined)
+    let defaults = UserDefaults(suiteName: "com.smmr-software.Privacy-Redirect-for-Safari.group")
     func refreshEnabledState() {
         SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: appState.identifier, completionHandler: { (state, error) in
             guard error == nil else {
@@ -25,6 +26,10 @@ struct PrivacyRedirectApp: App {
                 }
             }
         })
+        let location = (defaults?.url(forKey: "location"))
+        if location == nil || location != Bundle.main.bundleURL {
+            defaults?.set(Bundle.main.bundleURL, forKey: "location")
+        }
     }
     
     var body: some Scene {
