@@ -12,11 +12,11 @@ import SafariServices.SFSafariExtensionManager
 struct ContentView: View {
     @EnvironmentObject var appState: AppState
     @AppStorage("redirectNitter") var redirectNitter = true
-    @AppStorage("redirectInvidious") var redirectInvidious = true
-    @AppStorage("redirectOsm") var redirectOsm = true
     @AppStorage("redirectReddit") var redirectReddit = true
-    @AppStorage("redirectSearchEngine") var redirectSearchEngine = true
+    @AppStorage("redirectInvidious") var redirectInvidious = true
     @AppStorage("redirectSimplyTranslate") var redirectSimplyTranslate = true
+    @AppStorage("redirectOsm") var redirectOsm = true
+    @AppStorage("redirectSearchEngine") var redirectSearchEngine = true
     
     var body: some View {
         VStack {
@@ -39,11 +39,11 @@ struct ContentView: View {
             }
             Form {
                 Toggle("Nitter Redirects", isOn: $redirectNitter)
-                Toggle("Invidious Redirects", isOn: $redirectInvidious)
-                Toggle("Open Street Maps Redirects", isOn: $redirectOsm)
                 Toggle("Reddit Redirects", isOn: $redirectReddit)
-                Toggle("Search Engine Redirects", isOn: $redirectSearchEngine)
+                Toggle("Invidious Redirects", isOn: $redirectInvidious)
                 Toggle("SimplyTranslate Redirects", isOn: $redirectSimplyTranslate)
+                Toggle("Open Street Maps Redirects", isOn: $redirectOsm)
+                Toggle("Search Engine Redirects", isOn: $redirectSearchEngine)
             }
             .padding(.vertical)
             Button("Open Safari Extensions Preferences") {
