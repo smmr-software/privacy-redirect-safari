@@ -35,6 +35,7 @@ struct PrivacyRedirectApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .defaultAppStorage(defaults!)
                 .environmentObject(appState)
                 .onAppear(perform: refreshEnabledState)
                 .onReceive(NotificationCenter.default.publisher(for: NSApplication.willBecomeActiveNotification)) { _ in
