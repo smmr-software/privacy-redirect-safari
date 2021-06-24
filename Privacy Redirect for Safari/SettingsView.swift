@@ -23,8 +23,11 @@ struct SettingsView: View {
     @AppStorage("osmInstance") var osmInstance = "openstreetmap.org"
     @AppStorage("searchEngineInstance") var searchEngineInstance = "duckduckgo.com/"
     
-    let instances = Instances()
     @State var selection = 0
+    @State var exceptionField = ""
+    @State var exceptionType = 0
+    
+    let instances = Instances()
     
     var body: some View {
         TabView(selection: $selection) {
@@ -140,9 +143,30 @@ struct SettingsView: View {
                     Image(systemName: "gearshape.2")
                 }
                 .tag(1)
-            VStack {
-                Text("dolor")
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Enter a URL or Regular Expression to be excluded from redirects.")
+                Text("All requests for or initiating from a URL that matches the exception will be excluded from redirects.")
+                Text("Note - Supports JavaScript regular expressions, excluding the enclosing forward slashes.")
+                VStack(alignment: .leading) {
+                    Text("Add Exception")
+                        .bold()
+                    HStack {
+                        TextField("URL or RegExp", text: $exceptionField)
+                        Picker(selection: $exceptionType,
+                               label: Text("Exception Type"), content: {
+                            Text("URL").tag(0)
+                            Text("RegExp").tag(1)
+                        })
+                            .labelsHidden()
+                            .pickerStyle(SegmentedPickerStyle())
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundColor(.accentColor)
+                    }
+                }
+                    .padding(.top, 20)
+                Spacer()
             }
+                .padding()
                 .tabItem {
                     Text("Exceptions")
                     Image(systemName: "chevron.left.slash.chevron.right")
