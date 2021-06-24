@@ -117,7 +117,7 @@ struct InstancesView: View {
                         })
                             .labelsHidden()
                     } else {
-                        TextField("Search Engine Instance", text: $searchEngineInstance)
+                        TextField("Search Engine Instance (including path)", text: $searchEngineInstance)
                     }
                     Toggle("Custom", isOn: $useCustomSearchEngineInstance)
                 }
