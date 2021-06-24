@@ -20,21 +20,13 @@ struct SettingsView: View {
                     Image(systemName: "server.rack")
                 }
                 .tag(0)
-            VStack {
-                Text("ipsum")
-            }
-                .tabItem {
-                    Text("Advanced")
-                    Image(systemName: "gearshape.2")
-                }
-                .tag(1)
             ExceptionsView()
                 .padding()
                 .tabItem {
                     Text("Exceptions")
                     Image(systemName: "chevron.left.slash.chevron.right")
                 }
-                .tag(2)
+                .tag(1)
         }
             .frame(width: 300)
     }
@@ -46,8 +38,6 @@ struct SettingsView_Previews: PreviewProvider {
         SettingsView(selection: 0)
             .defaultAppStorage(UserDefaults(suiteName: "com.smmr-software.Privacy-Redirect-for-Safari.group")!)
         SettingsView(selection: 1)
-            .defaultAppStorage(UserDefaults(suiteName: "com.smmr-software.Privacy-Redirect-for-Safari.group")!)
-        SettingsView(selection: 2)
             .defaultAppStorage(UserDefaults(suiteName: "com.smmr-software.Privacy-Redirect-for-Safari.group")!)
     }
 }
