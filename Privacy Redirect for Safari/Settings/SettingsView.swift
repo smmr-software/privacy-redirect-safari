@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct SettingsView: View {
     @State var selection = 0
     
@@ -31,7 +30,6 @@ struct SettingsView: View {
             .frame(width: 300)
     }
 }
-
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
