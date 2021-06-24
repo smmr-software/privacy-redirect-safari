@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A00D89526811E490021E0B2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A00D89426811E490021E0B2 /* AppState.swift */; };
+		3A34363A2685059C00AD52A1 /* InstancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3436392685059C00AD52A1 /* InstancesView.swift */; };
 		3A71F3182673F606008ECB88 /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3142673F605008ECB88 /* pages */; };
 		3A71F3192673F606008ECB88 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3152673F605008ECB88 /* manifest.json */; };
 		3A71F31A2673F606008ECB88 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3162673F606008ECB88 /* _locales */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		3A00D89426811E490021E0B2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		3A3436392685059C00AD52A1 /* InstancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancesView.swift; sourceTree = "<group>"; };
 		3A71F3142673F605008ECB88 /* pages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pages; sourceTree = "<group>"; };
 		3A71F3152673F605008ECB88 /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		3A71F3162673F606008ECB88 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				3AFFBD932683DCED00238F4D /* SettingsView.swift */,
+				3A3436392685059C00AD52A1 /* InstancesView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				3A00D89526811E490021E0B2 /* AppState.swift in Sources */,
 				3AFFBD942683DCED00238F4D /* SettingsView.swift in Sources */,
+				3A34363A2685059C00AD52A1 /* InstancesView.swift in Sources */,
 				3A757AB72681136F00EE7CFF /* ContentView.swift in Sources */,
 				3A757AB52681133800EE7CFF /* PrivacyRedirectApp.swift in Sources */,
 			);
