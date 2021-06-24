@@ -84,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A3436382685051F00AD52A1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3AFFBD932683DCED00238F4D /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		3A9ADC922673E3210051292A = {
 			isa = PBXGroup;
 			children = (
@@ -109,8 +117,8 @@
 				3A9ADC9E2673E3210051292A /* Privacy_Redirect_for_Safari.entitlements */,
 				3A757AB42681133800EE7CFF /* PrivacyRedirectApp.swift */,
 				3A757AB62681136F00EE7CFF /* ContentView.swift */,
-				3AFFBD932683DCED00238F4D /* SettingsView.swift */,
 				3A00D89426811E490021E0B2 /* AppState.swift */,
+				3A3436382685051F00AD52A1 /* Settings */,
 				3A9ADCA62673E3210051292A /* Assets.xcassets */,
 				3A9ADCA82673E3210051292A /* Info.plist */,
 			);
