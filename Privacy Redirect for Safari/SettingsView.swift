@@ -24,9 +24,10 @@ struct SettingsView: View {
     @AppStorage("searchEngineInstance") var searchEngineInstance = "duckduckgo.com/"
     
     let instances = Instances()
+    @State var selection = 0
     
     var body: some View {
-        TabView {
+        TabView(selection: $selection) {
             Form {
                 Section(header: Text("Nitter"), content: {
                     HStack {
@@ -130,6 +131,7 @@ struct SettingsView: View {
                     Text("Instances")
                     Image(systemName: "server.rack")
                 }
+                .tag(0)
             VStack {
                 Text("ipsum")
             }
@@ -137,6 +139,7 @@ struct SettingsView: View {
                     Text("Advanced")
                     Image(systemName: "gearshape.2")
                 }
+                .tag(1)
             VStack {
                 Text("dolor")
             }
@@ -144,6 +147,7 @@ struct SettingsView: View {
                     Text("Exceptions")
                     Image(systemName: "chevron.left.slash.chevron.right")
                 }
+                .tag(2)
         }
             .frame(width: 300)
     }
@@ -256,7 +260,11 @@ struct SearchEngineInstance {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(selection: 0)
+            .defaultAppStorage(UserDefaults(suiteName: "com.smmr-software.Privacy-Redirect-for-Safari.group")!)
+        SettingsView(selection: 1)
+            .defaultAppStorage(UserDefaults(suiteName: "com.smmr-software.Privacy-Redirect-for-Safari.group")!)
+        SettingsView(selection: 2)
             .defaultAppStorage(UserDefaults(suiteName: "com.smmr-software.Privacy-Redirect-for-Safari.group")!)
     }
 }
