@@ -20,6 +20,8 @@
 		3A9ADCB32673E3220051292A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9ADCB22673E3220051292A /* Cocoa.framework */; };
 		3A9ADCB62673E3220051292A /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9ADCB52673E3220051292A /* SafariWebExtensionHandler.swift */; };
 		3AFB01E326852059005BFDBA /* ExceptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB01E226852059005BFDBA /* ExceptionsView.swift */; };
+		3AFB01E626852253005BFDBA /* Dictionary+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB01E526852253005BFDBA /* Dictionary+RawRepresentable.swift */; };
+		3AFB01E826852273005BFDBA /* Array+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB01E726852273005BFDBA /* Array+RawRepresentable.swift */; };
 		3AFFBD942683DCED00238F4D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFBD932683DCED00238F4D /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		3A9ADCB72673E3220051292A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A9ADCB82673E3220051292A /* Privacy_Redirect_for_Safari_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Privacy_Redirect_for_Safari_Extension.entitlements; sourceTree = "<group>"; };
 		3AFB01E226852059005BFDBA /* ExceptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionsView.swift; sourceTree = "<group>"; };
+		3AFB01E526852253005BFDBA /* Dictionary+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+RawRepresentable.swift"; sourceTree = "<group>"; };
+		3AFB01E726852273005BFDBA /* Array+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RawRepresentable.swift"; sourceTree = "<group>"; };
 		3AFFBD932683DCED00238F4D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +129,7 @@
 				3A757AB62681136F00EE7CFF /* ContentView.swift */,
 				3A00D89426811E490021E0B2 /* AppState.swift */,
 				3A3436382685051F00AD52A1 /* Settings */,
+				3AFB01E42685222A005BFDBA /* RawRepresentable */,
 				3A9ADCA62673E3210051292A /* Assets.xcassets */,
 				3A9ADCA82673E3210051292A /* Info.plist */,
 			);
@@ -161,6 +166,15 @@
 			name = Resources;
 			path = "Privacy Redirect for Safari Extension";
 			sourceTree = SOURCE_ROOT;
+		};
+		3AFB01E42685222A005BFDBA /* RawRepresentable */ = {
+			isa = PBXGroup;
+			children = (
+				3AFB01E526852253005BFDBA /* Dictionary+RawRepresentable.swift */,
+				3AFB01E726852273005BFDBA /* Array+RawRepresentable.swift */,
+			);
+			path = RawRepresentable;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -264,12 +278,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AFB01E626852253005BFDBA /* Dictionary+RawRepresentable.swift in Sources */,
 				3A00D89526811E490021E0B2 /* AppState.swift in Sources */,
 				3AFFBD942683DCED00238F4D /* SettingsView.swift in Sources */,
 				3AFB01E326852059005BFDBA /* ExceptionsView.swift in Sources */,
 				3A34363A2685059C00AD52A1 /* InstancesView.swift in Sources */,
 				3A757AB72681136F00EE7CFF /* ContentView.swift in Sources */,
 				3A757AB52681133800EE7CFF /* PrivacyRedirectApp.swift in Sources */,
+				3AFB01E826852273005BFDBA /* Array+RawRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
