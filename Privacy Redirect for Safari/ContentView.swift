@@ -46,7 +46,10 @@ struct ContentView: View {
                 Toggle("Search Engine Redirects", isOn: $redirectSearchEngine)
             }
             .padding(.vertical)
-            Button("Open Safari Extensions Preferences") {
+            Button("Open Privacy Redirect Preferences") {
+                NSApp.sendAction(Selector(("showPreferencesWindow:")), to: nil, from: nil)
+            }
+            Button("Open Safari Extension Preferences") {
                 SFSafariApplication.showPreferencesForExtension(withIdentifier: appState.identifier) { error in
                     guard error == nil else { return }
                     DispatchQueue.main.async {
