@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A00D89526811E490021E0B2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A00D89426811E490021E0B2 /* AppState.swift */; };
+		3A34363A2685059C00AD52A1 /* InstancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3436392685059C00AD52A1 /* InstancesView.swift */; };
 		3A71F3182673F606008ECB88 /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3142673F605008ECB88 /* pages */; };
 		3A71F3192673F606008ECB88 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3152673F605008ECB88 /* manifest.json */; };
 		3A71F31A2673F606008ECB88 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3162673F606008ECB88 /* _locales */; };
 		3A71F31B2673F606008ECB88 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3172673F606008ECB88 /* assets */; };
-		3A9ADCA02673E3210051292A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9ADC9F2673E3210051292A /* AppDelegate.swift */; };
-		3A9ADCA32673E3210051292A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9ADCA12673E3210051292A /* Main.storyboard */; };
-		3A9ADCA52673E3210051292A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9ADCA42673E3210051292A /* ViewController.swift */; };
+		3A757AB52681133800EE7CFF /* PrivacyRedirectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A757AB42681133800EE7CFF /* PrivacyRedirectApp.swift */; };
+		3A757AB72681136F00EE7CFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A757AB62681136F00EE7CFF /* ContentView.swift */; };
 		3A9ADCA72673E3210051292A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9ADCA62673E3210051292A /* Assets.xcassets */; };
 		3A9ADCAE2673E3220051292A /* Privacy Redirect for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A9ADCAD2673E3220051292A /* Privacy Redirect for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3A9ADCB32673E3220051292A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9ADCB22673E3220051292A /* Cocoa.framework */; };
 		3A9ADCB62673E3220051292A /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9ADCB52673E3220051292A /* SafariWebExtensionHandler.swift */; };
+		3AFB01E326852059005BFDBA /* ExceptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB01E226852059005BFDBA /* ExceptionsView.swift */; };
+		3AFB01E626852253005BFDBA /* Dictionary+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB01E526852253005BFDBA /* Dictionary+RawRepresentable.swift */; };
+		3AFB01E826852273005BFDBA /* Array+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB01E726852273005BFDBA /* Array+RawRepresentable.swift */; };
+		3AFFBD942683DCED00238F4D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFBD932683DCED00238F4D /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,15 +50,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A00D89426811E490021E0B2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		3A3436392685059C00AD52A1 /* InstancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancesView.swift; sourceTree = "<group>"; };
 		3A71F3142673F605008ECB88 /* pages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pages; sourceTree = "<group>"; };
 		3A71F3152673F605008ECB88 /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		3A71F3162673F606008ECB88 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
 		3A71F3172673F606008ECB88 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		3A757AB42681133800EE7CFF /* PrivacyRedirectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyRedirectApp.swift; sourceTree = "<group>"; };
+		3A757AB62681136F00EE7CFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A9ADC9B2673E3210051292A /* Privacy Redirect for Safari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Privacy Redirect for Safari.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9ADC9E2673E3210051292A /* Privacy_Redirect_for_Safari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Privacy_Redirect_for_Safari.entitlements; sourceTree = "<group>"; };
-		3A9ADC9F2673E3210051292A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A9ADCA22673E3210051292A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3A9ADCA42673E3210051292A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A9ADCA62673E3210051292A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A9ADCA82673E3210051292A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A9ADCAD2673E3220051292A /* Privacy Redirect for Safari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Privacy Redirect for Safari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +67,10 @@
 		3A9ADCB52673E3220051292A /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		3A9ADCB72673E3220051292A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A9ADCB82673E3220051292A /* Privacy_Redirect_for_Safari_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Privacy_Redirect_for_Safari_Extension.entitlements; sourceTree = "<group>"; };
+		3AFB01E226852059005BFDBA /* ExceptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionsView.swift; sourceTree = "<group>"; };
+		3AFB01E526852253005BFDBA /* Dictionary+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+RawRepresentable.swift"; sourceTree = "<group>"; };
+		3AFB01E726852273005BFDBA /* Array+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RawRepresentable.swift"; sourceTree = "<group>"; };
+		3AFFBD932683DCED00238F4D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A3436382685051F00AD52A1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3AFFBD932683DCED00238F4D /* SettingsView.swift */,
+				3A3436392685059C00AD52A1 /* InstancesView.swift */,
+				3AFB01E226852059005BFDBA /* ExceptionsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		3A9ADC922673E3210051292A = {
 			isa = PBXGroup;
 			children = (
@@ -105,9 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				3A9ADC9E2673E3210051292A /* Privacy_Redirect_for_Safari.entitlements */,
-				3A9ADC9F2673E3210051292A /* AppDelegate.swift */,
-				3A9ADCA12673E3210051292A /* Main.storyboard */,
-				3A9ADCA42673E3210051292A /* ViewController.swift */,
+				3A757AB42681133800EE7CFF /* PrivacyRedirectApp.swift */,
+				3A757AB62681136F00EE7CFF /* ContentView.swift */,
+				3A00D89426811E490021E0B2 /* AppState.swift */,
+				3A3436382685051F00AD52A1 /* Settings */,
+				3AFB01E42685222A005BFDBA /* RawRepresentable */,
 				3A9ADCA62673E3210051292A /* Assets.xcassets */,
 				3A9ADCA82673E3210051292A /* Info.plist */,
 			);
@@ -144,6 +166,15 @@
 			name = Resources;
 			path = "Privacy Redirect for Safari Extension";
 			sourceTree = SOURCE_ROOT;
+		};
+		3AFB01E42685222A005BFDBA /* RawRepresentable */ = {
+			isa = PBXGroup;
+			children = (
+				3AFB01E526852253005BFDBA /* Dictionary+RawRepresentable.swift */,
+				3AFB01E726852273005BFDBA /* Array+RawRepresentable.swift */,
+			);
+			path = RawRepresentable;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -226,7 +257,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A9ADCA72673E3210051292A /* Assets.xcassets in Resources */,
-				3A9ADCA32673E3210051292A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,8 +278,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A9ADCA52673E3210051292A /* ViewController.swift in Sources */,
-				3A9ADCA02673E3210051292A /* AppDelegate.swift in Sources */,
+				3AFB01E626852253005BFDBA /* Dictionary+RawRepresentable.swift in Sources */,
+				3A00D89526811E490021E0B2 /* AppState.swift in Sources */,
+				3AFFBD942683DCED00238F4D /* SettingsView.swift in Sources */,
+				3AFB01E326852059005BFDBA /* ExceptionsView.swift in Sources */,
+				3A34363A2685059C00AD52A1 /* InstancesView.swift in Sources */,
+				3A757AB72681136F00EE7CFF /* ContentView.swift in Sources */,
+				3A757AB52681133800EE7CFF /* PrivacyRedirectApp.swift in Sources */,
+				3AFB01E826852273005BFDBA /* Array+RawRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,17 +306,6 @@
 			targetProxy = 3A9ADCAF2673E3220051292A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3A9ADCA12673E3210051292A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A9ADCA22673E3210051292A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3A9ADCB92673E3220051292A /* Debug */ = {
@@ -409,7 +434,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari.Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -428,7 +453,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari.Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -450,7 +475,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -471,7 +496,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
