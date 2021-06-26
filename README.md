@@ -8,11 +8,12 @@ A fork of Simon Brazell's [Privacy Redirect][fork] for Chrome, Edge,
 and Firefox.
 
 ## Todo
-- [ ] Get redirects working
-  - [ ] Stop infinite redirect loop for every website on Big Sur
-  - [X] MacOS Monterey
+- [X] Get redirects working
+  - [X] Big Sur
+  - [X] Monterey
 - [ ] Make extension Apple-y
-  - [ ] Move settings to SwiftUI app
+  - [X] Move settings to SwiftUI app
+  - [ ] Make settings actually work
   - [ ] Port to iOS
 
 ## License
