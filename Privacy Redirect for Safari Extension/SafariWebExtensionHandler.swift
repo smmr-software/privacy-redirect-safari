@@ -12,21 +12,22 @@ let SFExtensionMessageKey = "message"
 
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 
-	func beginRequest(with context: NSExtensionContext) {
+    func beginRequest(with context: NSExtensionContext) {
         let item = context.inputItems[0] as! NSExtensionItem
         let message = item.userInfo?[SFExtensionMessageKey]
         os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@", message as! CVarArg)
 
         let defaults = UserDefaults(suiteName: "com.smmr-software.Privacy-Redirect-for-Safari.group")
         let app = defaults?.url(forKey: "location")
+        let response = NSExtensionItem()
         
         let messageDict = message as? [String: String]
         if messageDict?["message"] == "Open Sesame" && app != nil {
             NSWorkspace.shared.openApplication(at: app!, configuration: NSWorkspace.OpenConfiguration())
+            response.userInfo = [ SFExtensionMessageKey: [ "Response to": message ] ]
+        } else if messageDict?["message"] == "settings" {
+            response.userInfo = [ SFExtensionMessageKey: defaults?.dictionaryRepresentation() as Any ]
         }
-        
-        let response = NSExtensionItem()
-        response.userInfo = [ SFExtensionMessageKey: [ "Response to": message ] ]
 
         context.completeRequest(returningItems: [response], completionHandler: nil)
     }
