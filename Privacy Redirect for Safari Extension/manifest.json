@@ -111,7 +111,7 @@
       "matches": [
         "*://maps.google.com/*",
         "*://google.com/maps*",
-        "*://www.google.com/maps*",
+        "*://www.google.com/maps*"
       ],
       "js": ["assets/javascripts/google-maps.js"],
       "run_at": "document_start"

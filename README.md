@@ -9,8 +9,8 @@ and Firefox.
 
 ## Todo
 - [ ] Get redirects working
-  - [ ] Stop infinite redirect loop for every website on Big Sur
-  - [X] MacOS Monterey
+  - [X] Big Sur
+  - [X] Monterey
 - [ ] Make extension Apple-y
   - [ ] Move settings to SwiftUI app
   - [ ] Port to iOS
