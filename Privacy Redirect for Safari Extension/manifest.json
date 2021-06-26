@@ -116,10 +116,5 @@
       "js": ["assets/javascripts/google-maps.js"],
       "run_at": "document_start"
     }
-  ],
-  "options_ui": {
-    "page": "pages/options/options.html",
-    "open_in_tab": false
-  },
-  "web_accessible_resources": ["assets/javascripts/helpers/*"]
+  ]
 }
