@@ -28,23 +28,23 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         } else if messageDict?["message"] == "redirectSettings" {
             response.userInfo = [
                 SFExtensionMessageKey: [
-                    "redirectNitter": defaults?.bool(forKey: "redirectNitter"),
-                    "redirectReddit": defaults?.bool(forKey: "redirectReddit"),
-                    "redirectInvidious": defaults?.bool(forKey: "redirectInvidious"),
-                    "redirectSimplyTranslate": defaults?.bool(forKey: "redirectSimplyTranslate"),
-                    "redirectOsm": defaults?.bool(forKey: "redirectOsm"),
-                    "redirectSearchEngine": defaults?.bool(forKey: "redirectSearchEngine"),
+                    "nitter": defaults?.bool(forKey: "redirectNitter"),
+                    "reddit": defaults?.bool(forKey: "redirectReddit"),
+                    "invidious": defaults?.bool(forKey: "redirectInvidious"),
+                    "simplyTranslate": defaults?.bool(forKey: "redirectSimplyTranslate"),
+                    "osm": defaults?.bool(forKey: "redirectOsm"),
+                    "searchEngine": defaults?.bool(forKey: "redirectSearchEngine"),
                 ]
             ]
         } else if messageDict?["message"] == "instanceSettings" {
             response.userInfo = [
                 SFExtensionMessageKey: [
-                    "nitterInstance": defaults?.string(forKey: "nitterInstance"),
-                    "redditInstance": defaults?.string(forKey: "redditInstance"),
-                    "invidiousInstance": defaults?.string(forKey: "invidiousInstance"),
-                    "simplyTranslateInstance": defaults?.string(forKey: "simplyTranslateInstance"),
-                    "osmInstance": defaults?.string(forKey: "osmInstance"),
-                    "searchEngineInstance": defaults?.string(forKey: "searchEngineInstance"),
+                    "nitter": defaults?.string(forKey: "nitterInstance"),
+                    "reddit": defaults?.string(forKey: "redditInstance"),
+                    "invidious": defaults?.string(forKey: "invidiousInstance"),
+                    "simplyTranslate": defaults?.string(forKey: "simplyTranslateInstance"),
+                    "osm": defaults?.string(forKey: "osmInstance"),
+                    "searchEngine": defaults?.string(forKey: "searchEngineInstance"),
                 ]
             ]
         }
