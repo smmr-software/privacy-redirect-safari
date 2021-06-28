@@ -3,7 +3,7 @@
 browser.runtime.sendMessage({ type: "redirectSettings" })
   .then(redirects => {
     if (redirects.simplyTranslate) {
-      return browser.runtime.sendMessage({ type: "instanceSettings" })
+      return browser.runtime.sendMessage({ type: "instanceSettings" });
     } else {
       return null;
     }
