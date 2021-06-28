@@ -9,10 +9,12 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
     }
   })
   .then(instances => {
-    const url = new URL(window.location);
-    if (!(url.pathname.match(/iframe_api/) || url.pathname.match(/www-widgetapi/))) {
-      const redirect = `https://${instances.invidious}${url.pathname.replace("/shorts", "")}${url.search}`;
-      console.info(`Redirecting ${url.href} => ${redirect}`);
-      window.location = redirect;
+    if (instances) {
+      const url = new URL(window.location);
+      if (!(url.pathname.match(/iframe_api/) || url.pathname.match(/www-widgetapi/))) {
+        const redirect = `https://${instances.invidious}${url.pathname.replace("/shorts", "")}${url.search}`;
+        console.info(`Redirecting ${url.href} => ${redirect}`);
+        window.location = redirect;
+      }
     }
   });
