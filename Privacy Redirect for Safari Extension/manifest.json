@@ -18,6 +18,7 @@
       "*://pbs.twimg.com/*",
       "*://video.twimg.com/*",
       "*://www.reddit.com/*",
+      "*://old.reddit.com/*",
       "*://np.reddit.com/*",
       "*://new.reddit.com/*",
       "*://amp.reddit.com/*",
@@ -67,6 +68,7 @@
     {
       "matches": [
         "*://www.reddit.com/*",
+        "*://old.reddit.com/*",
         "*://np.reddit.com/*",
         "*://new.reddit.com/*",
         "*://amp.reddit.com/*",
