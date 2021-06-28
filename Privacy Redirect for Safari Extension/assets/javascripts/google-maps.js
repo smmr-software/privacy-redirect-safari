@@ -16,11 +16,6 @@ const layers = {
   traffic: "S", // not implemented on OSM, default to standard.
   bicycling: "C",
 };
-let disableOsm;
-let osmInstance;
-let exceptions;
-
-window.browser = window.browser || window.chrome;
 
 function addressToLatLng(address, callback) {
   const xmlhttp = new XMLHttpRequest();
@@ -47,22 +42,7 @@ function addressToLatLng(address, callback) {
   xmlhttp.send();
 }
 
-function getRandomInstance() {
-  return mapsInstances[~~(mapsInstances.length * Math.random())];
-}
-
-function isNotException(url) {
-  return !exceptions.some((regex) => regex.test(url.href));
-}
-
-function shouldRedirect(url) {
-  return (
-    isNotException(url) &&
-    !disableOsm
-  );
-}
-
-function redirectGoogleMaps(url) {
+function redirectGoogleMaps(instance, url) {
   let redirect;
   let mapCentre = "";
   let params = "";
@@ -101,7 +81,7 @@ function redirectGoogleMaps(url) {
       marker = coords;
       bbox = boundingbox;
     });
-    redirect = `${osmInstance}/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${marker}`;
+    redirect = `https://${instance}/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${marker}`;
     // Handle Google Maps Directions
   } else if (url.pathname.split("/").includes("dir")) {
     const travelMode =
@@ -117,25 +97,25 @@ function redirectGoogleMaps(url) {
         destination = coords;
       }
     );
-    redirect = `${osmInstance}/directions?engine=${travelMode}&route=${origin}%3B${destination}${mapCentre}${params}`;
+    redirect = `https://${instance}/directions?engine=${travelMode}&route=${origin}%3B${destination}${mapCentre}${params}`;
     // Get marker from data attribute
   } else if (
     url.pathname.includes("data=") &&
     url.pathname.match(dataLatLngRegex)
   ) {
     const [mlat, mlon] = url.pathname.match(dataLatLngRegex);
-    redirect = `${osmInstance}/?mlat=${mlat.replace(
+    redirect = `https://${instance}/?mlat=${mlat.replace(
       "!3d",
       ""
     )}&mlon=${mlon.replace("!4d", "")}${mapCentre}${params}`;
     // Get marker from ll param
   } else if (url.searchParams.has("ll")) {
     const [mlat, mlon] = url.searchParams.get("ll").split(",");
-    redirect = `${osmInstance}/?mlat=${mlat}&mlon=${mlon}${mapCentre}${params}`;
+    redirect = `https://${instance}/?mlat=${mlat}&mlon=${mlon}${mapCentre}${params}`;
     // Get marker from viewpoint param.
   } else if (url.searchParams.has("viewpoint")) {
     const [mlat, mlon] = url.searchParams.get("viewpoint").split(",");
-    redirect = `${osmInstance}/?mlat=${mlat}&mlon=${mlon}${mapCentre}${params}`;
+    redirect = `https://${instance}/?mlat=${mlat}&mlon=${mlon}${mapCentre}${params}`;
     // Use query as search if present.
   } else {
     let query;
@@ -146,7 +126,7 @@ function redirectGoogleMaps(url) {
     } else if (url.pathname.match(placeRegex)) {
       query = url.pathname.match(placeRegex)[1];
     }
-    redirect = `${osmInstance}/${query ? "search?query=" + query : ""}${
+    redirect = `https://${instance}/${query ? "search?query=" + query : ""}${
       mapCentre || "#"
     }${params}`;
   }
@@ -154,25 +134,19 @@ function redirectGoogleMaps(url) {
   return redirect;
 }
 
-browser.storage.sync.get(
-  [
-    "disableOsm",
-    "simplyTranslateInstance",
-    "exceptions",
-  ],
-  (result) => {
-    disableOsm = result.disableOsm;
-    osmInstance = result.osmInstance || getRandomInstance();
-    exceptions = result.exceptions
-      ? result.exceptions.map((e) => {
-          return new RegExp(e);
-        })
-      : [];
-    const url = new URL(window.location);
-    if (shouldRedirect(url)) {
-      const redirect = redirectGoogleMaps(url);
-      console.info("Redirecting", `"${url.href}"`, "=>", `"${redirect}"`);
+browser.runtime.sendMessage({ type: "redirectSettings" })
+  .then(redirects => {
+    if (redirects.osm) {
+      return browser.runtime.sendMessage({ type: "instanceSettings" });
+    } else {
+      return null;
+    }
+  })
+  .then(instances => {
+    if (instances) {
+      const url = new URL(window.location);
+      const redirect = redirectGoogleMaps(instances.osm, url);
+      console.info(`Redirecting ${url.href} => ${redirect}`);
       window.location = redirect;
     }
-  }
-);
+  });
