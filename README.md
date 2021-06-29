@@ -13,7 +13,7 @@ and Firefox.
   - [X] Monterey
 - [ ] Make extension Apple-y
   - [X] Move settings to SwiftUI app
-  - [ ] Make settings actually work
+  - [X] Make settings actually work
   - [ ] Port to iOS
 
 ## License
