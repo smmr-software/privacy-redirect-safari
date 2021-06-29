@@ -26,7 +26,7 @@ struct InstancesView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Nitter"), content: {
+            Section(header: Text("Nitter").bold(), content: {
                 HStack {
                 if !useCustomNitterInstance {
                     Picker(selection: $nitterInstance,
@@ -42,7 +42,7 @@ struct InstancesView: View {
                     Toggle("Custom", isOn: $useCustomNitterInstance)
                 }
             })
-            Section(header: Text("Reddit"), content: {
+            Section(header: Text("Reddit").bold(), content: {
                 HStack {
                     if !useCustomRedditInstance {
                         Picker(selection: $redditInstance,
@@ -58,7 +58,7 @@ struct InstancesView: View {
                     Toggle("Custom", isOn: $useCustomRedditInstance)
                 }
             })
-            Section(header: Text("Invidious"), content: {
+            Section(header: Text("Invidious").bold(), content: {
                 HStack {
                     if !useCustomInvidiousInstance {
                         Picker(selection: $invidiousInstance,
@@ -74,7 +74,7 @@ struct InstancesView: View {
                     Toggle("Custom", isOn: $useCustomInvidiousInstance)
                 }
             })
-            Section(header: Text("SimplyTranslate"), content: {
+            Section(header: Text("SimplyTranslate").bold(), content: {
                 HStack {
                     if !useCustomSimplyTranslateInstance {
                         Picker(selection: $simplyTranslateInstance,
@@ -90,7 +90,7 @@ struct InstancesView: View {
                     Toggle("Custom", isOn: $useCustomSimplyTranslateInstance)
                 }
             })
-            Section(header: Text("OpenStreetMap"), content: {
+            Section(header: Text("OpenStreetMap").bold(), content: {
                 HStack {
                     if !useCustomOsmInstance {
                         Picker(selection: $osmInstance,
@@ -106,7 +106,7 @@ struct InstancesView: View {
                     Toggle("Custom", isOn: $useCustomOsmInstance)
                 }
             })
-            Section(header: Text("Search Engine"), content: {
+            Section(header: Text("Search Engine").bold(), content: {
                 HStack {
                     if !useCustomSearchEngineInstance {
                         Picker(selection: $searchEngineInstance,

@@ -52,7 +52,10 @@ struct PrivacyRedirectApp: App {
         }
         .windowStyle(HiddenTitleBarWindowStyle())
         Settings {
-            SettingsView()
+            InstancesView()
+                .padding()
+                .navigationTitle("Instances")
+                .frame(width: 300)
                 .defaultAppStorage(defaults!)
         }
     }
