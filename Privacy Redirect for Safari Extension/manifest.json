@@ -1,9 +1,8 @@
 {
-  "name": "__MSG_extensionName__",
-  "description": "__MSG_extensionDescription__",
+  "name": "Privacy Redirect for Safari",
+  "description": "A configurable web extension that redirects Twitter, YouTube, Reddit, Google Maps, Google Search, & Google Translate requests to privacy friendly alternatives.",
   "version": "0.1.0",
   "manifest_version": 2,
-  "default_locale": "en",
   "icons": {
     "16": "assets/images/full/icon16.png",
     "32": "assets/images/full/icon32.png",
@@ -19,6 +18,7 @@
       "*://pbs.twimg.com/*",
       "*://video.twimg.com/*",
       "*://www.reddit.com/*",
+      "*://old.reddit.com/*",
       "*://np.reddit.com/*",
       "*://new.reddit.com/*",
       "*://amp.reddit.com/*",
@@ -68,6 +68,7 @@
     {
       "matches": [
         "*://www.reddit.com/*",
+        "*://old.reddit.com/*",
         "*://np.reddit.com/*",
         "*://new.reddit.com/*",
         "*://amp.reddit.com/*",
@@ -116,10 +117,5 @@
       "js": ["assets/javascripts/google-maps.js"],
       "run_at": "document_start"
     }
-  ],
-  "options_ui": {
-    "page": "pages/options/options.html",
-    "open_in_tab": false
-  },
-  "web_accessible_resources": ["assets/javascripts/helpers/*"]
+  ]
 }
