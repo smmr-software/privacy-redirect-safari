@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A00D89526811E490021E0B2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A00D89426811E490021E0B2 /* AppState.swift */; };
 		3A34363A2685059C00AD52A1 /* InstancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3436392685059C00AD52A1 /* InstancesView.swift */; };
+		3A42C41226AD1E07005BC5F6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42C41126AD1E07005BC5F6 /* SettingsView.swift */; };
 		3A71F3182673F606008ECB88 /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3142673F605008ECB88 /* pages */; };
 		3A71F3192673F606008ECB88 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3152673F605008ECB88 /* manifest.json */; };
 		3A71F31B2673F606008ECB88 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3172673F606008ECB88 /* assets */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		3A00D89426811E490021E0B2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		3A3436392685059C00AD52A1 /* InstancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancesView.swift; sourceTree = "<group>"; };
+		3A42C41126AD1E07005BC5F6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3A71F3142673F605008ECB88 /* pages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pages; sourceTree = "<group>"; };
 		3A71F3152673F605008ECB88 /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		3A71F3172673F606008ECB88 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				3A757AB42681133800EE7CFF /* PrivacyRedirectApp.swift */,
 				3A757AB62681136F00EE7CFF /* ContentView.swift */,
 				3A00D89426811E490021E0B2 /* AppState.swift */,
+				3A42C41126AD1E07005BC5F6 /* SettingsView.swift */,
 				3A3436392685059C00AD52A1 /* InstancesView.swift */,
 				3AFB01E42685222A005BFDBA /* RawRepresentable */,
 				3A9ADCA62673E3210051292A /* Assets.xcassets */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A42C41226AD1E07005BC5F6 /* SettingsView.swift in Sources */,
 				3AFB01E626852253005BFDBA /* Dictionary+RawRepresentable.swift in Sources */,
 				3A00D89526811E490021E0B2 /* AppState.swift in Sources */,
 				3A34363A2685059C00AD52A1 /* InstancesView.swift in Sources */,
