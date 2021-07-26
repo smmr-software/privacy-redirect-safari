@@ -7,21 +7,20 @@ alternatives.
 A fork of Simon Brazell's [Privacy Redirect][fork] written with SwiftUI
 and JavaScript for macOS.
 
+Available for download on the [App Store].
+
 ## Screenshots
 
-![Privacy Redirect for Safari on macOS](macos.png)
-
-## Todo
-- [X] Get redirects working
-  - [X] Big Sur
-  - [X] Monterey
-- [ ] Make extension Apple-y
-  - [X] Move settings to SwiftUI app
-  - [X] Make settings actually work
-  - [ ] Port to iOS
+<img width="432" src="/macos.png" alt="Privacy Redirect for Safari on macOS">
 
 ## License
 
 [GPLv3](COPYING).
 
+***
+
+A [SMMR Software] creation.
+
 [fork]: https://github.com/SimonBrazell/privacy-redirect
+[App Store]: https://apps.apple.com/us/app/privacy-redirect/id1578144015
+[SMMR Software]: https://smmr.software/
