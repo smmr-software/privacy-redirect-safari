@@ -1,6 +1,6 @@
 {
   "name": "Privacy Redirect for Safari",
-  "description": "A configurable web extension that redirects Twitter, YouTube, Reddit, Google Maps, Google Search, & Google Translate requests to privacy friendly alternatives.",
+  "description": "A configurable web extension that redirects Twitter, YouTube, Reddit, and more to privacy friendly alternatives.",
   "version": "0.1.0",
   "manifest_version": 2,
   "icons": {
