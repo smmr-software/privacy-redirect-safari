@@ -17,7 +17,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         let message = item.userInfo?[SFExtensionMessageKey]
         os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@", message as! CVarArg)
 
-        let defaults = UserDefaults(suiteName: "com.smmr-software.Privacy-Redirect-for-Safari.group")
+        let defaults = UserDefaults(suiteName: "9WHCFZ6J4N.Privacy-Redirect-for-Safari")
         let app = defaults?.url(forKey: "location")
         let response = NSExtensionItem()
         
