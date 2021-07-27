@@ -42,7 +42,7 @@ struct InstancesView: View {
                     Toggle("Custom", isOn: $useCustomNitterInstance)
                 }
             })
-            Section(header: Text("Reddit").bold(), content: {
+            Section(header: Text("Teddit or Libreddit").bold(), content: {
                 HStack {
                     if !useCustomRedditInstance {
                         Picker(selection: $redditInstance,

@@ -38,12 +38,12 @@ struct ContentView: View {
                 }
             }
             Form {
-                Toggle("Nitter Redirects", isOn: $redirectNitter)
+                Toggle("Twitter Redirects", isOn: $redirectNitter)
                 Toggle("Reddit Redirects", isOn: $redirectReddit)
-                Toggle("Invidious Redirects", isOn: $redirectInvidious)
-                Toggle("SimplyTranslate Redirects", isOn: $redirectSimplyTranslate)
-                Toggle("Open Street Maps Redirects", isOn: $redirectOsm)
-                Toggle("Search Engine Redirects", isOn: $redirectSearchEngine)
+                Toggle("YouTube Redirects", isOn: $redirectInvidious)
+                Toggle("Google Translate Redirects", isOn: $redirectSimplyTranslate)
+                Toggle("Google Maps Redirects", isOn: $redirectOsm)
+                Toggle("Google Search Redirects", isOn: $redirectSearchEngine)
             }
             .padding(.vertical)
             Button("Configure Privacy Redirect Instances") {
