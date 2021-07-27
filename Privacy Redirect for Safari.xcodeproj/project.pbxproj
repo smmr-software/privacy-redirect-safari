@@ -412,6 +412,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Privacy Redirect for Safari Extension/Privacy_Redirect_for_Safari_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				INFOPLIST_FILE = "Privacy Redirect for Safari Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -431,6 +432,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Privacy Redirect for Safari Extension/Privacy_Redirect_for_Safari_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				INFOPLIST_FILE = "Privacy Redirect for Safari Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +456,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Privacy Redirect for Safari/Privacy_Redirect_for_Safari.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				INFOPLIST_FILE = "Privacy Redirect for Safari/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -475,6 +478,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Privacy Redirect for Safari/Privacy_Redirect_for_Safari.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				INFOPLIST_FILE = "Privacy Redirect for Safari/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
