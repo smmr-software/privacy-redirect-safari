@@ -7,7 +7,7 @@ alternatives.
 A fork of Simon Brazell's [Privacy Redirect][fork] written with SwiftUI
 and JavaScript for macOS.
 
-### MacOS
+### macOS
 
 [![](./assets/macappstore.svg)][App Store]
 
