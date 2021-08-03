@@ -1,14 +1,17 @@
 # Privacy Redirect for Safari
 
 A configurable web extension that redirects Twitter, YouTube, Reddit,
-Google Maps, Google Search, & Google Translate to privacy friendly
+Google Maps, Google Search, and Google Translate to privacy friendly
 alternatives.
 
 A fork of Simon Brazell's [Privacy Redirect][fork] written with SwiftUI
 and JavaScript for macOS.
 
+### MacOS
+
 [![](./assets/macappstore.svg)][App Store]
 
+Requires macOS 11 or later.
 ## Screenshots
 
 <img width="432" src="/macos.png" alt="Privacy Redirect for Safari on macOS">
