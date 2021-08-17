@@ -130,62 +130,17 @@ struct InstancesView: View {
 struct Instances {
     public let nitter = [
         "nitter.net",
-        "nitter.snopyta.org",
-        "nitter.42l.fr",
         "nitter.nixnet.services",
-        "nitter.13ad.de",
-        "nitter.pussthecat.org",
-        "nitter.mastodont.cat",
-        "nitter.dark.fail",
-        "nitter.tedomum.net",
-        "nitter.cattube.org",
-        "nitter.fdn.fr",
-        "nitter.1d4.us",
-        "nitter.kavin.rocks",
-        "tweet.lambda.dance",
-        "nitter.cc",
-        "nitter.vxempire.xyz",
-        "nitter.unixfox.eu",
-        "bird.trom.tf",
     ]
     public let reddit = [
-        // libreddit: privacy w/ modern UI
         "libredd.it",
-        "libreddit.spike.codes",
-        "libreddit.kavin.rocks",
-        "libreddit.insanity.wtf",
-        "libreddit.dothq.co",
-        "libreddit.silkky.cloud",
-        "libreddit.himiko.cloud",
-        // teddit: privacy w/ old UI
         "teddit.net",
-        "teddit.ggc-project.de",
-        "teddit.kavin.rocks",
-        "old.reddit.com", // desktop
-        "i.reddit.com", // mobile
-        "snew.notabug.io", // anti-censorship
+        "old.reddit.com",
     ]
     public let invidious = [
         "invidious.snopyta.org",
-        "invidious.xyz",
         "invidious.kavin.rocks",
-        "tube.connect.cafe",
-        "invidious.zapashcanon.fr",
-        "invidiou.site",
-        "vid.mint.lgbt",
-        "invidious.site",
-        "yewtu.be",
-        "invidious.tube",
-        "invidious.silkky.cloud",
-        "invidious.fdn.fr",
-        "invidious.himiko.cloud",
-        "inv.skyn3t.in",
-        "tube.incognet.io",
-        "invidious.tinfoil-hat.net",
-        "invidious.namazso.eu",
-        "vid.puffyan.us",
-        "dev.viewtube.io",
-        "invidious.048596.xyz",
+        "piped.kavin.rocks",
     ]
     public let simplyTranslate = [
         "translate.metalune.xyz",
@@ -199,20 +154,10 @@ struct Instances {
         SearchEngineInstance("www.ecosia.org", path: "/search"),
         SearchEngineInstance("www.qwant.com"),
         SearchEngineInstance("www.mojeek.com", path: "/search"),
-        SearchEngineInstance("search.snopyta.org"),
         SearchEngineInstance("searx.info"),
-        SearchEngineInstance("searx.be"),
-        SearchEngineInstance("search.disroot.org"),
         SearchEngineInstance("searx.tuxcloud.net"),
-        SearchEngineInstance("searx.ninja"),
-        SearchEngineInstance("tromland.org/searx", path: "/search"),
-        SearchEngineInstance("engine.presearch.org", path: "/search"),
-        SearchEngineInstance("searx.silkky.cloud"),
-        SearchEngineInstance("search.trom.tf"),
-        SearchEngineInstance("whooglesearch.net", path: "/search"),
         SearchEngineInstance("whoogle.sdf.org", path: "/search"),
         SearchEngineInstance("whoogle.himiko.cloud", path: "/search"),
-        SearchEngineInstance("whoogle-search.zeet.app", path: "/search"),
     ]
 }
 
