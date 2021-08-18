@@ -11,7 +11,7 @@ import SafariServices.SFSafariExtensionManager
 @main
 struct PrivacyRedirectApp: App {
     let appState = AppState(initialExtensionEnabledState: .undetermined)
-    let defaults = UserDefaults(suiteName: "9WHCFZ6J4N.Privacy-Redirect-for-Safari")
+    let defaults = UserDefaults(suiteName: "\(Bundle.main.object(forInfoDictionaryKey: "TeamIdentifierPrefix") ?? "9WHCFZ6J4N.")Privacy-Redirect-for-Safari")
     func refreshEnabledState() {
         SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: appState.identifier, completionHandler: { (state, error) in
             guard error == nil else {
