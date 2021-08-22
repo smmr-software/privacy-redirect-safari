@@ -28,23 +28,29 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         } else if messageDict?["message"] == "redirectSettings" {
             response.userInfo = [
                 SFExtensionMessageKey: [
-                    "nitter": defaults?.bool(forKey: "redirectNitter"),
-                    "reddit": defaults?.bool(forKey: "redirectReddit"),
-                    "invidious": defaults?.bool(forKey: "redirectInvidious"),
-                    "simplyTranslate": defaults?.bool(forKey: "redirectSimplyTranslate"),
-                    "osm": defaults?.bool(forKey: "redirectOsm"),
-                    "searchEngine": defaults?.bool(forKey: "redirectSearchEngine"),
+                    "nitter": !(defaults?.bool(forKey: "disableNitter") ?? false),
+                    "reddit": !(defaults?.bool(forKey: "disableReddit") ?? false),
+                    "invidious": !(defaults?.bool(forKey: "disableInvidious") ?? false),
+                    "simplyTranslate": !(defaults?.bool(forKey: "disableSimplyTranslate") ?? false),
+                    "osm": !(defaults?.bool(forKey: "disableOsm") ?? false),
+                    "searchEngine": !(defaults?.bool(forKey: "disableSearchEngine") ?? false),
                 ]
             ]
         } else if messageDict?["message"] == "instanceSettings" {
+            let nitter = defaults?.string(forKey: "nitterInstance") ?? "nitter.net"
+            let reddit = defaults?.string(forKey: "redditInstance") ?? "teddit.net"
+            let invidious = defaults?.string(forKey: "invidiousInstance") ?? "invidious.snopyta.org"
+            let simplyTranslate = defaults?.string(forKey: "simplyTranslateInstance") ?? "translate.metalune.xyz"
+            let osm = defaults?.string(forKey: "osmInstance") ?? "openstreetmap.org"
+            let searchEngine = defaults?.string(forKey: "searchEngineInstance") ?? "duckduckgo.com/"
             response.userInfo = [
                 SFExtensionMessageKey: [
-                    "nitter": defaults?.string(forKey: "nitterInstance"),
-                    "reddit": defaults?.string(forKey: "redditInstance"),
-                    "invidious": defaults?.string(forKey: "invidiousInstance"),
-                    "simplyTranslate": defaults?.string(forKey: "simplyTranslateInstance"),
-                    "osm": defaults?.string(forKey: "osmInstance"),
-                    "searchEngine": defaults?.string(forKey: "searchEngineInstance"),
+                    "nitter": nitter,
+                    "reddit": reddit,
+                    "invidious": invidious,
+                    "simplyTranslate": simplyTranslate,
+                    "osm": osm,
+                    "searchEngine": searchEngine,
                 ]
             ]
         }
