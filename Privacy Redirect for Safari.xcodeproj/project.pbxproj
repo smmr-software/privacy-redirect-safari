@@ -211,13 +211,29 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		3A974244270A606500BA2B59 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		3A974245270A60AF00BA2B59 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
 		3A9ADC922673E3210051292A = {
 			isa = PBXGroup;
 			children = (
 				3A9ADC9D2673E3210051292A /* Shared (App) */,
 				3A9ADCB42673E3220051292A /* Shared (Extension) */,
 				3A7218A1270A5BB7000A271D /* iOS (App) */,
+				3A974244270A606500BA2B59 /* macOS (App) */,
 				3A7218C0270A5BB8000A271D /* iOS (Extension) */,
+				3A974245270A60AF00BA2B59 /* macOS (Extension) */,
 				3A9ADCB12673E3220051292A /* Frameworks */,
 				3A9ADC9C2673E3210051292A /* Products */,
 			);
