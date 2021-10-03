@@ -294,7 +294,7 @@
 				3A71F3142673F605008ECB88 /* pages */,
 			);
 			name = Resources;
-			path = "Privacy Redirect for Safari Extension";
+			path = "Shared (Extension)";
 			sourceTree = SOURCE_ROOT;
 		};
 		3AFB01E42685222A005BFDBA /* RawRepresentable */ = {
