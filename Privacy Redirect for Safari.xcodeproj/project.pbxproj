@@ -161,7 +161,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A7218A1270A5BB7000A271D /* Privacy Redirect for Safari (iOS) */ = {
+		3A7218A1270A5BB7000A271D /* iOS (App) */ = {
 			isa = PBXGroup;
 			children = (
 				3A7218A2270A5BB7000A271D /* AppDelegate.swift */,
@@ -173,7 +173,7 @@
 				3A7218B7270A5BB8000A271D /* Info.plist */,
 				3A7218A4270A5BB7000A271D /* Resources */,
 			);
-			path = "Privacy Redirect for Safari (iOS)";
+			path = "iOS (App)";
 			sourceTree = "<group>";
 		};
 		3A7218A4270A5BB7000A271D /* Resources */ = {
@@ -186,14 +186,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		3A7218C0270A5BB8000A271D /* Privacy Redirect for Safari (iOS) Extension */ = {
+		3A7218C0270A5BB8000A271D /* iOS (Extension) */ = {
 			isa = PBXGroup;
 			children = (
 				3A7218C1270A5BB8000A271D /* SafariWebExtensionHandler.swift */,
 				3A7218D4270A5BB8000A271D /* Info.plist */,
 				3A7218C3270A5BB8000A271D /* Resources */,
 			);
-			path = "Privacy Redirect for Safari (iOS) Extension";
+			path = "iOS (Extension)";
 			sourceTree = "<group>";
 		};
 		3A7218C3270A5BB8000A271D /* Resources */ = {
@@ -214,10 +214,10 @@
 		3A9ADC922673E3210051292A = {
 			isa = PBXGroup;
 			children = (
-				3A9ADC9D2673E3210051292A /* Privacy Redirect for Safari */,
-				3A9ADCB42673E3220051292A /* Privacy Redirect for Safari Extension */,
-				3A7218A1270A5BB7000A271D /* Privacy Redirect for Safari (iOS) */,
-				3A7218C0270A5BB8000A271D /* Privacy Redirect for Safari (iOS) Extension */,
+				3A9ADC9D2673E3210051292A /* Shared (App) */,
+				3A9ADCB42673E3220051292A /* Shared (Extension) */,
+				3A7218A1270A5BB7000A271D /* iOS (App) */,
+				3A7218C0270A5BB8000A271D /* iOS (Extension) */,
 				3A9ADCB12673E3220051292A /* Frameworks */,
 				3A9ADC9C2673E3210051292A /* Products */,
 			);
@@ -234,7 +234,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3A9ADC9D2673E3210051292A /* Privacy Redirect for Safari */ = {
+		3A9ADC9D2673E3210051292A /* Shared (App) */ = {
 			isa = PBXGroup;
 			children = (
 				3A9ADC9E2673E3210051292A /* Privacy_Redirect_for_Safari.entitlements */,
@@ -247,7 +247,7 @@
 				3A9ADCA62673E3210051292A /* Assets.xcassets */,
 				3A9ADCA82673E3210051292A /* Info.plist */,
 			);
-			path = "Privacy Redirect for Safari";
+			path = "Shared (App)";
 			sourceTree = "<group>";
 		};
 		3A9ADCB12673E3220051292A /* Frameworks */ = {
@@ -258,7 +258,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3A9ADCB42673E3220051292A /* Privacy Redirect for Safari Extension */ = {
+		3A9ADCB42673E3220051292A /* Shared (Extension) */ = {
 			isa = PBXGroup;
 			children = (
 				3A9ADCC22673E3220051292A /* Resources */,
@@ -266,7 +266,7 @@
 				3A9ADCB72673E3220051292A /* Info.plist */,
 				3A9ADCB82673E3220051292A /* Privacy_Redirect_for_Safari_Extension.entitlements */,
 			);
-			path = "Privacy Redirect for Safari Extension";
+			path = "Shared (Extension)";
 			sourceTree = "<group>";
 		};
 		3A9ADCC22673E3220051292A /* Resources */ = {
