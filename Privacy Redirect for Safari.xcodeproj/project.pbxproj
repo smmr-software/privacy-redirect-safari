@@ -34,6 +34,7 @@
 		3A7218D5270A5BB8000A271D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A7218B6270A5BB8000A271D /* Assets.xcassets */; };
 		3A757AB52681133800EE7CFF /* PrivacyRedirectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A757AB42681133800EE7CFF /* PrivacyRedirectApp.swift */; };
 		3A757AB72681136F00EE7CFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A757AB62681136F00EE7CFF /* ContentView.swift */; };
+		3A974246270A610E00BA2B59 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A9ADCA82673E3210051292A /* Info.plist */; };
 		3A9ADCA72673E3210051292A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9ADCA62673E3210051292A /* Assets.xcassets */; };
 		3A9ADCAE2673E3220051292A /* Privacy Redirect for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A9ADCAD2673E3220051292A /* Privacy Redirect for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3A9ADCB32673E3220051292A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9ADCB22673E3220051292A /* Cocoa.framework */; };
@@ -214,6 +215,8 @@
 		3A974244270A606500BA2B59 /* macOS (App) */ = {
 			isa = PBXGroup;
 			children = (
+				3A9ADC9E2673E3210051292A /* Privacy_Redirect_for_Safari.entitlements */,
+				3A9ADCA82673E3210051292A /* Info.plist */,
 			);
 			path = "macOS (App)";
 			sourceTree = "<group>";
@@ -221,6 +224,8 @@
 		3A974245270A60AF00BA2B59 /* macOS (Extension) */ = {
 			isa = PBXGroup;
 			children = (
+				3A9ADCB72673E3220051292A /* Info.plist */,
+				3A9ADCB82673E3220051292A /* Privacy_Redirect_for_Safari_Extension.entitlements */,
 			);
 			path = "macOS (Extension)";
 			sourceTree = "<group>";
@@ -253,7 +258,6 @@
 		3A9ADC9D2673E3210051292A /* Shared (App) */ = {
 			isa = PBXGroup;
 			children = (
-				3A9ADC9E2673E3210051292A /* Privacy_Redirect_for_Safari.entitlements */,
 				3A757AB42681133800EE7CFF /* PrivacyRedirectApp.swift */,
 				3A757AB62681136F00EE7CFF /* ContentView.swift */,
 				3A00D89426811E490021E0B2 /* AppState.swift */,
@@ -261,7 +265,6 @@
 				3A3436392685059C00AD52A1 /* InstancesView.swift */,
 				3AFB01E42685222A005BFDBA /* RawRepresentable */,
 				3A9ADCA62673E3210051292A /* Assets.xcassets */,
-				3A9ADCA82673E3210051292A /* Info.plist */,
 			);
 			path = "Shared (App)";
 			sourceTree = "<group>";
@@ -279,8 +282,6 @@
 			children = (
 				3A9ADCC22673E3220051292A /* Resources */,
 				3A9ADCB52673E3220051292A /* SafariWebExtensionHandler.swift */,
-				3A9ADCB72673E3220051292A /* Info.plist */,
-				3A9ADCB82673E3220051292A /* Privacy_Redirect_for_Safari_Extension.entitlements */,
 			);
 			path = "Shared (Extension)";
 			sourceTree = "<group>";
@@ -457,6 +458,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A974246270A610E00BA2B59 /* Info.plist in Resources */,
 				3A9ADCA72673E3210051292A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -819,11 +821,11 @@
 		3A9ADCBC2673E3220051292A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Privacy Redirect for Safari Extension/Privacy_Redirect_for_Safari_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Privacy_Redirect_for_Safari_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Privacy Redirect for Safari Extension/Info.plist";
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -840,11 +842,11 @@
 		3A9ADCBD2673E3220051292A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Privacy Redirect for Safari Extension/Privacy_Redirect_for_Safari_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Privacy_Redirect_for_Safari_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Privacy Redirect for Safari Extension/Info.plist";
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -864,7 +866,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Privacy Redirect for Safari/Privacy_Redirect_for_Safari.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Privacy_Redirect_for_Safari.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
@@ -887,7 +889,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Privacy Redirect for Safari/Privacy_Redirect_for_Safari.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Privacy_Redirect_for_Safari.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
