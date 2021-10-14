@@ -62,7 +62,7 @@
         "*://pbs.twimg.com/*",
         "*://video.twimg.com/*"
       ],
-      "js": ["assets/javascripts/twitter.js"],
+      "js": ["assets/scripts/twitter.js"],
       "run_at": "document_start"
     },
     {
@@ -74,7 +74,7 @@
         "*://amp.reddit.com/*",
         "*://i.redd.it/*"
       ],
-      "js": ["assets/javascripts/reddit.js"],
+      "js": ["assets/scripts/reddit.js"],
       "run_at": "document_start"
     },
     {
@@ -89,14 +89,14 @@
         "*://s.ytimg.com/*",
         "*://music.youtube.com/*"
       ],
-      "js": ["assets/javascripts/youtube.js"],
+      "js": ["assets/scripts/youtube.js"],
       "run_at": "document_start"
     },
     {
       "matches": [
         "*://translate.google.com/*"
       ],
-      "js": ["assets/javascripts/google-translate.js"],
+      "js": ["assets/scripts/google-translate.js"],
       "run_at": "document_start"
     },
     {
@@ -105,7 +105,7 @@
         "*://www.google.com/search*",
         "*://search.google.com/*"
       ],
-      "js": ["assets/javascripts/google-search.js"],
+      "js": ["assets/scripts/google-search.js"],
       "run_at": "document_start"
     },
     {
@@ -114,7 +114,7 @@
         "*://google.com/maps*",
         "*://www.google.com/maps*"
       ],
-      "js": ["assets/javascripts/google-maps.js"],
+      "js": ["assets/scripts/google-maps.js"],
       "run_at": "document_start"
     }
   ]
