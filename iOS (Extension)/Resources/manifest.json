@@ -1,38 +1,121 @@
 {
-    "manifest_version": 2,
-    "default_locale": "en",
-
-    "name": "__MSG_extension_name__",
-    "description": "__MSG_extension_description__",
-    "version": "1.0",
-
-    "icons": {
-        "48": "images/icon-48.png",
-        "96": "images/icon-96.png",
-        "128": "images/icon-128.png",
-        "256": "images/icon-256.png",
-        "512": "images/icon-512.png"
+  "name": "Privacy Redirect for Safari",
+  "description": "A configurable web extension that redirects Twitter, YouTube, Reddit, and more to privacy friendly alternatives.",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "16": "assets/images/icon16.png",
+    "32": "assets/images/icon32.png",
+    "48": "assets/images/icon48.png",
+    "128": "assets/images/icon128.png"
+  },
+  "permissions": [
+      "storage",
+      "nativeMessaging",
+      "*://twitter.com/*",
+      "*://www.twitter.com/*",
+      "*://mobile.twitter.com/*",
+      "*://pbs.twimg.com/*",
+      "*://video.twimg.com/*",
+      "*://www.reddit.com/*",
+      "*://old.reddit.com/*",
+      "*://np.reddit.com/*",
+      "*://new.reddit.com/*",
+      "*://amp.reddit.com/*",
+      "*://i.redd.it/*",
+      "*://m.youtube.com/*",
+      "*://youtube.com/*",
+      "*://img.youtube.com/*",
+      "*://www.youtube.com/*",
+      "*://youtube-nocookie.com/*",
+      "*://www.youtube-nocookie.com/*",
+      "*://youtu.be/*",
+      "*://s.ytimg.com/*",
+      "*://music.youtube.com/*",
+      "*://translate.google.com/*",
+      "*://google.com/search*",
+      "*://www.google.com/search*",
+      "*://search.google.com/*",
+      "*://maps.google.com/*",
+      "*://google.com/maps*",
+      "*://www.google.com/maps*"
+  ],
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Privacy Redirect for Safari",
+    "default_icon": {
+      "16": "assets/images/icon16.png",
+      "32": "assets/images/icon32.png",
+      "48": "assets/images/icon48.png",
+      "128": "assets/images/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://twitter.com/*",
+        "*://www.twitter.com/*",
+        "*://mobile.twitter.com/*",
+        "*://pbs.twimg.com/*",
+        "*://video.twimg.com/*"
+      ],
+      "js": ["assets/scripts/twitter.js"],
+      "run_at": "document_start"
     },
-
-    "background": {
-        "scripts": [ "background.js" ],
-        "persistent": false
+    {
+      "matches": [
+        "*://www.reddit.com/*",
+        "*://old.reddit.com/*",
+        "*://np.reddit.com/*",
+        "*://new.reddit.com/*",
+        "*://amp.reddit.com/*",
+        "*://i.redd.it/*"
+      ],
+      "js": ["assets/scripts/reddit.js"],
+      "run_at": "document_start"
     },
-
-    "content_scripts": [{
-        "js": [ "content.js" ],
-        "matches": [ "*://example.com/*" ]
-    }],
-
-    "browser_action": {
-        "default_popup": "popup.html",
-        "default_icon": {
-            "16": "images/toolbar-icon-16.png",
-            "19": "images/toolbar-icon-19.png",
-            "32": "images/toolbar-icon-32.png",
-            "38": "images/toolbar-icon-38.png"
-        }
+    {
+      "matches": [
+        "*://m.youtube.com/*",
+        "*://youtube.com/*",
+        "*://img.youtube.com/*",
+        "*://www.youtube.com/*",
+        "*://youtube-nocookie.com/*",
+        "*://www.youtube-nocookie.com/*",
+        "*://youtu.be/*",
+        "*://s.ytimg.com/*",
+        "*://music.youtube.com/*"
+      ],
+      "js": ["assets/scripts/youtube.js"],
+      "run_at": "document_start"
     },
-
-    "permissions": [ ]
+    {
+      "matches": [
+        "*://translate.google.com/*"
+      ],
+      "js": ["assets/scripts/google-translate.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://google.com/search*",
+        "*://www.google.com/search*",
+        "*://search.google.com/*"
+      ],
+      "js": ["assets/scripts/google-search.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://maps.google.com/*",
+        "*://google.com/maps*",
+        "*://www.google.com/maps*"
+      ],
+      "js": ["assets/scripts/google-maps.js"],
+      "run_at": "document_start"
+    }
+  ]
 }
