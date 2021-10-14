@@ -215,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9ADC9E2673E3210051292A /* Privacy_Redirect_for_Safari.entitlements */,
+				3A9ADCA62673E3210051292A /* Assets.xcassets */,
 				3A9ADCA82673E3210051292A /* Info.plist */,
 			);
 			path = "macOS (App)";
@@ -263,7 +264,6 @@
 				3A42C41126AD1E07005BC5F6 /* SettingsView.swift */,
 				3A3436392685059C00AD52A1 /* InstancesView.swift */,
 				3AFB01E42685222A005BFDBA /* RawRepresentable */,
-				3A9ADCA62673E3210051292A /* Assets.xcassets */,
 			);
 			path = "Shared (App)";
 			sourceTree = "<group>";
