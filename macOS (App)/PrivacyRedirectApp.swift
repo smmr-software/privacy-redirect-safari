@@ -32,7 +32,7 @@ struct PrivacyRedirectApp: App {
         }
     }
     
-    var body: some Scene {
+    @SceneBuilder var body: some Scene {
         WindowGroup {
             ContentView()
                 .defaultAppStorage(defaults!)

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3A00D89526811E490021E0B2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A00D89426811E490021E0B2 /* AppState.swift */; };
+		3A18F4BC271A137A0014F161 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42C41126AD1E07005BC5F6 /* SettingsView.swift */; };
+		3A18F4BD271A137E0014F161 /* InstancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3436392685059C00AD52A1 /* InstancesView.swift */; };
+		3A18F4BE271A13830014F161 /* Dictionary+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB01E526852253005BFDBA /* Dictionary+RawRepresentable.swift */; };
+		3A18F4BF271A13850014F161 /* Array+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB01E726852273005BFDBA /* Array+RawRepresentable.swift */; };
+		3A18F4C1271A154A0014F161 /* PrivacyRedirectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A18F4C0271A154A0014F161 /* PrivacyRedirectApp.swift */; };
+		3A18F4C3271A154E0014F161 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A18F4C2271A154E0014F161 /* ContentView.swift */; };
 		3A34363A2685059C00AD52A1 /* InstancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3436392685059C00AD52A1 /* InstancesView.swift */; };
 		3A42C41226AD1E07005BC5F6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A42C41126AD1E07005BC5F6 /* SettingsView.swift */; };
 		3A71F3182673F606008ECB88 /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3142673F605008ECB88 /* pages */; };
@@ -73,6 +79,8 @@
 
 /* Begin PBXFileReference section */
 		3A00D89426811E490021E0B2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		3A18F4C0271A154A0014F161 /* PrivacyRedirectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyRedirectApp.swift; sourceTree = "<group>"; };
+		3A18F4C2271A154E0014F161 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A3436392685059C00AD52A1 /* InstancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancesView.swift; sourceTree = "<group>"; };
 		3A42C41126AD1E07005BC5F6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3A71F3142673F605008ECB88 /* pages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pages; sourceTree = "<group>"; };
@@ -137,6 +145,8 @@
 		3A7218A1270A5BB7000A271D /* iOS (App) */ = {
 			isa = PBXGroup;
 			children = (
+				3A18F4C0271A154A0014F161 /* PrivacyRedirectApp.swift */,
+				3A18F4C2271A154E0014F161 /* ContentView.swift */,
 				3A7218B6270A5BB8000A271D /* Assets.xcassets */,
 				3A7218B7270A5BB8000A271D /* Info.plist */,
 			);
@@ -174,6 +184,9 @@
 		3A974244270A606500BA2B59 /* macOS (App) */ = {
 			isa = PBXGroup;
 			children = (
+				3A757AB42681133800EE7CFF /* PrivacyRedirectApp.swift */,
+				3A757AB62681136F00EE7CFF /* ContentView.swift */,
+				3A00D89426811E490021E0B2 /* AppState.swift */,
 				3A9ADC9E2673E3210051292A /* Privacy_Redirect_for_Safari.entitlements */,
 				3A9ADCA62673E3210051292A /* Assets.xcassets */,
 				3A9ADCA82673E3210051292A /* Info.plist */,
@@ -220,9 +233,6 @@
 		3A9ADC9D2673E3210051292A /* Shared (App) */ = {
 			isa = PBXGroup;
 			children = (
-				3A757AB42681133800EE7CFF /* PrivacyRedirectApp.swift */,
-				3A757AB62681136F00EE7CFF /* ContentView.swift */,
-				3A00D89426811E490021E0B2 /* AppState.swift */,
 				3A42C41126AD1E07005BC5F6 /* SettingsView.swift */,
 				3A3436392685059C00AD52A1 /* InstancesView.swift */,
 				3AFB01E42685222A005BFDBA /* RawRepresentable */,
@@ -427,6 +437,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A18F4BF271A13850014F161 /* Array+RawRepresentable.swift in Sources */,
+				3A18F4BC271A137A0014F161 /* SettingsView.swift in Sources */,
+				3A18F4C3271A154E0014F161 /* ContentView.swift in Sources */,
+				3A18F4BD271A137E0014F161 /* InstancesView.swift in Sources */,
+				3A18F4C1271A154A0014F161 /* PrivacyRedirectApp.swift in Sources */,
+				3A18F4BE271A13830014F161 /* Dictionary+RawRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
