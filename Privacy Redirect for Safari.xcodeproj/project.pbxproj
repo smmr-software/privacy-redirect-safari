@@ -217,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				3A7954142718B0E80074E832 /* Resources */,
+				3A9ADCB52673E3220051292A /* SafariWebExtensionHandler.swift */,
 				3A9ADCB72673E3220051292A /* Info.plist */,
 				3A9ADCB82673E3220051292A /* Privacy_Redirect_for_Safari_Extension.entitlements */,
 			);
@@ -273,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				3A9ADCC22673E3220051292A /* Resources */,
-				3A9ADCB52673E3220051292A /* SafariWebExtensionHandler.swift */,
 			);
 			path = "Shared (Extension)";
 			sourceTree = "<group>";
