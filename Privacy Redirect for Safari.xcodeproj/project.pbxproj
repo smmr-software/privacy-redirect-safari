@@ -13,14 +13,6 @@
 		3A71F3182673F606008ECB88 /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3142673F605008ECB88 /* pages */; };
 		3A71F3192673F606008ECB88 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3152673F605008ECB88 /* manifest.json */; };
 		3A71F31B2673F606008ECB88 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3172673F606008ECB88 /* assets */; };
-		3A7218A3270A5BB7000A271D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7218A2270A5BB7000A271D /* AppDelegate.swift */; };
-		3A7218A7270A5BB7000A271D /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A7218A5270A5BB7000A271D /* Main.html */; };
-		3A7218A9270A5BB7000A271D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A7218A8270A5BB7000A271D /* Icon.png */; };
-		3A7218AB270A5BB7000A271D /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 3A7218AA270A5BB7000A271D /* Style.css */; };
-		3A7218AD270A5BB7000A271D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7218AC270A5BB7000A271D /* SceneDelegate.swift */; };
-		3A7218AF270A5BB7000A271D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7218AE270A5BB7000A271D /* ViewController.swift */; };
-		3A7218B2270A5BB7000A271D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7218B0270A5BB7000A271D /* LaunchScreen.storyboard */; };
-		3A7218B5270A5BB7000A271D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7218B3270A5BB7000A271D /* Main.storyboard */; };
 		3A7218BD270A5BB8000A271D /* Privacy Redirect for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A7218BC270A5BB8000A271D /* Privacy Redirect for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3A7218C2270A5BB8000A271D /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7218C1270A5BB8000A271D /* SafariWebExtensionHandler.swift */; };
 		3A7218C9270A5BB8000A271D /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A7218C8270A5BB8000A271D /* manifest.json */; };
@@ -87,14 +79,6 @@
 		3A71F3152673F605008ECB88 /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		3A71F3172673F606008ECB88 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		3A7218A0270A5BB7000A271D /* Privacy Redirect for Safari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Privacy Redirect for Safari.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A7218A2270A5BB7000A271D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A7218A6270A5BB7000A271D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
-		3A7218A8270A5BB7000A271D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		3A7218AA270A5BB7000A271D /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
-		3A7218AC270A5BB7000A271D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A7218AE270A5BB7000A271D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A7218B1270A5BB7000A271D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3A7218B4270A5BB7000A271D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A7218B6270A5BB8000A271D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A7218B7270A5BB8000A271D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A7218BC270A5BB8000A271D /* Privacy Redirect for Safari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Privacy Redirect for Safari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,26 +137,10 @@
 		3A7218A1270A5BB7000A271D /* iOS (App) */ = {
 			isa = PBXGroup;
 			children = (
-				3A7218A2270A5BB7000A271D /* AppDelegate.swift */,
-				3A7218AC270A5BB7000A271D /* SceneDelegate.swift */,
-				3A7218AE270A5BB7000A271D /* ViewController.swift */,
-				3A7218B0270A5BB7000A271D /* LaunchScreen.storyboard */,
-				3A7218B3270A5BB7000A271D /* Main.storyboard */,
 				3A7218B6270A5BB8000A271D /* Assets.xcassets */,
 				3A7218B7270A5BB8000A271D /* Info.plist */,
-				3A7218A4270A5BB7000A271D /* Resources */,
 			);
 			path = "iOS (App)";
-			sourceTree = "<group>";
-		};
-		3A7218A4270A5BB7000A271D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				3A7218A5270A5BB7000A271D /* Main.html */,
-				3A7218A8270A5BB7000A271D /* Icon.png */,
-				3A7218AA270A5BB7000A271D /* Style.css */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		3A7218C0270A5BB8000A271D /* iOS (Extension) */ = {
@@ -420,12 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A7218A9270A5BB7000A271D /* Icon.png in Resources */,
-				3A7218B5270A5BB7000A271D /* Main.storyboard in Resources */,
-				3A7218B2270A5BB7000A271D /* LaunchScreen.storyboard in Resources */,
-				3A7218A7270A5BB7000A271D /* Main.html in Resources */,
 				3A7218D5270A5BB8000A271D /* Assets.xcassets in Resources */,
-				3A7218AB270A5BB7000A271D /* Style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,9 +427,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A7218AF270A5BB7000A271D /* ViewController.swift in Sources */,
-				3A7218A3270A5BB7000A271D /* AppDelegate.swift in Sources */,
-				3A7218AD270A5BB7000A271D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,33 +474,6 @@
 			targetProxy = 3A9ADCAF2673E3220051292A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3A7218A5270A5BB7000A271D /* Main.html */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A7218A6270A5BB7000A271D /* Base */,
-			);
-			name = Main.html;
-			sourceTree = "<group>";
-		};
-		3A7218B0270A5BB7000A271D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A7218B1270A5BB7000A271D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		3A7218B3270A5BB7000A271D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A7218B4270A5BB7000A271D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3A7218D6270A5BB8000A271D /* Debug */ = {
