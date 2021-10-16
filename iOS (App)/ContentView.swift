@@ -43,13 +43,19 @@ struct ContentView: View {
         
         return VStack {
             Spacer()
-            Image(uiImage: UIImage(named: "AppIcon")!)
+            Image(uiImage: UIImage(named: "LargeIcon")!)
+                .resizable()
+                .frame(
+                    width: 150,
+                    height: 150,
+                    alignment: .center
+                )
+            Text("Privacy Redirect for Safari")
+                .font(.title)
+            Text("Enable the extension in Safari Settings")
+                .font(.subheadline)
+            Spacer()
             VStack {
-                Text("Privacy Redirect for Safari")
-                    .font(.title)
-                Text("You can turn on Privacy Redirect for Safari in Settings.")
-            }
-            Form {
                 Toggle("Twitter Redirects", isOn: redirectNitter)
                 Toggle("Reddit Redirects", isOn: redirectReddit)
                 Toggle("YouTube Redirects", isOn: redirectInvidious)
@@ -57,14 +63,14 @@ struct ContentView: View {
                 Toggle("Google Maps Redirects", isOn: redirectOsm)
                 Toggle("Google Search Redirects", isOn: redirectSearchEngine)
             }
-            .padding(.vertical)
+                .padding()
+            Spacer()
             Button("Configure Privacy Redirect Instances") {
                 // Stuff
             }
             Spacer()
         }
         .padding()
-        .frame(maxWidth: 350)
     }
 }
 
