@@ -25,103 +25,137 @@ struct InstancesView: View {
     let instances = Instances()
     
     var body: some View {
-        Form {
-            Section(header: Text("Nitter").bold(), content: {
+        VStack {
+            VStack(alignment: .leading) {
+                Text("Nitter")
+                    .font(.headline)
                 HStack {
-                if !useCustomNitterInstance {
-                    Picker(selection: $nitterInstance,
-                           label: Text("Instance"), content: {
-                            ForEach(instances.nitter, id: \.self) { instance in
-                                Text("\(instance)").tag(instance)
-                            }
-                    })
-                        .labelsHidden()
-                } else {
-                    TextField("Nitter Instance", text: $nitterInstance)
-                }
+                    if !useCustomNitterInstance {
+                        Picker(selection: $nitterInstance,
+                               label: Text("Instance"), content: {
+                                ForEach(instances.nitter, id: \.self) { instance in
+                                    Text("\(instance)").tag(instance)
+                                }
+                        })
+                            .labelsHidden()
+                    } else {
+                        TextField("Nitter Instance", text: $nitterInstance)
+                    }
+                    Spacer()
                     Toggle("Custom", isOn: $useCustomNitterInstance)
+                        .labelsHidden()
                 }
-            })
-            Section(header: Text("Teddit or Libreddit").bold(), content: {
-                HStack {
-                    if !useCustomRedditInstance {
-                        Picker(selection: $redditInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.reddit, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                                }
-                        })
+            }
+            VStack {
+                VStack(alignment: .leading) {
+                    Text("Teddit or Libreddit")
+                        .font(.headline)
+                    HStack {
+                        if !useCustomRedditInstance {
+                            Picker(selection: $redditInstance,
+                                   label: Text("Instance"), content: {
+                                    ForEach(instances.reddit, id: \.self) { instance in
+                                        Text("\(instance)").tag(instance)
+                                    }
+                            })
+                                .labelsHidden()
+                        } else {
+                            TextField("Reddit Instance", text: $redditInstance)
+                        }
+                        Spacer()
+                        Toggle("Custom", isOn: $useCustomRedditInstance)
                             .labelsHidden()
-                    } else {
-                        TextField("Reddit Instance", text: $redditInstance)
                     }
-                    Toggle("Custom", isOn: $useCustomRedditInstance)
                 }
-            })
-            Section(header: Text("Invidious").bold(), content: {
-                HStack {
-                    if !useCustomInvidiousInstance {
-                        Picker(selection: $invidiousInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.invidious, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                                }
-                        })
+            }
+            VStack {
+                VStack(alignment: .leading) {
+                    Text("Invidious")
+                        .font(.headline)
+                    HStack {
+                        if !useCustomInvidiousInstance {
+                            Picker(selection: $invidiousInstance,
+                                   label: Text("Instance"), content: {
+                                    ForEach(instances.invidious, id: \.self) { instance in
+                                        Text("\(instance)").tag(instance)
+                                    }
+                            })
+                                .labelsHidden()
+                        } else {
+                            TextField("Invidious Instance", text: $invidiousInstance)
+                        }
+                        Spacer()
+                        Toggle("Custom", isOn: $useCustomInvidiousInstance)
                             .labelsHidden()
-                    } else {
-                        TextField("Invidious Instance", text: $invidiousInstance)
                     }
-                    Toggle("Custom", isOn: $useCustomInvidiousInstance)
                 }
-            })
-            Section(header: Text("SimplyTranslate").bold(), content: {
-                HStack {
-                    if !useCustomSimplyTranslateInstance {
-                        Picker(selection: $simplyTranslateInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.simplyTranslate, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                                }
-                        })
+            }
+            VStack {
+                VStack(alignment: .leading) {
+                    Text("SimplyTranslate")
+                        .font(.headline)
+                    HStack {
+                        if !useCustomSimplyTranslateInstance {
+                            Picker(selection: $simplyTranslateInstance,
+                                   label: Text("Instance"), content: {
+                                    ForEach(instances.simplyTranslate, id: \.self) { instance in
+                                        Text("\(instance)").tag(instance)
+                                    }
+                            })
+                                .labelsHidden()
+                        } else {
+                            TextField("SimplyTranslate Instance", text: $simplyTranslateInstance)
+                        }
+                        Spacer()
+                        Toggle("Custom", isOn: $useCustomSimplyTranslateInstance)
                             .labelsHidden()
-                    } else {
-                        TextField("SimplyTranslate Instance", text: $simplyTranslateInstance)
                     }
-                    Toggle("Custom", isOn: $useCustomSimplyTranslateInstance)
                 }
-            })
-            Section(header: Text("OpenStreetMap").bold(), content: {
-                HStack {
-                    if !useCustomOsmInstance {
-                        Picker(selection: $osmInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.maps, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                                }
-                        })
+            }
+            VStack {
+                VStack(alignment: .leading) {
+                    Text("OpenStreetMap")
+                        .font(.headline)
+                    HStack {
+                        if !useCustomOsmInstance {
+                            Picker(selection: $osmInstance,
+                                   label: Text("Instance"), content: {
+                                    ForEach(instances.maps, id: \.self) { instance in
+                                        Text("\(instance)").tag(instance)
+                                    }
+                            })
+                                .labelsHidden()
+                        } else {
+                            TextField("OpenStreetMap Instance", text: $osmInstance)
+                        }
+                        Spacer()
+                        Toggle("Custom", isOn: $useCustomOsmInstance)
                             .labelsHidden()
-                    } else {
-                        TextField("OpenStreetMap Instance", text: $osmInstance)
                     }
-                    Toggle("Custom", isOn: $useCustomOsmInstance)
                 }
-            })
-            Section(header: Text("Search Engine").bold(), content: {
-                HStack {
-                    if !useCustomSearchEngineInstance {
-                        Picker(selection: $searchEngineInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.searchEngines, id: \.id) { instance in
-                                    Text("\(instance.link)").tag(instance.url)
-                                }
-                        })
+            }
+            VStack {
+                VStack(alignment: .leading) {
+                    Text("Search Engine")
+                        .font(.headline)
+                    HStack {
+                        if !useCustomSearchEngineInstance {
+                            Picker(selection: $searchEngineInstance,
+                                   label: Text("Instance"), content: {
+                                    ForEach(instances.searchEngines, id: \.id) { instance in
+                                        Text("\(instance.link)").tag(instance.url)
+                                    }
+                            })
+                                .labelsHidden()
+                        } else {
+                            TextField("Search Engine Instance (including path)", text: $searchEngineInstance)
+                        }
+                        Spacer()
+                        Toggle("Custom", isOn: $useCustomSearchEngineInstance)
                             .labelsHidden()
-                    } else {
-                        TextField("Search Engine Instance (including path)", text: $searchEngineInstance)
                     }
-                    Toggle("Custom", isOn: $useCustomSearchEngineInstance)
                 }
-            })
+            }
         }
     }
 }
