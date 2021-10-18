@@ -14,6 +14,7 @@ struct ContentView: View {
     @AppStorage("disableSimplyTranslate") var disableSimplyTranslate = false
     @AppStorage("disableOsm") var disableOsm = false
     @AppStorage("disableSearchEngine") var disableSearchEngine = false
+    @State private var viewingSettings = false
     
     var body: some View {
         let redirectNitter = Binding<Bool>(
@@ -66,10 +67,13 @@ struct ContentView: View {
                 .padding()
             Spacer()
             Button("Configure Privacy Redirect Instances") {
-                // Stuff
+                self.viewingSettings = true
             }
             Spacer()
         }
+        .sheet(isPresented: $viewingSettings, content: {
+            SettingsView()
+        })
         .padding()
     }
 }
