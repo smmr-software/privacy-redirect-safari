@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct PrivacyRedirectApp: App {
-    let defaults = UserDefaults(suiteName: "\(Bundle.main.object(forInfoDictionaryKey: "TeamIdentifierPrefix") ?? "9WHCFZ6J4N.")Privacy-Redirect-for-Safari")
+    let defaults = UserDefaults(suiteName: "group.Privacy-Redirect-for-Safari")
     
     var body: some Scene {
         WindowGroup {

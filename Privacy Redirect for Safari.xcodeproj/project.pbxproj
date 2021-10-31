@@ -79,6 +79,8 @@
 
 /* Begin PBXFileReference section */
 		3A00D89426811E490021E0B2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		3A045A09272E654300927FEB /* Privacy Redirect for Safari (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Privacy Redirect for Safari (iOS).entitlements"; sourceTree = "<group>"; };
+		3A045A0A272E655600927FEB /* Privacy Redirect for Safari Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Privacy Redirect for Safari Extension (iOS).entitlements"; sourceTree = "<group>"; };
 		3A18F4C0271A154A0014F161 /* PrivacyRedirectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyRedirectApp.swift; sourceTree = "<group>"; };
 		3A18F4C2271A154E0014F161 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A3436392685059C00AD52A1 /* InstancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancesView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				3A18F4C0271A154A0014F161 /* PrivacyRedirectApp.swift */,
 				3A18F4C2271A154E0014F161 /* ContentView.swift */,
 				3AF724EE271DE5600032D351 /* InstancesView.swift */,
+				3A045A09272E654300927FEB /* Privacy Redirect for Safari (iOS).entitlements */,
 				3A7218B6270A5BB8000A271D /* Assets.xcassets */,
 				3A7218B7270A5BB8000A271D /* Info.plist */,
 			);
@@ -160,6 +163,7 @@
 			children = (
 				3A7218C3270A5BB8000A271D /* Resources */,
 				3A7218C1270A5BB8000A271D /* SafariWebExtensionHandler.swift */,
+				3A045A0A272E655600927FEB /* Privacy Redirect for Safari Extension (iOS).entitlements */,
 				3A7218D4270A5BB8000A271D /* Info.plist */,
 			);
 			path = "iOS (Extension)";
@@ -501,6 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Privacy Redirect for Safari (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
@@ -539,6 +544,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Privacy Redirect for Safari (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
@@ -575,6 +581,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "iOS (Extension)/Privacy Redirect for Safari Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
@@ -607,6 +614,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "iOS (Extension)/Privacy Redirect for Safari Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
