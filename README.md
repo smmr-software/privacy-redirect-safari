@@ -5,13 +5,14 @@ Google Maps, Google Search, and Google Translate to privacy friendly
 alternatives.
 
 A fork of Simon Brazell's [Privacy Redirect][fork] written with SwiftUI
-and JavaScript for macOS.
+and JavaScript for macOS and iOS.
 
-### macOS
+### Download
 
-[![](./assets/macappstore.svg)][App Store]
+[![](./assets/appstore.svg)][App Store]
 
-Requires macOS 11 or later.
+Requires macOS >=11 or iOS >=15.
+
 ## Screenshots
 
 <img width="432" src="/macos.png" alt="Privacy Redirect for Safari on macOS">
