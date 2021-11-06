@@ -35,7 +35,6 @@ struct InstancesView: View {
                                 Text("\(instance)").tag(instance)
                             }
                     })
-                        .labelsHidden()
                 } else {
                     TextField("Nitter Instance", text: $nitterInstance)
                 }
@@ -51,7 +50,6 @@ struct InstancesView: View {
                                     Text("\(instance)").tag(instance)
                                 }
                         })
-                            .labelsHidden()
                     } else {
                         TextField("Reddit Instance", text: $redditInstance)
                     }
@@ -67,7 +65,6 @@ struct InstancesView: View {
                                     Text("\(instance)").tag(instance)
                                 }
                         })
-                            .labelsHidden()
                     } else {
                         TextField("Invidious Instance", text: $invidiousInstance)
                     }
@@ -83,7 +80,6 @@ struct InstancesView: View {
                                     Text("\(instance)").tag(instance)
                                 }
                         })
-                            .labelsHidden()
                     } else {
                         TextField("SimplyTranslate Instance", text: $simplyTranslateInstance)
                     }
@@ -99,7 +95,6 @@ struct InstancesView: View {
                                     Text("\(instance)").tag(instance)
                                 }
                         })
-                            .labelsHidden()
                     } else {
                         TextField("OpenStreetMap Instance", text: $osmInstance)
                     }
@@ -115,7 +110,6 @@ struct InstancesView: View {
                                     Text("\(instance.link)").tag(instance.url)
                                 }
                         })
-                            .labelsHidden()
                     } else {
                         TextField("Search Engine Instance (including path)", text: $searchEngineInstance)
                     }
@@ -123,6 +117,7 @@ struct InstancesView: View {
                 }
             })
         }
+        .labelsHidden()
     }
 }
 
