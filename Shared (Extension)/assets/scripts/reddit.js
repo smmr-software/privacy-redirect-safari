@@ -34,7 +34,9 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
       if (!url.pathname.match(bypassPaths)) {
         const redirect = redirectReddit(instances.reddit, url);
         console.info(`Redirecting ${url.href} => ${redirect}`);
-        window.location = redirect;
+        if (url.href !== redirect) {
+          window.location = redirect;
+        }
       }
     }
   });

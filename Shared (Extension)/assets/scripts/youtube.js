@@ -14,7 +14,9 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
       if (!(url.pathname.match(/iframe_api/) || url.pathname.match(/www-widgetapi/))) {
         const redirect = `https://${instances.invidious}${url.pathname.replace("/shorts", "")}${url.search}`;
         console.info(`Redirecting ${url.href} => ${redirect}`);
-        window.location = redirect;
+        if (url.href !== redirect) {
+          window.location = redirect;
+        }
       }
     }
   });

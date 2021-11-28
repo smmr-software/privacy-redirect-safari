@@ -13,6 +13,8 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
       const url = new URL(window.location);
       const redirect = `https://${instances.simplyTranslate}/${url.search}`;
       console.info(`Redirecting ${url.href} => ${redirect}`);
-      window.location = redirect;
+      if (url.href !== redirect) {
+        window.location = redirect;
+      }
     }
   });

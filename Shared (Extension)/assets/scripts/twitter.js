@@ -32,7 +32,9 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
       if (!url.pathname.includes("/home")) {
         const redirect = redirectTwitter(instances.nitter, url);
         console.info(`Redirecting ${url.href} => ${redirect}`);
-        window.location = redirect;
+        if (url.href !== redirect) {
+          window.location = redirect;
+        }
       }
     }
   });

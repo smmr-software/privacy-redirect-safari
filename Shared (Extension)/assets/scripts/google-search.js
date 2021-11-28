@@ -25,7 +25,9 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
       if (!url.pathname.includes("/sorry")) {
         const redirect = redirectGoogleSearch(instances.searchEngine, url);
         console.info(`Redirecting ${url.href} => ${redirect}`);
-        window.location = redirect;
+        if (url.href !== redirect) {
+          window.location = redirect;
+        }
       }
     }
   });

@@ -147,6 +147,8 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
       const url = new URL(window.location);
       const redirect = redirectGoogleMaps(instances.osm, url);
       console.info(`Redirecting ${url.href} => ${redirect}`);
-      window.location = redirect;
+      if (url.href !== redirect) {
+        window.location = redirect;
+      }
     }
   });
