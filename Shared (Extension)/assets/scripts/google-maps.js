@@ -1,6 +1,5 @@
 "use strict";
 
-const mapsInstances = ["https://openstreetmap.org"];
 const mapCentreRegex = /@(-?\d[0-9.]*),(-?\d[0-9.]*),(\d{1,2})[.z]/;
 const dataLatLngRegex = /(!3d|!4d)(-?[0-9]{1,10}.[0-9]{1,10})/g;
 const placeRegex = /\/place\/(.*)\//;
@@ -77,7 +76,7 @@ function redirectGoogleMaps(instance, url) {
       }
     }
     let marker, bbox;
-    mapsHelper.addressToLatLng(query, (coords, boundingbox) => {
+    addressToLatLng(query, (coords, boundingbox) => {
       marker = coords;
       bbox = boundingbox;
     });
@@ -87,11 +86,11 @@ function redirectGoogleMaps(instance, url) {
     const travelMode =
       travelModes[url.searchParams.get("travelmode")] || travelModes["driving"];
     let origin;
-    mapsHelper.addressToLatLng(url.searchParams.get("origin"), (coords) => {
+    addressToLatLng(url.searchParams.get("origin"), (coords) => {
       origin = coords;
     });
     let destination;
-    mapsHelper.addressToLatLng(
+    addressToLatLng(
       url.searchParams.get("destination"),
       (coords) => {
         destination = coords;

@@ -20,7 +20,7 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
   })
   .then(instances => {
     navigator.serviceWorker.getRegistrations().then((registrations) => {
-      for (let registration of registrations) {
+      for (const registration of registrations) {
         if (registration.scope === "https://twitter.com/") {
           registration.unregister();
           console.log("Unregistered Twitter SW", registration);
