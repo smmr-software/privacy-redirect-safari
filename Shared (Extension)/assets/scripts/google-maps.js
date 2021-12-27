@@ -25,7 +25,9 @@ function addressToLatLng(address, callback) {
         if (json) {
           callback(
             `${json.lat}%2C${json.lon}`,
-            `${json.boundingbox[2]},${json.boundingbox[1]},${json.boundingbox[3]},${json.boundingbox[0]}`
+            `${json.boundingbox[2]},${json.boundingbox[1]},${
+              json.boundingbox[3]
+            },${json.boundingbox[0]}`,
           );
         }
       } else {
@@ -36,7 +38,7 @@ function addressToLatLng(address, callback) {
   xmlhttp.open(
     "GET",
     `https://nominatim.openstreetmap.org/search/${address}?format=json&limit=1`,
-    false
+    false,
   );
   xmlhttp.send();
 }
@@ -80,11 +82,12 @@ function redirectGoogleMaps(instance, url) {
       marker = coords;
       bbox = boundingbox;
     });
-    redirect = `https://${instance}/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${marker}`;
+    redirect =
+      `https://${instance}/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${marker}`;
     // Handle Google Maps Directions
   } else if (url.pathname.split("/").includes("dir")) {
-    const travelMode =
-      travelModes[url.searchParams.get("travelmode")] || travelModes["driving"];
+    const travelMode = travelModes[url.searchParams.get("travelmode")] ||
+      travelModes["driving"];
     let origin;
     addressToLatLng(url.searchParams.get("origin"), (coords) => {
       origin = coords;
@@ -94,27 +97,32 @@ function redirectGoogleMaps(instance, url) {
       url.searchParams.get("destination"),
       (coords) => {
         destination = coords;
-      }
+      },
     );
-    redirect = `https://${instance}/directions?engine=${travelMode}&route=${origin}%3B${destination}${mapCentre}${params}`;
+    redirect =
+      `https://${instance}/directions?engine=${travelMode}&route=${origin}%3B${destination}${mapCentre}${params}`;
     // Get marker from data attribute
   } else if (
     url.pathname.includes("data=") &&
     url.pathname.match(dataLatLngRegex)
   ) {
     const [mlat, mlon] = url.pathname.match(dataLatLngRegex);
-    redirect = `https://${instance}/?mlat=${mlat.replace(
-      "!3d",
-      ""
-    )}&mlon=${mlon.replace("!4d", "")}${mapCentre}${params}`;
+    redirect = `https://${instance}/?mlat=${
+      mlat.replace(
+        "!3d",
+        "",
+      )
+    }&mlon=${mlon.replace("!4d", "")}${mapCentre}${params}`;
     // Get marker from ll param
   } else if (url.searchParams.has("ll")) {
     const [mlat, mlon] = url.searchParams.get("ll").split(",");
-    redirect = `https://${instance}/?mlat=${mlat}&mlon=${mlon}${mapCentre}${params}`;
+    redirect =
+      `https://${instance}/?mlat=${mlat}&mlon=${mlon}${mapCentre}${params}`;
     // Get marker from viewpoint param.
   } else if (url.searchParams.has("viewpoint")) {
     const [mlat, mlon] = url.searchParams.get("viewpoint").split(",");
-    redirect = `https://${instance}/?mlat=${mlat}&mlon=${mlon}${mapCentre}${params}`;
+    redirect =
+      `https://${instance}/?mlat=${mlat}&mlon=${mlon}${mapCentre}${params}`;
     // Use query as search if present.
   } else {
     let query;
@@ -134,14 +142,14 @@ function redirectGoogleMaps(instance, url) {
 }
 
 browser.runtime.sendMessage({ type: "redirectSettings" })
-  .then(redirects => {
+  .then((redirects) => {
     if (redirects.osm) {
       return browser.runtime.sendMessage({ type: "instanceSettings" });
     } else {
       return null;
     }
   })
-  .then(instances => {
+  .then((instances) => {
     if (instances) {
       const url = new URL(window.location);
       const redirect = redirectGoogleMaps(instances.osm, url);

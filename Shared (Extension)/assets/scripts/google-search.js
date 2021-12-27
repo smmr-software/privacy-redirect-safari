@@ -12,14 +12,14 @@ function redirectGoogleSearch(instance, url) {
 }
 
 browser.runtime.sendMessage({ type: "redirectSettings" })
-  .then(redirects => {
+  .then((redirects) => {
     if (redirects.searchEngine) {
       return browser.runtime.sendMessage({ type: "instanceSettings" });
     } else {
       return null;
     }
   })
-  .then(instances => {
+  .then((instances) => {
     if (instances) {
       const url = new URL(window.location);
       if (!url.pathname.includes("/sorry")) {

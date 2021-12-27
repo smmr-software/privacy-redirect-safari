@@ -21,14 +21,14 @@ function redirectReddit(instance, url) {
 }
 
 browser.runtime.sendMessage({ type: "redirectSettings" })
-  .then(redirects => {
+  .then((redirects) => {
     if (redirects.reddit) {
       return browser.runtime.sendMessage({ type: "instanceSettings" });
     } else {
       return null;
     }
   })
-  .then(instances => {
+  .then((instances) => {
     if (instances) {
       const url = new URL(window.location);
       if (!url.pathname.match(bypassPaths)) {

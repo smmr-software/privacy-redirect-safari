@@ -11,14 +11,14 @@ function redirectTwitter(instance, url) {
 }
 
 browser.runtime.sendMessage({ type: "redirectSettings" })
-  .then(redirects => {
+  .then((redirects) => {
     if (redirects.nitter) {
       return browser.runtime.sendMessage({ type: "instanceSettings" });
     } else {
       return null;
     }
   })
-  .then(instances => {
+  .then((instances) => {
     navigator.serviceWorker.getRegistrations().then((registrations) => {
       for (const registration of registrations) {
         if (registration.scope === "https://twitter.com/") {
