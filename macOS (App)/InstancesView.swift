@@ -173,6 +173,8 @@ struct Instances {
     ]
     public let scribe = [
         "scribe.rip",
+        "scribe.nixnet.services",
+        "scribe.citizen4.eu",
     ]
 }
 
