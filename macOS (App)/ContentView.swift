@@ -17,6 +17,7 @@ struct ContentView: View {
     @AppStorage("disableSimplyTranslate") var disableSimplyTranslate = false
     @AppStorage("disableOsm") var disableOsm = false
     @AppStorage("disableSearchEngine") var disableSearchEngine = false
+    @AppStorage("disableScribe") var disableScribe = false
     
     var body: some View {
         let redirectNitter = Binding<Bool>(
@@ -42,6 +43,10 @@ struct ContentView: View {
         let redirectSearchEngine = Binding<Bool>(
             get: { !self.disableSearchEngine },
             set: { value in self.disableSearchEngine = !value }
+        )
+        let redirectScribe = Binding<Bool>(
+            get: { !self.disableScribe },
+            set: { value in self.disableScribe = !value }
         )
         
         return VStack {
@@ -69,6 +74,7 @@ struct ContentView: View {
                 Toggle("Google Translate Redirects", isOn: redirectSimplyTranslate)
                 Toggle("Google Maps Redirects", isOn: redirectOsm)
                 Toggle("Google Search Redirects", isOn: redirectSearchEngine)
+                Toggle("Medium Redirects", isOn: redirectScribe)
             }
             .padding(.vertical)
             Button("Configure Privacy Redirect Instances") {

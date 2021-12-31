@@ -14,6 +14,7 @@ struct ContentView: View {
     @AppStorage("disableSimplyTranslate") var disableSimplyTranslate = false
     @AppStorage("disableOsm") var disableOsm = false
     @AppStorage("disableSearchEngine") var disableSearchEngine = false
+    @AppStorage("disableScribe") var disableScribe = false
     @State private var viewingSettings = false
     
     var body: some View {
@@ -41,6 +42,10 @@ struct ContentView: View {
             get: { !self.disableSearchEngine },
             set: { value in self.disableSearchEngine = !value }
         )
+        let redirectScribe = Binding<Bool>(
+            get: { !self.disableScribe },
+            set: { value in self.disableScribe = !value }
+        )
         
         return VStack {
             Spacer()
@@ -63,6 +68,7 @@ struct ContentView: View {
                 Toggle("Google Translate Redirects", isOn: redirectSimplyTranslate)
                 Toggle("Google Maps Redirects", isOn: redirectOsm)
                 Toggle("Google Search Redirects", isOn: redirectSearchEngine)
+                Toggle("Medium Redirects", isOn: redirectScribe)
             }
                 .padding()
             Spacer()

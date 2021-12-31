@@ -30,6 +30,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "simplyTranslate": !(defaults?.bool(forKey: "disableSimplyTranslate") ?? false),
                     "osm": !(defaults?.bool(forKey: "disableOsm") ?? false),
                     "searchEngine": !(defaults?.bool(forKey: "disableSearchEngine") ?? false),
+                    "scribe": !(defaults?.bool(forKey: "disableScribe") ?? false),
                 ]
             ]
         } else if messageDict?["message"] == "instanceSettings" {
@@ -39,6 +40,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             let simplyTranslate = defaults?.string(forKey: "simplyTranslateInstance") ?? "translate.metalune.xyz"
             let osm = defaults?.string(forKey: "osmInstance") ?? "openstreetmap.org"
             let searchEngine = defaults?.string(forKey: "searchEngineInstance") ?? "duckduckgo.com/"
+            let scribe = defaults?.string(forKey: "scribeInstance") ?? "scribe.rip"
             response.userInfo = [
                 SFExtensionMessageKey: [
                     "nitter": nitter,
@@ -47,6 +49,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "simplyTranslate": simplyTranslate,
                     "osm": osm,
                     "searchEngine": searchEngine,
+                    "scribe": scribe,
                 ]
             ]
         }

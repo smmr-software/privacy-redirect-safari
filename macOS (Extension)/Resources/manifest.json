@@ -38,7 +38,8 @@
       "*://search.google.com/*",
       "*://maps.google.com/*",
       "*://google.com/maps*",
-      "*://www.google.com/maps*"
+      "*://www.google.com/maps*",
+      "*://medium.com/*"
   ],
   "background": {
       "scripts": ["pages/background.js"],
@@ -116,6 +117,13 @@
         "*://www.google.com/maps*"
       ],
       "js": ["assets/scripts/google-maps.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://medium.com/*"
+      ],
+      "js": ["assets/scripts/medium.js"],
       "run_at": "document_start"
     }
   ]

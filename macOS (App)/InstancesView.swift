@@ -14,6 +14,7 @@ struct InstancesView: View {
     @AppStorage("useCustomSimplyTranslateInstance") var useCustomSimplyTranslateInstance = false
     @AppStorage("useCustomOsmInstance") var useCustomOsmInstance = false
     @AppStorage("useCustomSearchEngineInstance") var useCustomSearchEngineInstance = false
+    @AppStorage("useCustomScribeInstance") var useCustomScribeInstance = false
     
     @AppStorage("nitterInstance") var nitterInstance = "nitter.net"
     @AppStorage("redditInstance") var redditInstance = "teddit.net"
@@ -21,6 +22,7 @@ struct InstancesView: View {
     @AppStorage("simplyTranslateInstance") var simplyTranslateInstance = "translate.metalune.xyz"
     @AppStorage("osmInstance") var osmInstance = "openstreetmap.org"
     @AppStorage("searchEngineInstance") var searchEngineInstance = "duckduckgo.com/"
+    @AppStorage("scribeInstance") var scribeInstance = "scribe.rip"
     
     let instances = Instances()
     
@@ -116,6 +118,21 @@ struct InstancesView: View {
                     Toggle("Custom", isOn: $useCustomSearchEngineInstance)
                 }
             })
+            Section(header: Text("Medium").bold(), content: {
+                HStack {
+                    if !useCustomScribeInstance {
+                        Picker(selection: $scribeInstance,
+                               label: Text("Instance"), content: {
+                                ForEach(instances.scribe, id: \.self) { instance in
+                                    Text("\(instance)").tag(instance)
+                               }
+                        })
+                    } else {
+                        TextField("Scribe Instance", text: $scribeInstance)
+                    }
+                    Toggle("Custom", isOn: $useCustomScribeInstance)
+                }
+            })
         }
         .labelsHidden()
     }
@@ -141,7 +158,7 @@ struct Instances {
         "translate.metalune.xyz",
     ]
     public let maps = [
-         "openstreetmap.org"
+         "openstreetmap.org",
     ]
     public let searchEngines = [
         SearchEngineInstance("duckduckgo.com"),
@@ -153,6 +170,9 @@ struct Instances {
         SearchEngineInstance("searx.tuxcloud.net"),
         SearchEngineInstance("whoogle.sdf.org", path: "/search"),
         SearchEngineInstance("whoogle.himiko.cloud", path: "/search"),
+    ]
+    public let scribe = [
+        "scribe.rip",
     ]
 }
 
