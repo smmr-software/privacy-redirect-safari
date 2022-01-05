@@ -522,7 +522,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -562,7 +562,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -597,7 +597,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -630,7 +630,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -777,7 +777,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari.Extension";
 				PRODUCT_NAME = "Privacy Redirect for Safari Extension";
 				SKIP_INSTALL = YES;
@@ -801,7 +801,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari.Extension";
 				PRODUCT_NAME = "Privacy Redirect for Safari Extension";
 				SKIP_INSTALL = YES;
@@ -828,7 +828,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari";
 				PRODUCT_NAME = "Privacy Redirect for Safari";
 				SWIFT_VERSION = 5.0;
@@ -854,7 +854,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari";
 				PRODUCT_NAME = "Privacy Redirect for Safari";
 				SWIFT_VERSION = 5.0;
