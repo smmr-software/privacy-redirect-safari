@@ -7,9 +7,17 @@
 
 import SwiftUI
 import SafariServices.SFSafariExtensionManager
+import Cocoa
+
+class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
+}
 
 @main
 struct PrivacyRedirectApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     let appState = AppState(initialExtensionEnabledState: .undetermined)
     let defaults = UserDefaults(suiteName: "\(Bundle.main.object(forInfoDictionaryKey: "TeamIdentifierPrefix") ?? "9WHCFZ6J4N.")Privacy-Redirect-for-Safari")
     func refreshEnabledState() {
