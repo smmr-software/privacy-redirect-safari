@@ -181,6 +181,7 @@ struct InstancesView: View {
                 }
             }
         }
+        .frame(maxWidth: 600)
     }
 }
 

@@ -70,6 +70,7 @@ struct ContentView: View {
                 Toggle("Google Search Redirects", isOn: redirectSearchEngine)
                 Toggle("Medium Redirects", isOn: redirectScribe)
             }
+                .frame(maxWidth: 500)
                 .padding()
             Spacer()
             Button("Configure Privacy Redirect Instances") {
