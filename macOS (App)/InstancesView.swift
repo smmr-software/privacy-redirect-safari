@@ -75,7 +75,7 @@ struct InstancesView: View {
                     Toggle("Custom", isOn: $useCustomInvidiousInstance)
                 }
             })
-            Section(header: Text("Invidious").bold(), content: {
+            Section(header: Text("Bibliogram").bold(), content: {
                 HStack {
                     if !useCustomBibliogramInstance {
                         Picker(selection: $bibliogramInstance,
