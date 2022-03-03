@@ -37,18 +37,19 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
   .then((instances) => {
     if (instances) {
       const url = new URL(window.location);
-    
+
       if (url.pathname.match(/login/)) {
         const nextPathname = url.searchParams.get("next");
         if (!nextPathname) return;
         url.pathname = nextPathname;
         url.searchParams.delete("next");
       }
-        
+
       if (!url.pathname.match(/accounts/)) {
         const paths = url.pathname.split("/");
         const isUser = url.pathname !== "/" && !reservedPaths.has(paths[1]);
-        const isUserPrefixed = isUser && paths[2] && reservedPaths.has(paths[2]);
+        const isUserPrefixed = isUser && paths[2] &&
+          reservedPaths.has(paths[2]);
 
         const redirect = `https://${instances.bibliogram}${
           isUser && !isUserPrefixed ? "/u" : ""
@@ -63,4 +64,3 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
       }
     }
   });
-
