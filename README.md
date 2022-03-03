@@ -1,6 +1,6 @@
 # Privacy Redirect for Safari
 
-A configurable web extension that redirects Twitter, YouTube, Reddit,
+A configurable web extension that redirects Twitter, YouTube, Reddit, Instagram,
 Google Maps, Google Search, and Google Translate to privacy friendly
 alternatives.
 

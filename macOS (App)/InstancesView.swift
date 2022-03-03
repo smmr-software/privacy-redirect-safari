@@ -11,6 +11,7 @@ struct InstancesView: View {
     @AppStorage("useCustomNitterInstance") var useCustomNitterInstance = false
     @AppStorage("useCustomRedditInstance") var useCustomRedditInstance = false
     @AppStorage("useCustomInvidiousInstance") var useCustomInvidiousInstance = false
+    @AppStorage("useCustomBibliogramInstance") var useCustomBibliogramInstance = false
     @AppStorage("useCustomSimplyTranslateInstance") var useCustomSimplyTranslateInstance = false
     @AppStorage("useCustomOsmInstance") var useCustomOsmInstance = false
     @AppStorage("useCustomSearchEngineInstance") var useCustomSearchEngineInstance = false
@@ -19,6 +20,7 @@ struct InstancesView: View {
     @AppStorage("nitterInstance") var nitterInstance = "nitter.net"
     @AppStorage("redditInstance") var redditInstance = "teddit.net"
     @AppStorage("invidiousInstance") var invidiousInstance = "invidious.snopyta.org"
+    @AppStorage("bibliogramInstance") var bibliogramInstance = "bibliogram.art"
     @AppStorage("simplyTranslateInstance") var simplyTranslateInstance = "translate.metalune.xyz"
     @AppStorage("osmInstance") var osmInstance = "openstreetmap.org"
     @AppStorage("searchEngineInstance") var searchEngineInstance = "duckduckgo.com/"
@@ -71,6 +73,21 @@ struct InstancesView: View {
                         TextField("Invidious Instance", text: $invidiousInstance)
                     }
                     Toggle("Custom", isOn: $useCustomInvidiousInstance)
+                }
+            })
+            Section(header: Text("Invidious").bold(), content: {
+                HStack {
+                    if !useCustomBibliogramInstance {
+                        Picker(selection: $bibliogramInstance,
+                               label: Text("Instance"), content: {
+                                ForEach(instances.bibliogram, id: \.self) { instance in
+                                    Text("\(instance)").tag(instance)
+                                }
+                        })
+                    } else {
+                        TextField("Bibliogram Instance", text: $bibliogramInstance)
+                    }
+                    Toggle("Custom", isOn: $useCustomBibliogramInstance)
                 }
             })
             Section(header: Text("SimplyTranslate").bold(), content: {
@@ -153,6 +170,17 @@ struct Instances {
         "invidious.snopyta.org",
         "invidious.kavin.rocks",
         "piped.kavin.rocks",
+    ]
+    public let bibliogram = [
+        "bibliogram.art",
+        "bibliogram.snopyta.org",
+        "bibliogram.pussthecat.org",
+        "bibliogram.1d4.us",
+        "insta.trom.tf",
+        "bib.riverside.rocks",
+        "bibliogram.esmailelbob.xyz",
+        "bib.actionsack.com",
+        "biblio.alefvanoon.xyz",
     ]
     public let simplyTranslate = [
         "translate.metalune.xyz",

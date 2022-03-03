@@ -32,6 +32,8 @@
       "*://youtu.be/*",
       "*://s.ytimg.com/*",
       "*://music.youtube.com/*",
+      "*://instagram.com/*",
+      "*://www.instagram.com/*",
       "*://translate.google.com/*",
       "*://google.com/search*",
       "*://www.google.com/search*",
@@ -1414,6 +1416,14 @@
         "*://music.youtube.com/*"
       ],
       "js": ["assets/scripts/youtube.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://instagram.com/*",
+        "*://www.instagram.com/*"
+      ],
+      "js": ["assets/scripts/instagram.js"],
       "run_at": "document_start"
     },
     {
