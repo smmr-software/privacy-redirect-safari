@@ -1373,10 +1373,12 @@
   "browser_action": {
     "default_title": "Privacy Redirect for Safari",
     "default_icon": {
-      "16": "assets/images/icon16.png",
-      "32": "assets/images/icon32.png",
-      "48": "assets/images/icon48.png",
-      "128": "assets/images/icon128.png"
+      "16": "assets/images/toolbar-icon16.png",
+      "19": "assets/images/toolbar-icon19.png",
+      "32": "assets/images/toolbar-icon32.png",
+      "38": "assets/images/toolbar-icon38.png",
+      "48": "assets/images/toolbar-icon48.png",
+      "72": "assets/images/toolbar-icon72.png"
     }
   },
   "content_scripts": [
