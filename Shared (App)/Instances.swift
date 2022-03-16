@@ -35,7 +35,9 @@ struct Instances {
         "biblio.alefvanoon.xyz",
     ]
     public let simplyTranslate = [
-        "translate.metalune.xyz",
+        "simplytranslate.org",
+        "translate.bus-hit.me",
+        "simplytranslate.pussthecat.org",
     ]
     public let maps = [
          "openstreetmap.org",
@@ -49,7 +51,6 @@ struct Instances {
         SearchEngineInstance("searx.info"),
         SearchEngineInstance("searx.tuxcloud.net"),
         SearchEngineInstance("whoogle.sdf.org", path: "/search"),
-        SearchEngineInstance("whoogle.himiko.cloud", path: "/search"),
     ]
     public let scribe = [
         "scribe.rip",
