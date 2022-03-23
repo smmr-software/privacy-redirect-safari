@@ -1,7 +1,7 @@
 {
   "name": "Privacy Redirect for Safari",
   "description": "A configurable web extension that redirects Twitter, YouTube, Reddit, and more to privacy friendly alternatives.",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "manifest_version": 2,
   "icons": {
     "16": "assets/images/icon16.png",
@@ -48,6 +48,7 @@
         "*://np.reddit.com/*",
         "*://new.reddit.com/*",
         "*://amp.reddit.com/*",
+        "*://i.reddit.com/*",
         "*://i.redd.it/*"
       ],
       "js": ["assets/scripts/reddit.js"],
