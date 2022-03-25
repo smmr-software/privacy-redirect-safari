@@ -15,9 +15,17 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
         !(url.pathname.match(/iframe_api/) ||
           url.pathname.match(/www-widgetapi/))
       ) {
-        const redirect = `https://${instances.invidious}${
+        let redirect = `${instances.invidious}${
           url.pathname.replace("/shorts", "")
         }${url.search}`;
+
+        if (
+          !instances.invidious.startsWith("http://") &&
+          !instances.invidious.startsWith("https://")
+        ) {
+          redirect = "https://" + redirect;
+        }
+
         console.info(`Redirecting ${url.href} => ${redirect}`);
         if (url.href !== redirect) {
           window.location = redirect;

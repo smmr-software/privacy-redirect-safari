@@ -2,11 +2,11 @@
 
 function redirectTwitter(instance, url) {
   if (url.host.split(".")[0] === "pbs") {
-    return `https://${instance}/pic/${encodeURIComponent(url.href)}`;
+    return `${instance}/pic/${encodeURIComponent(url.href)}`;
   } else if (url.host.split(".")[0] === "video") {
-    return `https://${instance}/gif/${encodeURIComponent(url.href)}`;
+    return `${instance}/gif/${encodeURIComponent(url.href)}`;
   } else {
-    return `https://${instance}${url.pathname}${url.search}`;
+    return `${instance}${url.pathname}${url.search}`;
   }
 }
 
@@ -30,7 +30,15 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
     if (instances) {
       const url = new URL(window.location);
       if (!url.pathname.includes("/home")) {
-        const redirect = redirectTwitter(instances.nitter, url);
+        let instance = instances.nitter;
+        if (
+          !instance.startsWith("http://") &&
+          !instance.startsWith("https://")
+        ) {
+          instance = "https://" + instance;
+        }
+
+        const redirect = redirectTwitter(instance, url);
         console.info(`Redirecting ${url.href} => ${redirect}`);
         if (url.href !== redirect) {
           window.location = redirect;

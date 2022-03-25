@@ -5,7 +5,7 @@ const bypassPaths = /\/(gallery\/poll\/rpan\/settings\/topics)/;
 function redirectReddit(instance, url) {
   if (url.host === "i.redd.it") {
     if (instance.includes("libredd")) {
-      return `https://${instance}/img${url.pathname}${url.search}`;
+      return `${instance}/img${url.pathname}${url.search}`;
     } else if (instance.includes("teddit")) {
       // As of 2021-04-09, redirects for teddit images are nontrivial:
       // - navigating to the image before ever navigating to its page causes
@@ -17,7 +17,7 @@ function redirectReddit(instance, url) {
       return null;
     }
   }
-  return `https://${instance}${url.pathname}${url.search}`;
+  return `${instance}${url.pathname}${url.search}`;
 }
 
 browser.runtime.sendMessage({ type: "redirectSettings" })
@@ -32,7 +32,15 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
     if (instances) {
       const url = new URL(window.location);
       if (!url.pathname.match(bypassPaths)) {
-        const redirect = redirectReddit(instances.reddit, url);
+        let instance = instances.reddit;
+        if (
+          !instance.startsWith("http://") &&
+          !instance.startsWith("https://")
+        ) {
+          instance = "https://" + instance;
+        }
+
+        const redirect = redirectReddit(instance, url);
         console.info(`Redirecting ${url.href} => ${redirect}`);
         if (url.href !== redirect) {
           window.location = redirect;

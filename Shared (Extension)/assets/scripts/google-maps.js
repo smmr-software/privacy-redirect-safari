@@ -83,7 +83,7 @@ function redirectGoogleMaps(instance, url) {
       bbox = boundingbox;
     });
     redirect =
-      `https://${instance}/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${marker}`;
+      `${instance}/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${marker}`;
     // Handle Google Maps Directions
   } else if (url.pathname.split("/").includes("dir")) {
     const travelMode = travelModes[url.searchParams.get("travelmode")] ||
@@ -100,14 +100,14 @@ function redirectGoogleMaps(instance, url) {
       },
     );
     redirect =
-      `https://${instance}/directions?engine=${travelMode}&route=${origin}%3B${destination}${mapCentre}${params}`;
+      `${instance}/directions?engine=${travelMode}&route=${origin}%3B${destination}${mapCentre}${params}`;
     // Get marker from data attribute
   } else if (
     url.pathname.includes("data=") &&
     url.pathname.match(dataLatLngRegex)
   ) {
     const [mlat, mlon] = url.pathname.match(dataLatLngRegex);
-    redirect = `https://${instance}/?mlat=${
+    redirect = `${instance}/?mlat=${
       mlat.replace(
         "!3d",
         "",
@@ -116,13 +116,11 @@ function redirectGoogleMaps(instance, url) {
     // Get marker from ll param
   } else if (url.searchParams.has("ll")) {
     const [mlat, mlon] = url.searchParams.get("ll").split(",");
-    redirect =
-      `https://${instance}/?mlat=${mlat}&mlon=${mlon}${mapCentre}${params}`;
+    redirect = `${instance}/?mlat=${mlat}&mlon=${mlon}${mapCentre}${params}`;
     // Get marker from viewpoint param.
   } else if (url.searchParams.has("viewpoint")) {
     const [mlat, mlon] = url.searchParams.get("viewpoint").split(",");
-    redirect =
-      `https://${instance}/?mlat=${mlat}&mlon=${mlon}${mapCentre}${params}`;
+    redirect = `${instance}/?mlat=${mlat}&mlon=${mlon}${mapCentre}${params}`;
     // Use query as search if present.
   } else {
     let query;
@@ -133,7 +131,7 @@ function redirectGoogleMaps(instance, url) {
     } else if (url.pathname.match(placeRegex)) {
       query = url.pathname.match(placeRegex)[1];
     }
-    redirect = `https://${instance}/${query ? "search?query=" + query : ""}${
+    redirect = `${instance}/${query ? "search?query=" + query : ""}${
       mapCentre || "#"
     }${params}`;
   }
@@ -152,7 +150,16 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
   .then((instances) => {
     if (instances) {
       const url = new URL(window.location);
-      const redirect = redirectGoogleMaps(instances.osm, url);
+
+      let instance = instances.osm;
+      if (
+        !instance.startsWith("http://") &&
+        !instance.startsWith("https://")
+      ) {
+        instance = "https://" + instance;
+      }
+
+      const redirect = redirectGoogleMaps(instance, url);
       console.info(`Redirecting ${url.href} => ${redirect}`);
       if (url.href !== redirect) {
         window.location = redirect;

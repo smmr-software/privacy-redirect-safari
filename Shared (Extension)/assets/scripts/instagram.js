@@ -51,9 +51,15 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
         const isUserPrefixed = isUser && paths[2] &&
           reservedPaths.has(paths[2]);
 
-        const redirect = `https://${instances.bibliogram}${
-          isUser && !isUserPrefixed ? "/u" : ""
-        }${
+        let instance = instances.bibliogram;
+        if (
+          !instance.startsWith("http://") &&
+          !instance.startsWith("https://")
+        ) {
+          instance = "https://" + instance;
+        }
+
+        const redirect = `${instance}${isUser && !isUserPrefixed ? "/u" : ""}${
           isUserPrefixed ? `/${paths.slice(2).join("/")}` : url.pathname
         }${url.search}`;
 

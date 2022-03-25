@@ -8,7 +8,7 @@ function redirectGoogleSearch(instance, url) {
     .forEach(function (input) {
       if (input.startsWith("q=")) search = input;
     });
-  return `https://${instance}?${search}`;
+  return `${instance}?${search}`;
 }
 
 browser.runtime.sendMessage({ type: "redirectSettings" })
@@ -23,7 +23,15 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
     if (instances) {
       const url = new URL(window.location);
       if (!url.pathname.includes("/sorry")) {
-        const redirect = redirectGoogleSearch(instances.searchEngine, url);
+        let instance = instances.searchEngine;
+        if (
+          !instance.startsWith("http://") &&
+          !instance.startsWith("https://")
+        ) {
+          instance = "https://" + instance;
+        }
+
+        const redirect = redirectGoogleSearch(instance, url);
         console.info(`Redirecting ${url.href} => ${redirect}`);
         if (url.href !== redirect) {
           window.location = redirect;
