@@ -52,42 +52,44 @@ struct ContentView: View {
             set: { value in self.disableScribe = !value }
         )
         
-        return VStack {
-            Spacer()
-            Image(uiImage: UIImage(named: "LargeIcon")!)
-                .resizable()
-                .frame(
-                    width: 150,
-                    height: 150,
-                    alignment: .center
-                )
-            Text("Privacy Redirect for Safari")
-                .font(.title)
-            Text("Enable the extension in Safari Settings")
-                .font(.subheadline)
-            Spacer()
+        return ScrollView {
             VStack {
-                Toggle("Twitter Redirects", isOn: redirectNitter)
-                Toggle("Reddit Redirects", isOn: redirectReddit)
-                Toggle("YouTube Redirects", isOn: redirectInvidious)
-                Toggle("Instagram Redirects", isOn: redirectBibliogram)
-                Toggle("Google Translate Redirects", isOn: redirectSimplyTranslate)
-                Toggle("Google Maps Redirects", isOn: redirectOsm)
-                Toggle("Google Search Redirects", isOn: redirectSearchEngine)
-                Toggle("Medium Redirects", isOn: redirectScribe)
+                Spacer()
+                Image(uiImage: UIImage(named: "LargeIcon")!)
+                    .resizable()
+                    .frame(
+                        width: 150,
+                        height: 150,
+                        alignment: .center
+                    )
+                Text("Privacy Redirect for Safari")
+                    .font(.title)
+                Text("Enable the extension in Safari Settings")
+                    .font(.subheadline)
+                Spacer()
+                VStack {
+                    Toggle("Twitter Redirects", isOn: redirectNitter)
+                    Toggle("Reddit Redirects", isOn: redirectReddit)
+                    Toggle("YouTube Redirects", isOn: redirectInvidious)
+                    Toggle("Instagram Redirects", isOn: redirectBibliogram)
+                    Toggle("Google Translate Redirects", isOn: redirectSimplyTranslate)
+                    Toggle("Google Maps Redirects", isOn: redirectOsm)
+                    Toggle("Google Search Redirects", isOn: redirectSearchEngine)
+                    Toggle("Medium Redirects", isOn: redirectScribe)
+                }
+                    .frame(maxWidth: 500)
+                    .padding()
+                Spacer()
+                Button("Configure Privacy Redirect Instances") {
+                    self.viewingSettings = true
+                }
+                Spacer()
             }
-                .frame(maxWidth: 500)
-                .padding()
-            Spacer()
-            Button("Configure Privacy Redirect Instances") {
-                self.viewingSettings = true
-            }
-            Spacer()
+            .sheet(isPresented: $viewingSettings, content: {
+                SettingsView()
+            })
+            .padding()
         }
-        .sheet(isPresented: $viewingSettings, content: {
-            SettingsView()
-        })
-        .padding()
     }
 }
 
