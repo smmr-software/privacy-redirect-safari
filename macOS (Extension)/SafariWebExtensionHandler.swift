@@ -36,6 +36,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "osm": !(defaults?.bool(forKey: "disableOsm") ?? false),
                     "searchEngine": !(defaults?.bool(forKey: "disableSearchEngine") ?? false),
                     "scribe": !(defaults?.bool(forKey: "disableScribe") ?? false),
+                    "proxiTok": !(defaults?.bool(forKey: "disableProxiTok") ?? false),
                 ]
             ]
         } else if messageDict?["message"] == "instanceSettings" {
@@ -47,6 +48,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             let osm = defaults?.string(forKey: "osmInstance") ?? "openstreetmap.org"
             let searchEngine = defaults?.string(forKey: "searchEngineInstance") ?? "duckduckgo.com/"
             let scribe = defaults?.string(forKey: "scribeInstance") ?? "scribe.rip"
+            let proxiTok = defaults?.string(forKey: "proxiTokInstance") ?? "proxitok.herokuapp.com"
             response.userInfo = [
                 SFExtensionMessageKey: [
                     "nitter": nitter,
@@ -57,6 +59,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "osm": osm,
                     "searchEngine": searchEngine,
                     "scribe": scribe,
+                    "proxiTok": proxiTok,
                 ]
             ]
         }

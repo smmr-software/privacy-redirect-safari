@@ -57,4 +57,8 @@ struct Instances {
         "scribe.nixnet.services",
         "scribe.citizen4.eu",
     ]
+    public let proxiTok = [
+        "proxitok.herokuapp.com",
+        "proxitok.pussthecat.org",
+    ]
 }

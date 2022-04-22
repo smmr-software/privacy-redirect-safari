@@ -16,6 +16,7 @@ struct InstancesView: View {
     @AppStorage("useCustomOsmInstance") var useCustomOsmInstance = false
     @AppStorage("useCustomSearchEngineInstance") var useCustomSearchEngineInstance = false
     @AppStorage("useCustomScribeInstance") var useCustomScribeInstance = false
+    @AppStorage("useCustomProxiTokInstance") var useCustomProxiTokInstance = false
     
     @AppStorage("nitterInstance") var nitterInstance = "nitter.net"
     @AppStorage("redditInstance") var redditInstance = "teddit.net"
@@ -25,6 +26,7 @@ struct InstancesView: View {
     @AppStorage("osmInstance") var osmInstance = "openstreetmap.org"
     @AppStorage("searchEngineInstance") var searchEngineInstance = "duckduckgo.com/"
     @AppStorage("scribeInstance") var scribeInstance = "scribe.rip"
+    @AppStorage("proxiTokInstance") var proxiTokInstance = "proxitok.herokuapp.com"
     
     let instances = Instances()
     
@@ -201,6 +203,28 @@ struct InstancesView: View {
                             }
                             Spacer()
                             Toggle("Custom", isOn: $useCustomScribeInstance)
+                                .labelsHidden()
+                        }
+                    }
+                }
+                VStack {
+                    VStack(alignment: .leading) {
+                        Text("TikTok")
+                            .font(.headline)
+                        HStack {
+                            if !useCustomProxiTokInstance {
+                                Picker(selection: $proxiTokInstance,
+                                       label: Text("Instance"), content: {
+                                        ForEach(instances.proxiTok, id: \.self) { instance in
+                                            Text("\(instance)").tag(instance)
+                                        }
+                                })
+                                    .labelsHidden()
+                            } else {
+                                TextField("ProxiTok Instance", text: $proxiTokInstance)
+                            }
+                            Spacer()
+                            Toggle("Custom", isOn: $useCustomProxiTokInstance)
                                 .labelsHidden()
                         }
                     }

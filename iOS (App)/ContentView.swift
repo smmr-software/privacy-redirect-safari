@@ -16,6 +16,7 @@ struct ContentView: View {
     @AppStorage("disableOsm") var disableOsm = false
     @AppStorage("disableSearchEngine") var disableSearchEngine = false
     @AppStorage("disableScribe") var disableScribe = false
+    @AppStorage("disableProxiTok") var disableProxiTok = false
     @State private var viewingSettings = false
     
     var body: some View {
@@ -51,6 +52,10 @@ struct ContentView: View {
             get: { !self.disableScribe },
             set: { value in self.disableScribe = !value }
         )
+        let redirectProxiTok = Binding<Bool>(
+            get: { !self.disableProxiTok },
+            set: { value in self.disableProxiTok = !value }
+        )
         
         return ScrollView {
             VStack {
@@ -76,6 +81,7 @@ struct ContentView: View {
                     Toggle("Google Maps Redirects", isOn: redirectOsm)
                     Toggle("Google Search Redirects", isOn: redirectSearchEngine)
                     Toggle("Medium Redirects", isOn: redirectScribe)
+                    Toggle("TikTok Redirects", isOn: redirectProxiTok)
                 }
                     .frame(maxWidth: 500)
                     .padding()
