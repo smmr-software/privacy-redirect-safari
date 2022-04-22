@@ -17,6 +17,7 @@ struct InstancesView: View {
     @AppStorage("useCustomSearchEngineInstance") var useCustomSearchEngineInstance = false
     @AppStorage("useCustomScribeInstance") var useCustomScribeInstance = false
     @AppStorage("useCustomProxiTokInstance") var useCustomProxiTokInstance = false
+    @AppStorage("useCustomRimgoInstance") var useCustomRimgoInstance = false
     
     @AppStorage("nitterInstance") var nitterInstance = "nitter.net"
     @AppStorage("redditInstance") var redditInstance = "teddit.net"
@@ -27,6 +28,7 @@ struct InstancesView: View {
     @AppStorage("searchEngineInstance") var searchEngineInstance = "duckduckgo.com/"
     @AppStorage("scribeInstance") var scribeInstance = "scribe.rip"
     @AppStorage("proxiTokInstance") var proxiTokInstance = "proxitok.herokuapp.com"
+    @AppStorage("rimgoInstance") var rimgoInstance = ""
     
     let instances = Instances()
     
@@ -165,6 +167,21 @@ struct InstancesView: View {
                         TextField("ProxiTok Instance", text: $proxiTokInstance)
                     }
                     Toggle("Custom", isOn: $useCustomProxiTokInstance)
+                }
+            })
+            Section(header: Text("Imgur").bold(), content: {
+                HStack {
+                    if !useCustomRimgoInstance {
+                        Picker(selection: $rimgoInstance,
+                               label: Text("Instance"), content: {
+                                ForEach(instances.rimgo, id: \.self) { instance in
+                                    Text("\(instance)").tag(instance)
+                               }
+                        })
+                    } else {
+                        TextField("Rimgo Instance", text: $rimgoInstance)
+                    }
+                    Toggle("Custom", isOn: $useCustomRimgoInstance)
                 }
             })
         }

@@ -61,4 +61,10 @@ struct Instances {
         "proxitok.herokuapp.com",
         "proxitok.pussthecat.org",
     ]
+    public let rimgo = [
+        "i.bcow.xyz",
+        "rimgo.pussthecat.org",
+        "img.riverside.rocks",
+        "rimgo.bus-hit.me",
+    ]
 }

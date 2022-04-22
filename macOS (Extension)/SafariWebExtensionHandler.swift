@@ -37,6 +37,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "searchEngine": !(defaults?.bool(forKey: "disableSearchEngine") ?? false),
                     "scribe": !(defaults?.bool(forKey: "disableScribe") ?? false),
                     "proxiTok": !(defaults?.bool(forKey: "disableProxiTok") ?? false),
+                    "rimgo": !(defaults?.bool(forKey: "disableRimgo") ?? false),
                 ]
             ]
         } else if messageDict?["message"] == "instanceSettings" {
@@ -49,6 +50,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             let searchEngine = defaults?.string(forKey: "searchEngineInstance") ?? "duckduckgo.com/"
             let scribe = defaults?.string(forKey: "scribeInstance") ?? "scribe.rip"
             let proxiTok = defaults?.string(forKey: "proxiTokInstance") ?? "proxitok.herokuapp.com"
+            let rimgo = defaults?.string(forKey: "rimgoInstance") ?? "i.bcow.xyz"
             response.userInfo = [
                 SFExtensionMessageKey: [
                     "nitter": nitter,
@@ -60,6 +62,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "searchEngine": searchEngine,
                     "scribe": scribe,
                     "proxiTok": proxiTok,
+                    "rimgo": rimgo,
                 ]
             ]
         }
