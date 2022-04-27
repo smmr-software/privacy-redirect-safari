@@ -34,97 +34,37 @@ struct InstancesView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Nitter").bold(), content: {
-                HStack {
-                if !useCustomNitterInstance {
-                    Picker(selection: $nitterInstance,
-                           label: Text("Instance"), content: {
-                            ForEach(instances.nitter, id: \.self) { instance in
-                                Text("\(instance)").tag(instance)
-                            }
-                    })
-                } else {
-                    TextField("Nitter Instance", text: $nitterInstance)
-                }
-                    Toggle("Custom", isOn: $useCustomNitterInstance)
-                }
-            })
-            Section(header: Text("Teddit or Libreddit").bold(), content: {
-                HStack {
-                    if !useCustomRedditInstance {
-                        Picker(selection: $redditInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.reddit, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                                }
-                        })
-                    } else {
-                        TextField("Reddit Instance", text: $redditInstance)
-                    }
-                    Toggle("Custom", isOn: $useCustomRedditInstance)
-                }
-            })
-            Section(header: Text("Invidious").bold(), content: {
-                HStack {
-                    if !useCustomInvidiousInstance {
-                        Picker(selection: $invidiousInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.invidious, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                                }
-                        })
-                    } else {
-                        TextField("Invidious Instance", text: $invidiousInstance)
-                    }
-                    Toggle("Custom", isOn: $useCustomInvidiousInstance)
-                }
-            })
-            Section(header: Text("Bibliogram").bold(), content: {
-                HStack {
-                    if !useCustomBibliogramInstance {
-                        Picker(selection: $bibliogramInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.bibliogram, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                                }
-                        })
-                    } else {
-                        TextField("Bibliogram Instance", text: $bibliogramInstance)
-                    }
-                    Toggle("Custom", isOn: $useCustomBibliogramInstance)
-                }
-            })
-            Section(header: Text("SimplyTranslate").bold(), content: {
-                HStack {
-                    if !useCustomSimplyTranslateInstance {
-                        Picker(selection: $simplyTranslateInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.simplyTranslate, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                                }
-                        })
-                    } else {
-                        TextField("SimplyTranslate Instance", text: $simplyTranslateInstance)
-                    }
-                    Toggle("Custom", isOn: $useCustomSimplyTranslateInstance)
-                }
-            })
-            Section(header: Text("OpenStreetMap").bold(), content: {
-                HStack {
-                    if !useCustomOsmInstance {
-                        Picker(selection: $osmInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.maps, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                                }
-                        })
-                    } else {
-                        TextField("OpenStreetMap Instance", text: $osmInstance)
-                    }
-                    Toggle("Custom", isOn: $useCustomOsmInstance)
-                }
-            })
-            Section(header: Text("Search Engine").bold(), content: {
+            InstanceSection(
+                name: "Twitter",
+                customInstance: $useCustomNitterInstance,
+                instance: $nitterInstance,
+                instances: instances.nitter)
+            InstanceSection(
+                name: "Reddit",
+                customInstance: $useCustomRedditInstance,
+                instance: $redditInstance,
+                instances: instances.reddit)
+            InstanceSection(
+                name: "YouTube",
+                customInstance: $useCustomInvidiousInstance,
+                instance: $invidiousInstance,
+                instances: instances.invidious)
+            InstanceSection(
+                name: "Instagram",
+                customInstance: $useCustomBibliogramInstance,
+                instance: $bibliogramInstance,
+                instances: instances.bibliogram)
+            InstanceSection(
+                name: "Google Translate",
+                customInstance: $useCustomSimplyTranslateInstance,
+                instance: $simplyTranslateInstance,
+                instances: instances.simplyTranslate)
+            InstanceSection(
+                name: "Google Maps",
+                customInstance: $useCustomOsmInstance,
+                instance: $osmInstance,
+                instances: instances.maps)
+            Section(header: Text("Google Search").bold(), content: {
                 HStack {
                     if !useCustomSearchEngineInstance {
                         Picker(selection: $searchEngineInstance,
@@ -139,56 +79,50 @@ struct InstancesView: View {
                     Toggle("Custom", isOn: $useCustomSearchEngineInstance)
                 }
             })
-            Section(header: Text("Medium").bold(), content: {
-                HStack {
-                    if !useCustomScribeInstance {
-                        Picker(selection: $scribeInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.scribe, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                               }
-                        })
-                    } else {
-                        TextField("Scribe Instance", text: $scribeInstance)
-                    }
-                    Toggle("Custom", isOn: $useCustomScribeInstance)
-                }
-            })
-            Section(header: Text("TikTok").bold(), content: {
-                HStack {
-                    if !useCustomProxiTokInstance {
-                        Picker(selection: $proxiTokInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.proxiTok, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                               }
-                        })
-                    } else {
-                        TextField("ProxiTok Instance", text: $proxiTokInstance)
-                    }
-                    Toggle("Custom", isOn: $useCustomProxiTokInstance)
-                }
-            })
-            Section(header: Text("Imgur").bold(), content: {
-                HStack {
-                    if !useCustomRimgoInstance {
-                        Picker(selection: $rimgoInstance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances.rimgo, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                               }
-                        })
-                    } else {
-                        TextField("Rimgo Instance", text: $rimgoInstance)
-                    }
-                    Toggle("Custom", isOn: $useCustomRimgoInstance)
-                }
-            })
+            InstanceSection(
+                name: "Medium",
+                customInstance: $useCustomScribeInstance,
+                instance: $scribeInstance,
+                instances: instances.scribe)
+            InstanceSection(
+                name: "TikTok",
+                customInstance: $useCustomProxiTokInstance,
+                instance: $proxiTokInstance,
+                instances: instances.proxiTok)
+            InstanceSection(
+                name: "Imgur",
+                customInstance: $useCustomRimgoInstance,
+                instance: $rimgoInstance,
+                instances: instances.rimgo)
         }
         .labelsHidden()
     }
 }
 
+struct InstanceSection: View {
+    public let name: String
+    public let customInstance: Binding<Bool>
+    public let instance: Binding<String>
+    public let instances: Array<String>
+
+    var body: some View {
+        Section(header: Text(name).bold(), content: {
+            HStack {
+            if !customInstance.wrappedValue {
+                Picker(selection: instance,
+                       label: Text("Instance"), content: {
+                        ForEach(instances, id: \.self) { instance in
+                            Text("\(instance)").tag(instance)
+                        }
+                })
+            } else {
+                TextField("\(name) Instance", text: instance)
+            }
+                Toggle("Custom", isOn: customInstance)
+            }
+        })
+    }
+}
 
 struct SearchEngineInstance {
     public let link: String
