@@ -43,7 +43,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         } else if messageDict?["message"] == "instanceSettings" {
             let nitter = defaults?.string(forKey: "nitterInstance") ?? "nitter.net"
             let reddit = defaults?.string(forKey: "redditInstance") ?? "teddit.net"
-            let invidious = defaults?.string(forKey: "invidiousInstance") ?? "invidious.snopyta.org"
+            let invidious = defaults?.string(forKey: "invidiousInstance") ?? "invidious.kavin.rocks"
             let bibliogram = defaults?.string(forKey: "bibliogramInstance") ?? "bibliogram.art"
             let simplyTranslate = defaults?.string(forKey: "simplyTranslateInstance") ?? "translate.metalune.xyz"
             let osm = defaults?.string(forKey: "osmInstance") ?? "openstreetmap.org"
