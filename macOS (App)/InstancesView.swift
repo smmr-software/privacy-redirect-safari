@@ -21,7 +21,7 @@ struct InstancesView: View {
     
     @AppStorage("nitterInstance") var nitterInstance = "nitter.net"
     @AppStorage("redditInstance") var redditInstance = "teddit.net"
-    @AppStorage("invidiousInstance") var invidiousInstance = "invidious.snopyta.org"
+    @AppStorage("invidiousInstance") var invidiousInstance = "invidious.kavin.rocks"
     @AppStorage("bibliogramInstance") var bibliogramInstance = "bibliogram.art"
     @AppStorage("simplyTranslateInstance") var simplyTranslateInstance = "translate.metalune.xyz"
     @AppStorage("osmInstance") var osmInstance = "openstreetmap.org"

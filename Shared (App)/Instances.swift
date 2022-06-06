@@ -19,7 +19,6 @@ struct Instances {
         "old.reddit.com",
     ]
     public let invidious = [
-        "invidious.snopyta.org",
         "invidious.kavin.rocks",
         "piped.kavin.rocks",
     ]
