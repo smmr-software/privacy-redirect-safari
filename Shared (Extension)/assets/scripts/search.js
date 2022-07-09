@@ -1,6 +1,6 @@
 "use strict";
 
-function redirectGoogleSearch(instance, url) {
+function redirectSearch(instance, url) {
   let search = "";
   url.search
     .slice(1)
@@ -31,7 +31,7 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
           instance = "https://" + instance;
         }
 
-        const redirect = redirectGoogleSearch(instance, url);
+        const redirect = redirectSearch(instance, url);
         console.info(`Redirecting ${url.href} => ${redirect}`);
         if (url.href !== redirect) {
           window.location = redirect;

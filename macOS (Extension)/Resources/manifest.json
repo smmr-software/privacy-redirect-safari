@@ -1,7 +1,7 @@
 {
   "name": "Privacy Redirect for Safari",
   "description": "A configurable web extension that redirects Twitter, YouTube, Reddit, and more to privacy friendly alternatives.",
-  "version": "1.5.3",
+  "version": "1.6.0",
   "manifest_version": 2,
   "icons": {
     "16": "assets/images/icon16.png",
@@ -845,9 +845,10 @@
         "*://search.google.co.zw/*",
         "*://google.cat/search*",
         "*://www.google.cat/search*",
-        "*://search.google.cat/*"
+        "*://search.google.cat/*",
+        "*://duckduckgo.com/*"
       ],
-      "js": ["assets/scripts/google-search.js"],
+      "js": ["assets/scripts/search.js"],
       "run_at": "document_start"
     },
     {
