@@ -5,6 +5,7 @@
 //  Created by FIGBERT on 6/21/21.
 //
 
+import Foundation
 import SwiftUI
 import SafariServices.SFSafariApplication
 import SafariServices.SFSafariExtensionManager
@@ -96,7 +97,14 @@ struct ContentView: View {
             }
             .padding(.vertical)
             Button("Configure Privacy Redirect Instances") {
-                NSApp.sendAction(Selector(("showPreferencesWindow:")), to: nil, from: nil)
+                let info = ProcessInfo()
+                var command = "showPreferencesWindow"
+                
+                if info.isOperatingSystemAtLeast(OperatingSystemVersion(majorVersion: 13,minorVersion: 0,patchVersion: 0)) {
+                    command = "showSettingsWindow"
+                }
+                
+                NSApp.sendAction(Selector(("\(command):")), to: nil, from: nil)
             }
             Button("Open Safari Extension Preferences") {
                 SFSafariApplication.showPreferencesForExtension(withIdentifier: appState.identifier) { error in
