@@ -1,6 +1,6 @@
 //
 //  SafariWebExtensionHandler.swift
-//  Privacy Redirect for Safari Extension
+//  Privacy Redirect Extension
 //
 //  Created by FIGBERT on 6/11/21.
 //

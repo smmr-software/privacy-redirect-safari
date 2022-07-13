@@ -1,6 +1,6 @@
 //
 //  SettingsView.swift
-//  Privacy Redirect for Safari
+//  Privacy Redirect
 //
 //  Created by figbert on 7/24/21.
 //
@@ -17,7 +17,7 @@ struct SettingsView: View {
                     Image(systemName: "server.rack")
                 }
             VStack {
-                Text("Privacy Redirect for Safari - v\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String)")
+                Text("Privacy Redirect - v\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String)")
                 Link(destination: URL(string: "https://smmr.software/")!) { Text("by SMMR Software") }
             }
                 .padding()

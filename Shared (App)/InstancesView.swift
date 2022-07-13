@@ -1,6 +1,6 @@
 //
 //  InstancesView.swift
-//  Privacy Redirect for Safari
+//  Privacy Redirect
 //
 //  Created by figbert on 15/7/22.
 //

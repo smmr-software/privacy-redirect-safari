@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Privacy Redirect for Safari
+//  Privacy Redirect
 //
 //  Created by FIGBERT on 6/21/21.
 //
@@ -72,7 +72,7 @@ struct ContentView: View {
                         height: 150,
                         alignment: .center
                     )
-                Text("Privacy Redirect for Safari")
+                Text("Privacy Redirect")
                     .font(.title)
                 Text("Enable the extension in Safari Settings")
                     .font(.subheadline)

@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Privacy Redirect for Safari
+//  Privacy Redirect
 //
 //  Created by FIGBERT on 6/21/21.
 //
@@ -69,7 +69,7 @@ struct ContentView: View {
             Spacer()
             Image(nsImage: NSImage(named: "AppIcon")!)
             VStack {
-                Text("Privacy Redirect for Safari")
+                Text("Privacy Redirect")
                     .font(.title)
                 HStack(spacing: 2) {
                     Text("The extension is currently")

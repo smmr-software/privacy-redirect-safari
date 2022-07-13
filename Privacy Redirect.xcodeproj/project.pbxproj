@@ -20,7 +20,7 @@
 		3A71F3182673F606008ECB88 /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3142673F605008ECB88 /* pages */; };
 		3A71F3192673F606008ECB88 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3152673F605008ECB88 /* manifest.json */; };
 		3A71F31B2673F606008ECB88 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3172673F606008ECB88 /* assets */; };
-		3A7218BD270A5BB8000A271D /* Privacy Redirect for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A7218BC270A5BB8000A271D /* Privacy Redirect for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A7218BD270A5BB8000A271D /* Privacy Redirect Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A7218BC270A5BB8000A271D /* Privacy Redirect Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3A7218C2270A5BB8000A271D /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7218C1270A5BB8000A271D /* SafariWebExtensionHandler.swift */; };
 		3A7218C9270A5BB8000A271D /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A7218C8270A5BB8000A271D /* manifest.json */; };
 		3A7218CB270A5BB8000A271D /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A7218CA270A5BB8000A271D /* background.js */; };
@@ -29,7 +29,7 @@
 		3A757AB72681136F00EE7CFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A757AB62681136F00EE7CFF /* ContentView.swift */; };
 		3A7954132718B0E30074E832 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3172673F606008ECB88 /* assets */; };
 		3A9ADCA72673E3210051292A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9ADCA62673E3210051292A /* Assets.xcassets */; };
-		3A9ADCAE2673E3220051292A /* Privacy Redirect for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A9ADCAD2673E3220051292A /* Privacy Redirect for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A9ADCAE2673E3220051292A /* Privacy Redirect Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A9ADCAD2673E3220051292A /* Privacy Redirect Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3A9ADCB32673E3220051292A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9ADCB22673E3220051292A /* Cocoa.framework */; };
 		3A9ADCB62673E3220051292A /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9ADCB52673E3220051292A /* SafariWebExtensionHandler.swift */; };
 		3A9D2FE228816F0C00707AAE /* InstancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9D2FE128816F0C00707AAE /* InstancesView.swift */; };
@@ -45,14 +45,14 @@
 			containerPortal = 3A9ADC932673E3210051292A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3A7218BB270A5BB8000A271D;
-			remoteInfo = "Privacy Redirect for Safari (iOS) Extension";
+			remoteInfo = "Privacy Redirect (iOS) Extension";
 		};
 		3A9ADCAF2673E3220051292A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3A9ADC932673E3210051292A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3A9ADCAC2673E3220051292A;
-			remoteInfo = "Privacy Redirect for Safari Extension";
+			remoteInfo = "Privacy Redirect Extension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -63,7 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3A7218BD270A5BB8000A271D /* Privacy Redirect for Safari Extension.appex in Embed App Extensions */,
+				3A7218BD270A5BB8000A271D /* Privacy Redirect Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +74,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3A9ADCAE2673E3220051292A /* Privacy Redirect for Safari Extension.appex in Embed App Extensions */,
+				3A9ADCAE2673E3220051292A /* Privacy Redirect Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,8 +83,8 @@
 
 /* Begin PBXFileReference section */
 		3A00D89426811E490021E0B2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		3A045A09272E654300927FEB /* Privacy Redirect for Safari (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Privacy Redirect for Safari (iOS).entitlements"; sourceTree = "<group>"; };
-		3A045A0A272E655600927FEB /* Privacy Redirect for Safari Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Privacy Redirect for Safari Extension (iOS).entitlements"; sourceTree = "<group>"; };
+		3A045A09272E654300927FEB /* Privacy Redirect (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Privacy Redirect (iOS).entitlements"; sourceTree = "<group>"; };
+		3A045A0A272E655600927FEB /* Privacy Redirect Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Privacy Redirect Extension (iOS).entitlements"; sourceTree = "<group>"; };
 		3A18F4C0271A154A0014F161 /* PrivacyRedirectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyRedirectApp.swift; sourceTree = "<group>"; };
 		3A18F4C2271A154E0014F161 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A3436392685059C00AD52A1 /* InstancesViewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancesViewDetails.swift; sourceTree = "<group>"; };
@@ -93,25 +93,25 @@
 		3A71F3142673F605008ECB88 /* pages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pages; sourceTree = "<group>"; };
 		3A71F3152673F605008ECB88 /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		3A71F3172673F606008ECB88 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
-		3A7218A0270A5BB7000A271D /* Privacy Redirect for Safari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Privacy Redirect for Safari.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A7218A0270A5BB7000A271D /* Privacy Redirect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Privacy Redirect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7218B6270A5BB8000A271D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A7218B7270A5BB8000A271D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A7218BC270A5BB8000A271D /* Privacy Redirect for Safari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Privacy Redirect for Safari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A7218BC270A5BB8000A271D /* Privacy Redirect Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Privacy Redirect Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7218C1270A5BB8000A271D /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		3A7218C8270A5BB8000A271D /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		3A7218CA270A5BB8000A271D /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 		3A7218D4270A5BB8000A271D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A757AB42681133800EE7CFF /* PrivacyRedirectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyRedirectApp.swift; sourceTree = "<group>"; };
 		3A757AB62681136F00EE7CFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3A9ADC9B2673E3210051292A /* Privacy Redirect for Safari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Privacy Redirect for Safari.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A9ADC9E2673E3210051292A /* Privacy_Redirect_for_Safari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Privacy_Redirect_for_Safari.entitlements; sourceTree = "<group>"; };
+		3A9ADC9B2673E3210051292A /* Privacy Redirect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Privacy Redirect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9ADC9E2673E3210051292A /* Privacy_Redirect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Privacy_Redirect.entitlements; sourceTree = "<group>"; };
 		3A9ADCA62673E3210051292A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A9ADCA82673E3210051292A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A9ADCAD2673E3220051292A /* Privacy Redirect for Safari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Privacy Redirect for Safari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9ADCAD2673E3220051292A /* Privacy Redirect Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Privacy Redirect Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9ADCB22673E3220051292A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3A9ADCB52673E3220051292A /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		3A9ADCB72673E3220051292A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A9ADCB82673E3220051292A /* Privacy_Redirect_for_Safari_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Privacy_Redirect_for_Safari_Extension.entitlements; sourceTree = "<group>"; };
+		3A9ADCB82673E3220051292A /* Privacy_Redirect_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Privacy_Redirect_Extension.entitlements; sourceTree = "<group>"; };
 		3A9D2FE128816F0C00707AAE /* InstancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancesView.swift; sourceTree = "<group>"; };
 		3AF724EE271DE5600032D351 /* InstancesViewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancesViewDetails.swift; sourceTree = "<group>"; };
 		3AFB01E526852253005BFDBA /* Dictionary+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+RawRepresentable.swift"; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 				3A18F4C0271A154A0014F161 /* PrivacyRedirectApp.swift */,
 				3A18F4C2271A154E0014F161 /* ContentView.swift */,
 				3AF724EE271DE5600032D351 /* InstancesViewDetails.swift */,
-				3A045A09272E654300927FEB /* Privacy Redirect for Safari (iOS).entitlements */,
+				3A045A09272E654300927FEB /* Privacy Redirect (iOS).entitlements */,
 				3A7218B6270A5BB8000A271D /* Assets.xcassets */,
 				3A7218B7270A5BB8000A271D /* Info.plist */,
 			);
@@ -169,7 +169,7 @@
 			children = (
 				3A7218C3270A5BB8000A271D /* Resources */,
 				3A7218C1270A5BB8000A271D /* SafariWebExtensionHandler.swift */,
-				3A045A0A272E655600927FEB /* Privacy Redirect for Safari Extension (iOS).entitlements */,
+				3A045A0A272E655600927FEB /* Privacy Redirect Extension (iOS).entitlements */,
 				3A7218D4270A5BB8000A271D /* Info.plist */,
 			);
 			path = "iOS (Extension)";
@@ -200,7 +200,7 @@
 				3A757AB62681136F00EE7CFF /* ContentView.swift */,
 				3A3436392685059C00AD52A1 /* InstancesViewDetails.swift */,
 				3A00D89426811E490021E0B2 /* AppState.swift */,
-				3A9ADC9E2673E3210051292A /* Privacy_Redirect_for_Safari.entitlements */,
+				3A9ADC9E2673E3210051292A /* Privacy_Redirect.entitlements */,
 				3A9ADCA62673E3210051292A /* Assets.xcassets */,
 				3A9ADCA82673E3210051292A /* Info.plist */,
 			);
@@ -213,7 +213,7 @@
 				3A7954142718B0E80074E832 /* Resources */,
 				3A9ADCB52673E3220051292A /* SafariWebExtensionHandler.swift */,
 				3A9ADCB72673E3220051292A /* Info.plist */,
-				3A9ADCB82673E3220051292A /* Privacy_Redirect_for_Safari_Extension.entitlements */,
+				3A9ADCB82673E3220051292A /* Privacy_Redirect_Extension.entitlements */,
 			);
 			path = "macOS (Extension)";
 			sourceTree = "<group>";
@@ -235,10 +235,10 @@
 		3A9ADC9C2673E3210051292A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A9ADC9B2673E3210051292A /* Privacy Redirect for Safari.app */,
-				3A9ADCAD2673E3220051292A /* Privacy Redirect for Safari Extension.appex */,
-				3A7218A0270A5BB7000A271D /* Privacy Redirect for Safari.app */,
-				3A7218BC270A5BB8000A271D /* Privacy Redirect for Safari Extension.appex */,
+				3A9ADC9B2673E3210051292A /* Privacy Redirect.app */,
+				3A9ADCAD2673E3220051292A /* Privacy Redirect Extension.appex */,
+				3A7218A0270A5BB7000A271D /* Privacy Redirect.app */,
+				3A7218BC270A5BB8000A271D /* Privacy Redirect Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,9 +291,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3A72189F270A5BB6000A271D /* Privacy Redirect for Safari (iOS) */ = {
+		3A72189F270A5BB6000A271D /* Privacy Redirect (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A7218DC270A5BB8000A271D /* Build configuration list for PBXNativeTarget "Privacy Redirect for Safari (iOS)" */;
+			buildConfigurationList = 3A7218DC270A5BB8000A271D /* Build configuration list for PBXNativeTarget "Privacy Redirect (iOS)" */;
 			buildPhases = (
 				3A72189C270A5BB6000A271D /* Sources */,
 				3A72189D270A5BB6000A271D /* Frameworks */,
@@ -305,14 +305,14 @@
 			dependencies = (
 				3A7218BF270A5BB8000A271D /* PBXTargetDependency */,
 			);
-			name = "Privacy Redirect for Safari (iOS)";
-			productName = "Privacy Redirect for Safari (iOS)";
-			productReference = 3A7218A0270A5BB7000A271D /* Privacy Redirect for Safari.app */;
+			name = "Privacy Redirect (iOS)";
+			productName = "Privacy Redirect (iOS)";
+			productReference = 3A7218A0270A5BB7000A271D /* Privacy Redirect.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3A7218BB270A5BB8000A271D /* Privacy Redirect for Safari Extension (iOS) */ = {
+		3A7218BB270A5BB8000A271D /* Privacy Redirect Extension (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A7218DB270A5BB8000A271D /* Build configuration list for PBXNativeTarget "Privacy Redirect for Safari Extension (iOS)" */;
+			buildConfigurationList = 3A7218DB270A5BB8000A271D /* Build configuration list for PBXNativeTarget "Privacy Redirect Extension (iOS)" */;
 			buildPhases = (
 				3A7218B8270A5BB8000A271D /* Sources */,
 				3A7218B9270A5BB8000A271D /* Frameworks */,
@@ -322,14 +322,14 @@
 			);
 			dependencies = (
 			);
-			name = "Privacy Redirect for Safari Extension (iOS)";
-			productName = "Privacy Redirect for Safari (iOS) Extension";
-			productReference = 3A7218BC270A5BB8000A271D /* Privacy Redirect for Safari Extension.appex */;
+			name = "Privacy Redirect Extension (iOS)";
+			productName = "Privacy Redirect (iOS) Extension";
+			productReference = 3A7218BC270A5BB8000A271D /* Privacy Redirect Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		3A9ADC9A2673E3210051292A /* Privacy Redirect for Safari (macOS) */ = {
+		3A9ADC9A2673E3210051292A /* Privacy Redirect (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A9ADCBF2673E3220051292A /* Build configuration list for PBXNativeTarget "Privacy Redirect for Safari (macOS)" */;
+			buildConfigurationList = 3A9ADCBF2673E3220051292A /* Build configuration list for PBXNativeTarget "Privacy Redirect (macOS)" */;
 			buildPhases = (
 				3A9ADC972673E3210051292A /* Sources */,
 				3A9ADC982673E3210051292A /* Frameworks */,
@@ -341,14 +341,14 @@
 			dependencies = (
 				3A9ADCB02673E3220051292A /* PBXTargetDependency */,
 			);
-			name = "Privacy Redirect for Safari (macOS)";
-			productName = "Privacy Redirect for Safari";
-			productReference = 3A9ADC9B2673E3210051292A /* Privacy Redirect for Safari.app */;
+			name = "Privacy Redirect (macOS)";
+			productName = "Privacy Redirect";
+			productReference = 3A9ADC9B2673E3210051292A /* Privacy Redirect.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3A9ADCAC2673E3220051292A /* Privacy Redirect for Safari Extension (macOS) */ = {
+		3A9ADCAC2673E3220051292A /* Privacy Redirect Extension (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A9ADCBB2673E3220051292A /* Build configuration list for PBXNativeTarget "Privacy Redirect for Safari Extension (macOS)" */;
+			buildConfigurationList = 3A9ADCBB2673E3220051292A /* Build configuration list for PBXNativeTarget "Privacy Redirect Extension (macOS)" */;
 			buildPhases = (
 				3A9ADCA92673E3220051292A /* Sources */,
 				3A9ADCAA2673E3220051292A /* Frameworks */,
@@ -358,9 +358,9 @@
 			);
 			dependencies = (
 			);
-			name = "Privacy Redirect for Safari Extension (macOS)";
-			productName = "Privacy Redirect for Safari Extension";
-			productReference = 3A9ADCAD2673E3220051292A /* Privacy Redirect for Safari Extension.appex */;
+			name = "Privacy Redirect Extension (macOS)";
+			productName = "Privacy Redirect Extension";
+			productReference = 3A9ADCAD2673E3220051292A /* Privacy Redirect Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -386,7 +386,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3A9ADC962673E3210051292A /* Build configuration list for PBXProject "Privacy Redirect for Safari" */;
+			buildConfigurationList = 3A9ADC962673E3210051292A /* Build configuration list for PBXProject "Privacy Redirect" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -399,10 +399,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A9ADC9A2673E3210051292A /* Privacy Redirect for Safari (macOS) */,
-				3A72189F270A5BB6000A271D /* Privacy Redirect for Safari (iOS) */,
-				3A9ADCAC2673E3220051292A /* Privacy Redirect for Safari Extension (macOS) */,
-				3A7218BB270A5BB8000A271D /* Privacy Redirect for Safari Extension (iOS) */,
+				3A9ADC9A2673E3210051292A /* Privacy Redirect (macOS) */,
+				3A72189F270A5BB6000A271D /* Privacy Redirect (iOS) */,
+				3A9ADCAC2673E3220051292A /* Privacy Redirect Extension (macOS) */,
+				3A7218BB270A5BB8000A271D /* Privacy Redirect Extension (iOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -499,12 +499,12 @@
 /* Begin PBXTargetDependency section */
 		3A7218BF270A5BB8000A271D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A7218BB270A5BB8000A271D /* Privacy Redirect for Safari Extension (iOS) */;
+			target = 3A7218BB270A5BB8000A271D /* Privacy Redirect Extension (iOS) */;
 			targetProxy = 3A7218BE270A5BB8000A271D /* PBXContainerItemProxy */;
 		};
 		3A9ADCB02673E3220051292A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A9ADCAC2673E3220051292A /* Privacy Redirect for Safari Extension (macOS) */;
+			target = 3A9ADCAC2673E3220051292A /* Privacy Redirect Extension (macOS) */;
 			targetProxy = 3A9ADCAF2673E3220051292A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -517,13 +517,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Privacy Redirect for Safari (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Privacy Redirect (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5.3.0;
+				CURRENT_PROJECT_VERSION = 1.6.0.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Privacy Redirect for Safari";
+				INFOPLIST_KEY_CFBundleDisplayName = "Privacy Redirect";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -534,7 +534,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.6.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -542,7 +542,7 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari";
-				PRODUCT_NAME = "Privacy Redirect for Safari";
+				PRODUCT_NAME = "Privacy Redirect";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -557,13 +557,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Privacy Redirect for Safari (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Privacy Redirect (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5.3.0;
+				CURRENT_PROJECT_VERSION = 1.6.0.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Privacy Redirect for Safari";
+				INFOPLIST_KEY_CFBundleDisplayName = "Privacy Redirect";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -574,7 +574,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.6.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -582,7 +582,7 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari";
-				PRODUCT_NAME = "Privacy Redirect for Safari";
+				PRODUCT_NAME = "Privacy Redirect";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -595,13 +595,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = "iOS (Extension)/Privacy Redirect for Safari Extension (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "iOS (Extension)/Privacy Redirect Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5.3.0;
+				CURRENT_PROJECT_VERSION = 1.6.0.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Privacy Redirect for Safari Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Privacy Redirect Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -609,13 +609,13 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.6.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari.Extension";
-				PRODUCT_NAME = "Privacy Redirect for Safari Extension";
+				PRODUCT_NAME = "Privacy Redirect Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -628,13 +628,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = "iOS (Extension)/Privacy Redirect for Safari Extension (iOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "iOS (Extension)/Privacy Redirect Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5.3.0;
+				CURRENT_PROJECT_VERSION = 1.6.0.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Privacy Redirect for Safari Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Privacy Redirect Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -642,13 +642,13 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.6.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari.Extension";
-				PRODUCT_NAME = "Privacy Redirect for Safari Extension";
+				PRODUCT_NAME = "Privacy Redirect Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -776,10 +776,10 @@
 		3A9ADCBC2673E3220051292A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Privacy_Redirect_for_Safari_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Privacy_Redirect_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.4.0;
+				CURRENT_PROJECT_VERSION = 1.7.0.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
@@ -789,9 +789,9 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.6.4;
+				MARKETING_VERSION = 1.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari.Extension";
-				PRODUCT_NAME = "Privacy Redirect for Safari Extension";
+				PRODUCT_NAME = "Privacy Redirect Extension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -800,10 +800,10 @@
 		3A9ADCBD2673E3220051292A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Privacy_Redirect_for_Safari_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Privacy_Redirect_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.4.0;
+				CURRENT_PROJECT_VERSION = 1.7.0.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
@@ -813,9 +813,9 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.6.4;
+				MARKETING_VERSION = 1.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari.Extension";
-				PRODUCT_NAME = "Privacy Redirect for Safari Extension";
+				PRODUCT_NAME = "Privacy Redirect Extension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -827,11 +827,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Privacy_Redirect_for_Safari.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Privacy_Redirect.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.6.4.0;
+				CURRENT_PROJECT_VERSION = 1.7.0.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (App)/Info.plist";
@@ -840,9 +840,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.6.4;
+				MARKETING_VERSION = 1.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari";
-				PRODUCT_NAME = "Privacy Redirect for Safari";
+				PRODUCT_NAME = "Privacy Redirect";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -853,11 +853,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Privacy_Redirect_for_Safari.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Privacy_Redirect.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.6.4.0;
+				CURRENT_PROJECT_VERSION = 1.7.0.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (App)/Info.plist";
@@ -866,9 +866,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.6.4;
+				MARKETING_VERSION = 1.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari";
-				PRODUCT_NAME = "Privacy Redirect for Safari";
+				PRODUCT_NAME = "Privacy Redirect";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -876,7 +876,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A7218DB270A5BB8000A271D /* Build configuration list for PBXNativeTarget "Privacy Redirect for Safari Extension (iOS)" */ = {
+		3A7218DB270A5BB8000A271D /* Build configuration list for PBXNativeTarget "Privacy Redirect Extension (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A7218D9270A5BB8000A271D /* Debug */,
@@ -885,7 +885,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A7218DC270A5BB8000A271D /* Build configuration list for PBXNativeTarget "Privacy Redirect for Safari (iOS)" */ = {
+		3A7218DC270A5BB8000A271D /* Build configuration list for PBXNativeTarget "Privacy Redirect (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A7218D6270A5BB8000A271D /* Debug */,
@@ -894,7 +894,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A9ADC962673E3210051292A /* Build configuration list for PBXProject "Privacy Redirect for Safari" */ = {
+		3A9ADC962673E3210051292A /* Build configuration list for PBXProject "Privacy Redirect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A9ADCB92673E3220051292A /* Debug */,
@@ -903,7 +903,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A9ADCBB2673E3220051292A /* Build configuration list for PBXNativeTarget "Privacy Redirect for Safari Extension (macOS)" */ = {
+		3A9ADCBB2673E3220051292A /* Build configuration list for PBXNativeTarget "Privacy Redirect Extension (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A9ADCBC2673E3220051292A /* Debug */,
@@ -912,7 +912,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A9ADCBF2673E3220051292A /* Build configuration list for PBXNativeTarget "Privacy Redirect for Safari (macOS)" */ = {
+		3A9ADCBF2673E3220051292A /* Build configuration list for PBXNativeTarget "Privacy Redirect (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A9ADCC02673E3220051292A /* Debug */,

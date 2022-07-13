@@ -1,6 +1,6 @@
 //
 //  AppState.swift
-//  Privacy Redirect for Safari
+//  Privacy Redirect
 //
 //  Created by FIGBERT on 6/21/21.
 //
