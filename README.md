@@ -11,7 +11,7 @@ and JavaScript for macOS and iOS.
 
 [![](./assets/appstore.svg)][App Store]
 
-Requires macOS >=11 or iOS >=15.
+Requires macOS ≥11 or iOS ≥15.
 
 ## Screenshots
 
