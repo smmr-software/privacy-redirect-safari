@@ -28,7 +28,7 @@ struct InstancesView: View {
     @AppStorage("searchEngineInstance") var searchEngineInstance = "duckduckgo.com/"
     @AppStorage("scribeInstance") var scribeInstance = "scribe.rip"
     @AppStorage("proxiTokInstance") var proxiTokInstance = "proxitok.herokuapp.com"
-    @AppStorage("rimgoInstance") var rimgoInstance = ""
+    @AppStorage("rimgoInstance") var rimgoInstance = "i.bcow.xyz"
     
     let instances = Instances()
     
