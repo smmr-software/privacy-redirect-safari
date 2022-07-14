@@ -23,7 +23,7 @@ struct InstancesView: View {
     @AppStorage("redditInstance") var redditInstance = "teddit.net"
     @AppStorage("invidiousInstance") var invidiousInstance = "invidious.kavin.rocks"
     @AppStorage("bibliogramInstance") var bibliogramInstance = "bibliogram.art"
-    @AppStorage("simplyTranslateInstance") var simplyTranslateInstance = "translate.metalune.xyz"
+    @AppStorage("simplyTranslateInstance") var simplyTranslateInstance = "simplytranslate.org"
     @AppStorage("osmInstance") var osmInstance = "openstreetmap.org"
     @AppStorage("searchEngineInstance") var searchEngineInstance = "duckduckgo.com/"
     @AppStorage("scribeInstance") var scribeInstance = "scribe.rip"

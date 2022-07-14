@@ -45,7 +45,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             let reddit = defaults?.string(forKey: "redditInstance") ?? "teddit.net"
             let invidious = defaults?.string(forKey: "invidiousInstance") ?? "invidious.kavin.rocks"
             let bibliogram = defaults?.string(forKey: "bibliogramInstance") ?? "bibliogram.art"
-            let simplyTranslate = defaults?.string(forKey: "simplyTranslateInstance") ?? "translate.metalune.xyz"
+            let simplyTranslate = defaults?.string(forKey: "simplyTranslateInstance") ?? "simplytranslate.org"
             let osm = defaults?.string(forKey: "osmInstance") ?? "openstreetmap.org"
             let searchEngine = defaults?.string(forKey: "searchEngineInstance") ?? "duckduckgo.com/"
             let scribe = defaults?.string(forKey: "scribeInstance") ?? "scribe.rip"
