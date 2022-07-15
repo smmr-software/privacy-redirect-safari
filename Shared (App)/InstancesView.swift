@@ -2,7 +2,7 @@
 //  InstancesView.swift
 //  Privacy Redirect for Safari
 //
-//  Created by FIGBERT on 6/24/21.
+//  Created by figbert on 15/7/22.
 //
 
 import SwiftUI
@@ -33,7 +33,7 @@ struct InstancesView: View {
     let instances = Instances()
     
     var body: some View {
-        ScrollView {
+        InstanceViewContainer {
             InstanceSection(
                 name: "Twitter",
                 customInstance: $useCustomNitterInstance,
@@ -64,6 +64,7 @@ struct InstancesView: View {
                 customInstance: $useCustomOsmInstance,
                 instance: $osmInstance,
                 instances: instances.maps)
+            #if os(iOS)
             VStack(alignment: .leading) {
                 Text("Google Search")
                     .font(.headline)
@@ -84,6 +85,23 @@ struct InstancesView: View {
                         .labelsHidden()
                 }
             }
+            #else
+            Section(header: Text("Google Search").bold(), content: {
+                HStack {
+                    if !useCustomSearchEngineInstance {
+                        Picker(selection: $searchEngineInstance,
+                               label: Text("Instance"), content: {
+                                ForEach(instances.searchEngines, id: \.id) { instance in
+                                    Text("\(instance.link)").tag(instance.url)
+                                }
+                        })
+                    } else {
+                        TextField("Search Engine Instance (including path)", text: $searchEngineInstance)
+                    }
+                    Toggle("Custom", isOn: $useCustomSearchEngineInstance)
+                }
+            })
+            #endif
             InstanceSection(
                 name: "Medium",
                 customInstance: $useCustomScribeInstance,
@@ -100,40 +118,8 @@ struct InstancesView: View {
                 instance: $rimgoInstance,
                 instances: instances.rimgo)
         }
-        .frame(maxWidth: 600)
     }
 }
-
-struct InstanceSection: View {
-    public let name: String
-    public let customInstance: Binding<Bool>
-    public let instance: Binding<String>
-    public let instances: Array<String>
-
-    var body: some View {
-        VStack(alignment: .leading) {
-                Text(name)
-                    .font(.headline)
-                HStack {
-                    if !customInstance.wrappedValue {
-                        Picker(selection: instance,
-                               label: Text("Instance"), content: {
-                                ForEach(instances, id: \.self) { instance in
-                                    Text("\(instance)").tag(instance)
-                                }
-                        })
-                            .labelsHidden()
-                    } else {
-                        TextField("\(name) Instance", text: instance)
-                    }
-                    Spacer()
-                    Toggle("Custom", isOn: customInstance)
-                        .labelsHidden()
-                }
-            }
-    }
-}
-
 
 struct SearchEngineInstance {
     public let link: String
@@ -147,7 +133,6 @@ struct SearchEngineInstance {
         self.url = link + path
     }
 }
-
 
 struct InstancesView_Previews: PreviewProvider {
     static var previews: some View {
