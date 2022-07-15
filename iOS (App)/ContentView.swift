@@ -19,7 +19,7 @@ struct ContentView: View {
     @AppStorage("disableProxiTok") var disableProxiTok = false
     @AppStorage("disableRimgo") var disableRimgo = false
     @State private var viewingSettings = false
-    
+
     var body: some View {
         let redirectNitter = Binding<Bool>(
             get: { !self.disableNitter },
@@ -61,7 +61,7 @@ struct ContentView: View {
             get: { !self.disableRimgo },
             set: { value in self.disableRimgo = !value }
         )
-        
+
         return ScrollView {
             VStack {
                 Spacer()

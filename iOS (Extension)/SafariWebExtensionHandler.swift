@@ -19,7 +19,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 
         let defaults = UserDefaults(suiteName: "group.Privacy-Redirect-for-Safari")
         let response = NSExtensionItem()
-        
+
         let messageDict = message as? [String: String]
         if messageDict?["message"] == "redirectSettings" {
             response.userInfo = [
@@ -65,5 +65,5 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 
         context.completeRequest(returningItems: [response], completionHandler: nil)
     }
-    
+
 }

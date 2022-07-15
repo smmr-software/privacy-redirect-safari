@@ -20,7 +20,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         let defaults = UserDefaults(suiteName: "\(Bundle.main.object(forInfoDictionaryKey: "TeamIdentifierPrefix") ?? "9WHCFZ6J4N.")Privacy-Redirect-for-Safari")
         let app = defaults?.url(forKey: "location")
         let response = NSExtensionItem()
-        
+
         let messageDict = message as? [String: String]
         if messageDict?["message"] == "Open Sesame" && app != nil {
             NSWorkspace.shared.openApplication(at: app!, configuration: NSWorkspace.OpenConfiguration())
@@ -69,5 +69,5 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 
         context.completeRequest(returningItems: [response], completionHandler: nil)
     }
-    
+
 }

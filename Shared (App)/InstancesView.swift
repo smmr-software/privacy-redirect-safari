@@ -18,7 +18,7 @@ struct InstancesView: View {
     @AppStorage("useCustomScribeInstance") var useCustomScribeInstance = false
     @AppStorage("useCustomProxiTokInstance") var useCustomProxiTokInstance = false
     @AppStorage("useCustomRimgoInstance") var useCustomRimgoInstance = false
-    
+
     @AppStorage("nitterInstance") var nitterInstance = "nitter.net"
     @AppStorage("redditInstance") var redditInstance = "teddit.net"
     @AppStorage("invidiousInstance") var invidiousInstance = "invidious.kavin.rocks"
@@ -29,9 +29,9 @@ struct InstancesView: View {
     @AppStorage("scribeInstance") var scribeInstance = "scribe.rip"
     @AppStorage("proxiTokInstance") var proxiTokInstance = "proxitok.herokuapp.com"
     @AppStorage("rimgoInstance") var rimgoInstance = "i.bcow.xyz"
-    
+
     let instances = Instances()
-    
+
     var body: some View {
         InstanceViewContainer {
             InstanceSection(
@@ -126,7 +126,7 @@ struct SearchEngineInstance {
     public let path: String
     public let url: String
     public let id = UUID()
-    
+
     init(_ link: String, path: String = "/") {
         self.link = link
         self.path = path

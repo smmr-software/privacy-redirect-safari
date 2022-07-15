@@ -22,7 +22,7 @@ struct ContentView: View {
     @AppStorage("disableScribe") var disableScribe = false
     @AppStorage("disableProxiTok") var disableProxiTok = false
     @AppStorage("disableRimgo") var disableRimgo = false
-    
+
     var body: some View {
         let redirectNitter = Binding<Bool>(
             get: { !self.disableNitter },
@@ -64,7 +64,7 @@ struct ContentView: View {
             get: { !self.disableRimgo },
             set: { value in self.disableRimgo = !value }
         )
-        
+
         return VStack {
             Spacer()
             Image(nsImage: NSImage(named: "AppIcon")!)
@@ -99,11 +99,11 @@ struct ContentView: View {
             Button("Configure Privacy Redirect Instances") {
                 let info = ProcessInfo()
                 var command = "showPreferencesWindow"
-                
+
                 if info.isOperatingSystemAtLeast(OperatingSystemVersion(majorVersion: 13,minorVersion: 0,patchVersion: 0)) {
                     command = "showSettingsWindow"
                 }
-                
+
                 NSApp.sendAction(Selector(("\(command):")), to: nil, from: nil)
             }
             Button("Open Safari Extension Preferences") {

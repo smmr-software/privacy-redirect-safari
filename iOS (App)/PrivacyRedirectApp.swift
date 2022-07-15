@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct PrivacyRedirectApp: App {
     let defaults = UserDefaults(suiteName: "group.Privacy-Redirect-for-Safari")
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()

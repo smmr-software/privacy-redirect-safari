@@ -39,7 +39,7 @@ struct PrivacyRedirectApp: App {
             defaults?.set(Bundle.main.bundleURL, forKey: "location")
         }
     }
-    
+
     @SceneBuilder var body: some Scene {
         WindowGroup {
             ContentView()
