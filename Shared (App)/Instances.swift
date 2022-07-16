@@ -67,3 +67,16 @@ struct Instances {
         "rimgo.bus-hit.me",
     ]
 }
+
+struct SearchEngineInstance {
+    public let link: String
+    public let path: String
+    public let url: String
+    public let id = UUID()
+
+    init(_ link: String, path: String = "/") {
+        self.link = link
+        self.path = path
+        self.url = link + path
+    }
+}

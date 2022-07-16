@@ -121,19 +121,6 @@ struct InstancesView: View {
     }
 }
 
-struct SearchEngineInstance {
-    public let link: String
-    public let path: String
-    public let url: String
-    public let id = UUID()
-
-    init(_ link: String, path: String = "/") {
-        self.link = link
-        self.path = path
-        self.url = link + path
-    }
-}
-
 struct InstancesView_Previews: PreviewProvider {
     static var previews: some View {
         InstancesView()
