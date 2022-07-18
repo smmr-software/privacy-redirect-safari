@@ -519,7 +519,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Privacy Redirect (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.0.0;
+				CURRENT_PROJECT_VERSION = 1.6.1.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -534,7 +534,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.0;
+				MARKETING_VERSION = 1.6.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -559,7 +559,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Privacy Redirect (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.0.0;
+				CURRENT_PROJECT_VERSION = 1.6.1.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -574,7 +574,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.0;
+				MARKETING_VERSION = 1.6.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -597,7 +597,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = "iOS (Extension)/Privacy Redirect Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.0.0;
+				CURRENT_PROJECT_VERSION = 1.6.1.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
@@ -609,7 +609,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.0;
+				MARKETING_VERSION = 1.6.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -630,7 +630,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = "iOS (Extension)/Privacy Redirect Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.0.0;
+				CURRENT_PROJECT_VERSION = 1.6.1.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
@@ -642,7 +642,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.0;
+				MARKETING_VERSION = 1.6.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -779,7 +779,7 @@
 				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Privacy_Redirect_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7.0.0;
+				CURRENT_PROJECT_VERSION = 1.7.1.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
@@ -789,7 +789,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari.Extension";
 				PRODUCT_NAME = "Privacy Redirect Extension";
 				SKIP_INSTALL = YES;
@@ -803,7 +803,7 @@
 				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Privacy_Redirect_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7.0.0;
+				CURRENT_PROJECT_VERSION = 1.7.1.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
@@ -813,7 +813,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari.Extension";
 				PRODUCT_NAME = "Privacy Redirect Extension";
 				SKIP_INSTALL = YES;
@@ -831,7 +831,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.7.0.0;
+				CURRENT_PROJECT_VERSION = 1.7.1.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (App)/Info.plist";
@@ -840,7 +840,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari";
 				PRODUCT_NAME = "Privacy Redirect";
 				SWIFT_VERSION = 5.0;
@@ -857,7 +857,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.7.0.0;
+				CURRENT_PROJECT_VERSION = 1.7.1.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (App)/Info.plist";
@@ -866,7 +866,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari";
 				PRODUCT_NAME = "Privacy Redirect";
 				SWIFT_VERSION = 5.0;

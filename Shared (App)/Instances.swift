@@ -43,7 +43,7 @@ struct Instances {
     ]
     public let searchEngines = [
         SearchEngineInstance("duckduckgo.com"),
-        SearchEngineInstance("startpage.com", path: "/search/"),
+        SearchEngineInstance("startpage.com", path: "/sp/search"),
         SearchEngineInstance("www.ecosia.org", path: "/search"),
         SearchEngineInstance("www.qwant.com"),
         SearchEngineInstance("www.mojeek.com", path: "/search"),
