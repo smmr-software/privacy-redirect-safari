@@ -96,7 +96,7 @@ struct ContentView: View {
                 Toggle("Imgur Redirects", isOn: redirectRimgo)
             }
             .padding(.vertical)
-            Button("Configure Privacy Redirect Instances") {
+            Button("Instructions and Instance Settings") {
                 let info = ProcessInfo()
                 var command = "showPreferencesWindow"
 

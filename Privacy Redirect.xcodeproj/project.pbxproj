@@ -34,6 +34,8 @@
 		3A9ADCB62673E3220051292A /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9ADCB52673E3220051292A /* SafariWebExtensionHandler.swift */; };
 		3A9D2FE228816F0C00707AAE /* InstancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9D2FE128816F0C00707AAE /* InstancesView.swift */; };
 		3A9D2FE328816F0C00707AAE /* InstancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9D2FE128816F0C00707AAE /* InstancesView.swift */; };
+		3AF6421C288B12A400B0CA49 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6421B288B12A400B0CA49 /* InstructionsView.swift */; };
+		3AF6421D288B12A400B0CA49 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6421B288B12A400B0CA49 /* InstructionsView.swift */; };
 		3AF724EF271DE5600032D351 /* InstancesViewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF724EE271DE5600032D351 /* InstancesViewDetails.swift */; };
 		3AFB01E626852253005BFDBA /* Dictionary+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB01E526852253005BFDBA /* Dictionary+RawRepresentable.swift */; };
 		3AFB01E826852273005BFDBA /* Array+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB01E726852273005BFDBA /* Array+RawRepresentable.swift */; };
@@ -113,6 +115,7 @@
 		3A9ADCB72673E3220051292A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A9ADCB82673E3220051292A /* Privacy_Redirect_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Privacy_Redirect_Extension.entitlements; sourceTree = "<group>"; };
 		3A9D2FE128816F0C00707AAE /* InstancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancesView.swift; sourceTree = "<group>"; };
+		3AF6421B288B12A400B0CA49 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
 		3AF724EE271DE5600032D351 /* InstancesViewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancesViewDetails.swift; sourceTree = "<group>"; };
 		3AFB01E526852253005BFDBA /* Dictionary+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+RawRepresentable.swift"; sourceTree = "<group>"; };
 		3AFB01E726852273005BFDBA /* Array+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RawRepresentable.swift"; sourceTree = "<group>"; };
@@ -249,6 +252,7 @@
 				3A42C41126AD1E07005BC5F6 /* SettingsView.swift */,
 				3A4CCAFA27D27E6300F8AFBF /* Instances.swift */,
 				3A9D2FE128816F0C00707AAE /* InstancesView.swift */,
+				3AF6421B288B12A400B0CA49 /* InstructionsView.swift */,
 				3AFB01E42685222A005BFDBA /* RawRepresentable */,
 			);
 			path = "Shared (App)";
@@ -458,6 +462,7 @@
 				3AF724EF271DE5600032D351 /* InstancesViewDetails.swift in Sources */,
 				3A18F4C1271A154A0014F161 /* PrivacyRedirectApp.swift in Sources */,
 				3A4CCAFC27D27E6300F8AFBF /* Instances.swift in Sources */,
+				3AF6421D288B12A400B0CA49 /* InstructionsView.swift in Sources */,
 				3A18F4BE271A13830014F161 /* Dictionary+RawRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A42C41226AD1E07005BC5F6 /* SettingsView.swift in Sources */,
+				3AF6421C288B12A400B0CA49 /* InstructionsView.swift in Sources */,
 				3AFB01E626852253005BFDBA /* Dictionary+RawRepresentable.swift in Sources */,
 				3A4CCAFB27D27E6300F8AFBF /* Instances.swift in Sources */,
 				3A9D2FE228816F0C00707AAE /* InstancesView.swift in Sources */,
@@ -519,7 +525,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Privacy Redirect (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.1.0;
+				CURRENT_PROJECT_VERSION = 1.6.2.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -534,7 +540,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 1.6.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -559,7 +565,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = "iOS (App)/Privacy Redirect (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.1.0;
+				CURRENT_PROJECT_VERSION = 1.6.2.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -574,7 +580,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 1.6.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -597,7 +603,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = "iOS (Extension)/Privacy Redirect Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.1.0;
+				CURRENT_PROJECT_VERSION = 1.6.2.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
@@ -609,7 +615,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 1.6.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -630,7 +636,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = "iOS (Extension)/Privacy Redirect Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.6.1.0;
+				CURRENT_PROJECT_VERSION = 1.6.2.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
@@ -642,7 +648,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 1.6.2;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -779,7 +785,7 @@
 				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Privacy_Redirect_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7.1.0;
+				CURRENT_PROJECT_VERSION = 1.7.2.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
@@ -789,7 +795,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari.Extension";
 				PRODUCT_NAME = "Privacy Redirect Extension";
 				SKIP_INSTALL = YES;
@@ -803,7 +809,7 @@
 				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Privacy_Redirect_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7.1.0;
+				CURRENT_PROJECT_VERSION = 1.7.2.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
@@ -813,7 +819,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari.Extension";
 				PRODUCT_NAME = "Privacy Redirect Extension";
 				SKIP_INSTALL = YES;
@@ -831,7 +837,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.7.1.0;
+				CURRENT_PROJECT_VERSION = 1.7.2.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (App)/Info.plist";
@@ -840,7 +846,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari";
 				PRODUCT_NAME = "Privacy Redirect";
 				SWIFT_VERSION = 5.0;
@@ -857,7 +863,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.7.1.0;
+				CURRENT_PROJECT_VERSION = 1.7.2.0;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (App)/Info.plist";
@@ -866,7 +872,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smmr-software.Privacy-Redirect-for-Safari";
 				PRODUCT_NAME = "Privacy Redirect";
 				SWIFT_VERSION = 5.0;

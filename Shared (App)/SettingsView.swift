@@ -16,6 +16,12 @@ struct SettingsView: View {
                     Text("Instances")
                     Image(systemName: "server.rack")
                 }
+            InstructionsView()
+                .padding()
+                .tabItem {
+                    Text("Instructions")
+                    Image(systemName: "checkmark.square")
+                }
             VStack {
                 Text("Privacy Redirect - v\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String)")
                 Link(destination: URL(string: "https://smmr.software/")!) { Text("by SMMR Software") }

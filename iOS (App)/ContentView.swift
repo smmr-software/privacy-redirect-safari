@@ -92,7 +92,7 @@ struct ContentView: View {
                     .frame(maxWidth: 500)
                     .padding()
                 Spacer()
-                Button("Configure Privacy Redirect Instances") {
+                Button("Instructions and Instance Settings") {
                     self.viewingSettings = true
                 }
                 Spacer()
