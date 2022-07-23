@@ -90,7 +90,7 @@ struct ContentView: View {
                 Toggle("Instagram Redirects", isOn: redirectBibliogram)
                 Toggle("Google Translate Redirects", isOn: redirectSimplyTranslate)
                 Toggle("Google Maps Redirects", isOn: redirectOsm)
-                Toggle("Google Search Redirects", isOn: redirectSearchEngine)
+                Toggle("Search Redirects", isOn: redirectSearchEngine)
                 Toggle("Medium Redirects", isOn: redirectScribe)
                 Toggle("TikTok Redirects", isOn: redirectProxiTok)
                 Toggle("Imgur Redirects", isOn: redirectRimgo)

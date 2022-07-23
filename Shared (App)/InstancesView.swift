@@ -66,7 +66,7 @@ struct InstancesView: View {
                 instances: instances.maps)
             #if os(iOS)
             VStack(alignment: .leading) {
-                Text("Google Search")
+                Text("Search")
                     .font(.headline)
                 HStack {
                     if !useCustomSearchEngineInstance {
@@ -86,7 +86,7 @@ struct InstancesView: View {
                 }
             }
             #else
-            Section(header: Text("Google Search").bold(), content: {
+            Section(header: Text("Search").bold(), content: {
                 HStack {
                     if !useCustomSearchEngineInstance {
                         Picker(selection: $searchEngineInstance,
