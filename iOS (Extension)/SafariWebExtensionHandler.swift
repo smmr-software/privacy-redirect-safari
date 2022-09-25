@@ -34,6 +34,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "scribe": !(defaults?.bool(forKey: "disableScribe") ?? false),
                     "proxiTok": !(defaults?.bool(forKey: "disableProxiTok") ?? false),
                     "rimgo": !(defaults?.bool(forKey: "disableRimgo") ?? false),
+                    "quetre": !(defaults?.bool(forKey: "disableQuetre") ?? false),
                 ]
             ]
         } else if messageDict?["message"] == "instanceSettings" {
@@ -47,6 +48,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             let scribe = defaults?.string(forKey: "scribeInstance") ?? "scribe.rip"
             let proxiTok = defaults?.string(forKey: "proxiTokInstance") ?? "proxitok.herokuapp.com"
             let rimgo = defaults?.string(forKey: "rimgoInstance") ?? "i.bcow.xyz"
+            let quetre = defaults?.string(forKey: "quetreInstance") ?? "quetre.iket.me"
             response.userInfo = [
                 SFExtensionMessageKey: [
                     "nitter": nitter,
@@ -59,6 +61,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "scribe": scribe,
                     "proxiTok": proxiTok,
                     "rimgo": rimgo,
+                    "quetre": quetre,
                 ]
             ]
         }

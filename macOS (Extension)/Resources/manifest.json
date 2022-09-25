@@ -1450,6 +1450,14 @@
       ],
       "js": ["assets/scripts/imgur.js"],
       "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://www.quora.com/*",
+        "*://quora.com/*"
+      ],
+      "js": ["assets/scripts/quora.js"],
+      "run_at": "document_start"
     }
   ]
 }

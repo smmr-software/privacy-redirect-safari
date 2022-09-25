@@ -18,6 +18,7 @@ struct ContentView: View {
     @AppStorage("disableScribe") var disableScribe = false
     @AppStorage("disableProxiTok") var disableProxiTok = false
     @AppStorage("disableRimgo") var disableRimgo = false
+    @AppStorage("disableQuetre") var disableQuetre = false
     @State private var viewingSettings = false
 
     var body: some View {
@@ -61,6 +62,10 @@ struct ContentView: View {
             get: { !self.disableRimgo },
             set: { value in self.disableRimgo = !value }
         )
+        let redirectQuetre = Binding<Bool>(
+            get: { !self.disableQuetre },
+            set: { value in self.disableQuetre = !value }
+        )
 
         return ScrollView {
             VStack {
@@ -78,16 +83,23 @@ struct ContentView: View {
                     .font(.subheadline)
                 Spacer()
                 VStack {
-                    Toggle("Twitter Redirects", isOn: redirectNitter)
-                    Toggle("Reddit Redirects", isOn: redirectReddit)
-                    Toggle("YouTube Redirects", isOn: redirectInvidious)
-                    Toggle("Instagram Redirects", isOn: redirectBibliogram)
-                    Toggle("Google Translate Redirects", isOn: redirectSimplyTranslate)
-                    Toggle("Google Maps Redirects", isOn: redirectOsm)
-                    Toggle("Search Redirects", isOn: redirectSearchEngine)
-                    Toggle("Medium Redirects", isOn: redirectScribe)
-                    Toggle("TikTok Redirects", isOn: redirectProxiTok)
-                    Toggle("Imgur Redirects", isOn: redirectRimgo)
+                    Group {
+                        Toggle("Twitter Redirects", isOn: redirectNitter)
+                        Toggle("Reddit Redirects", isOn: redirectReddit)
+                        Toggle("YouTube Redirects", isOn: redirectInvidious)
+                        Toggle("Instagram Redirects", isOn: redirectBibliogram)
+                    }
+                    Group {
+                        Toggle("Google Translate Redirects", isOn: redirectSimplyTranslate)
+                        Toggle("Google Maps Redirects", isOn: redirectOsm)
+                        Toggle("Search Redirects", isOn: redirectSearchEngine)
+                    }
+                    Group {
+                        Toggle("Medium Redirects", isOn: redirectScribe)
+                        Toggle("TikTok Redirects", isOn: redirectProxiTok)
+                        Toggle("Imgur Redirects", isOn: redirectRimgo)
+                        Toggle("Quora Redirects", isOn: redirectQuetre)
+                    }
                 }
                     .frame(maxWidth: 500)
                     .padding()

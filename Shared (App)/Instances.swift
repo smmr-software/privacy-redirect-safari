@@ -66,6 +66,11 @@ struct Instances {
         "img.riverside.rocks",
         "rimgo.bus-hit.me",
     ]
+    public let quetre = [
+        "quetre.iket.me",
+        "qr.vern.cc",
+        "quetre.pussthecat.org",
+    ]
 }
 
 struct SearchEngineInstance {
