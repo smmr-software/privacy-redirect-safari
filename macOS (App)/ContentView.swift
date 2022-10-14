@@ -23,6 +23,7 @@ struct ContentView: View {
     @AppStorage("disableProxiTok") var disableProxiTok = false
     @AppStorage("disableRimgo") var disableRimgo = false
     @AppStorage("disableQuetre") var disableQuetre = false
+    @AppStorage("disableLibremDB") var disableLibremDB = false
 
     var body: some View {
         let redirectNitter = Binding<Bool>(
@@ -69,6 +70,10 @@ struct ContentView: View {
             get: { !self.disableQuetre },
             set: { value in self.disableQuetre = !value }
         )
+        let redirectLibremDB = Binding<Bool>(
+            get: { !self.disableLibremDB },
+            set: { value in self.disableLibremDB = !value }
+        )
 
         return VStack {
             Spacer()
@@ -105,6 +110,7 @@ struct ContentView: View {
                     Toggle("TikTok Redirects", isOn: redirectProxiTok)
                     Toggle("Imgur Redirects", isOn: redirectRimgo)
                     Toggle("Quora Redirects", isOn: redirectQuetre)
+                    Toggle("IMDB Redirects", isOn: redirectLibremDB)
                 }
             }
             .padding(.vertical)

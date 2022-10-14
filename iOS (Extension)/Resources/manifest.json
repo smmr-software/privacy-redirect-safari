@@ -1457,6 +1457,14 @@
       ],
       "js": ["assets/scripts/quora.js"],
       "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://www.imdb.com/*",
+        "*://imdb.com/*"
+      ],
+      "js": ["assets/scripts/imdb.js"],
+      "run_at": "document_start"
     }
   ]
 }

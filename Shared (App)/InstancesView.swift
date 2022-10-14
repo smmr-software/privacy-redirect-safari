@@ -19,6 +19,7 @@ struct InstancesView: View {
     @AppStorage("useCustomProxiTokInstance") var useCustomProxiTokInstance = false
     @AppStorage("useCustomRimgoInstance") var useCustomRimgoInstance = false
     @AppStorage("useCustomQuetreInstance") var useCustomQuetreInstance = false
+    @AppStorage("useCustomLibremDBInstance") var useCustomLibremDBInstance = false
 
     @AppStorage("nitterInstance") var nitterInstance = "nitter.net"
     @AppStorage("redditInstance") var redditInstance = "teddit.net"
@@ -31,6 +32,7 @@ struct InstancesView: View {
     @AppStorage("proxiTokInstance") var proxiTokInstance = "proxitok.herokuapp.com"
     @AppStorage("rimgoInstance") var rimgoInstance = "i.bcow.xyz"
     @AppStorage("quetreInstance") var quetreInstance = "quetre.iket.me"
+    @AppStorage("libremDBInstance") var libremDBInstance = "libremdb.iket.me"
 
     let instances = Instances()
 
@@ -129,6 +131,11 @@ struct InstancesView: View {
                     customInstance: $useCustomQuetreInstance,
                     instance: $quetreInstance,
                     instances: instances.quetre)
+                InstanceSection(
+                    name: "LibremDB",
+                    customInstance: $useCustomLibremDBInstance,
+                    instance: $libremDBInstance,
+                    instances: instances.libremdb)
             }
         }
     }

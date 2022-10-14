@@ -71,6 +71,11 @@ struct Instances {
         "qr.vern.cc",
         "quetre.pussthecat.org",
     ]
+    public let libremdb = [
+        "libremdb.iket.me",
+        "ld.vern.cc",   
+        "libremdb.pussthecat.org",
+    ]
 }
 
 struct SearchEngineInstance {

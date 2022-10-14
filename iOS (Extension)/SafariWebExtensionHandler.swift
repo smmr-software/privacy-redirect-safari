@@ -35,6 +35,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "proxiTok": !(defaults?.bool(forKey: "disableProxiTok") ?? false),
                     "rimgo": !(defaults?.bool(forKey: "disableRimgo") ?? false),
                     "quetre": !(defaults?.bool(forKey: "disableQuetre") ?? false),
+                    "libremdb": !(defaults?.bool(forKey: "disableLibremDB") ?? false),
                 ]
             ]
         } else if messageDict?["message"] == "instanceSettings" {
@@ -49,6 +50,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             let proxiTok = defaults?.string(forKey: "proxiTokInstance") ?? "proxitok.herokuapp.com"
             let rimgo = defaults?.string(forKey: "rimgoInstance") ?? "i.bcow.xyz"
             let quetre = defaults?.string(forKey: "quetreInstance") ?? "quetre.iket.me"
+            let libremdb = defaults?.string(forKey: "libremDBInstance") ?? "libremdb.iket.me"
             response.userInfo = [
                 SFExtensionMessageKey: [
                     "nitter": nitter,
@@ -62,6 +64,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "proxiTok": proxiTok,
                     "rimgo": rimgo,
                     "quetre": quetre,
+                    "libremdb": libremdb,
                 ]
             ]
         }
