@@ -15,7 +15,6 @@ struct ContentView: View {
     @AppStorage("disableNitter") var disableNitter = false
     @AppStorage("disableReddit") var disableReddit = false
     @AppStorage("disableInvidious") var disableInvidious = false
-    @AppStorage("disableBibliogram") var disableBibliogram = false
     @AppStorage("disableSimplyTranslate") var disableSimplyTranslate = false
     @AppStorage("disableOsm") var disableOsm = false
     @AppStorage("disableSearchEngine") var disableSearchEngine = false
@@ -37,10 +36,6 @@ struct ContentView: View {
         let redirectInvidious = Binding<Bool>(
             get: { !self.disableInvidious },
             set: { value in self.disableInvidious = !value }
-        )
-        let redirectBibliogram = Binding<Bool>(
-            get: { !self.disableBibliogram },
-            set: { value in self.disableBibliogram = !value }
         )
         let redirectSimplyTranslate = Binding<Bool>(
             get: { !self.disableSimplyTranslate },
@@ -98,7 +93,6 @@ struct ContentView: View {
                     Toggle("Twitter Redirects", isOn: redirectNitter)
                     Toggle("Reddit Redirects", isOn: redirectReddit)
                     Toggle("YouTube Redirects", isOn: redirectInvidious)
-                    Toggle("Instagram Redirects", isOn: redirectBibliogram)
                 }
                 Group {
                     Toggle("Google Translate Redirects", isOn: redirectSimplyTranslate)

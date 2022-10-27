@@ -31,7 +31,6 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "nitter": !(defaults?.bool(forKey: "disableNitter") ?? false),
                     "reddit": !(defaults?.bool(forKey: "disableReddit") ?? false),
                     "invidious": !(defaults?.bool(forKey: "disableInvidious") ?? false),
-                    "bibliogram": !(defaults?.bool(forKey: "disableBibliogram") ?? false),
                     "simplyTranslate": !(defaults?.bool(forKey: "disableSimplyTranslate") ?? false),
                     "osm": !(defaults?.bool(forKey: "disableOsm") ?? false),
                     "searchEngine": !(defaults?.bool(forKey: "disableSearchEngine") ?? false),
@@ -46,7 +45,6 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             let nitter = defaults?.string(forKey: "nitterInstance") ?? "nitter.net"
             let reddit = defaults?.string(forKey: "redditInstance") ?? "teddit.net"
             let invidious = defaults?.string(forKey: "invidiousInstance") ?? "invidious.kavin.rocks"
-            let bibliogram = defaults?.string(forKey: "bibliogramInstance") ?? "bibliogram.art"
             let simplyTranslate = defaults?.string(forKey: "simplyTranslateInstance") ?? "simplytranslate.org"
             let osm = defaults?.string(forKey: "osmInstance") ?? "openstreetmap.org"
             let searchEngine = defaults?.string(forKey: "searchEngineInstance") ?? "duckduckgo.com/"
@@ -60,7 +58,6 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "nitter": nitter,
                     "reddit": reddit,
                     "invidious": invidious,
-                    "bibliogram": bibliogram,
                     "simplyTranslate": simplyTranslate,
                     "osm": osm,
                     "searchEngine": searchEngine,

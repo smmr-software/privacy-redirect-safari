@@ -1,7 +1,7 @@
 {
   "name": "Privacy Redirect",
   "description": "A configurable web extension that redirects Twitter, YouTube, Reddit, and more to privacy friendly alternatives.",
-  "version": "1.6.3",
+  "version": "1.9.0",
   "manifest_version": 2,
   "icons": {
     "16": "assets/images/icon16.png",
@@ -67,14 +67,6 @@
         "*://music.youtube.com/*"
       ],
       "js": ["assets/scripts/youtube.js"],
-      "run_at": "document_start"
-    },
-    {
-      "matches": [
-        "*://instagram.com/*",
-        "*://www.instagram.com/*"
-      ],
-      "js": ["assets/scripts/instagram.js"],
       "run_at": "document_start"
     },
     {

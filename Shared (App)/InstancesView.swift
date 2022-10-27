@@ -11,7 +11,6 @@ struct InstancesView: View {
     @AppStorage("useCustomNitterInstance") var useCustomNitterInstance = false
     @AppStorage("useCustomRedditInstance") var useCustomRedditInstance = false
     @AppStorage("useCustomInvidiousInstance") var useCustomInvidiousInstance = false
-    @AppStorage("useCustomBibliogramInstance") var useCustomBibliogramInstance = false
     @AppStorage("useCustomSimplyTranslateInstance") var useCustomSimplyTranslateInstance = false
     @AppStorage("useCustomOsmInstance") var useCustomOsmInstance = false
     @AppStorage("useCustomSearchEngineInstance") var useCustomSearchEngineInstance = false
@@ -24,7 +23,6 @@ struct InstancesView: View {
     @AppStorage("nitterInstance") var nitterInstance = "nitter.net"
     @AppStorage("redditInstance") var redditInstance = "teddit.net"
     @AppStorage("invidiousInstance") var invidiousInstance = "invidious.kavin.rocks"
-    @AppStorage("bibliogramInstance") var bibliogramInstance = "bibliogram.art"
     @AppStorage("simplyTranslateInstance") var simplyTranslateInstance = "simplytranslate.org"
     @AppStorage("osmInstance") var osmInstance = "openstreetmap.org"
     @AppStorage("searchEngineInstance") var searchEngineInstance = "duckduckgo.com/"
@@ -54,11 +52,6 @@ struct InstancesView: View {
                     customInstance: $useCustomInvidiousInstance,
                     instance: $invidiousInstance,
                     instances: instances.invidious)
-                InstanceSection(
-                    name: "Instagram",
-                    customInstance: $useCustomBibliogramInstance,
-                    instance: $bibliogramInstance,
-                    instances: instances.bibliogram)
             }
             Group {
                 InstanceSection(

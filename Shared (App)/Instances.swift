@@ -22,17 +22,6 @@ struct Instances {
         "invidious.kavin.rocks",
         "piped.kavin.rocks",
     ]
-    public let bibliogram = [
-        "bibliogram.art",
-        "bibliogram.snopyta.org",
-        "bibliogram.pussthecat.org",
-        "bibliogram.1d4.us",
-        "insta.trom.tf",
-        "bib.riverside.rocks",
-        "bibliogram.esmailelbob.xyz",
-        "bib.actionsack.com",
-        "biblio.alefvanoon.xyz",
-    ]
     public let simplyTranslate = [
         "simplytranslate.org",
         "translate.bus-hit.me",
