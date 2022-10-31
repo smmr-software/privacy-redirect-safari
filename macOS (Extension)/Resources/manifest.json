@@ -1,7 +1,7 @@
 {
   "name": "Privacy Redirect",
   "description": "A configurable web extension that redirects Twitter, YouTube, Reddit, and more to privacy friendly alternatives.",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "manifest_version": 2,
   "icons": {
     "16": "assets/images/icon16.png",
@@ -1454,6 +1454,7 @@
     {
       "matches": [
         "*://www.imdb.com/*",
+        "*://m.imdb.com/*",
         "*://imdb.com/*"
       ],
       "js": ["assets/scripts/imdb.js"],
