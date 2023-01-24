@@ -11,7 +11,8 @@ import Foundation
 struct Instances {
     public let nitter = [
         "nitter.net",
-        "nitter.nixnet.services",
+        "nitter.pussthecat.org",
+        "nitter.lacontrevoie.fr",
     ]
     public let reddit = [
         "libredd.it",
@@ -35,10 +36,8 @@ struct Instances {
         SearchEngineInstance("startpage.com", path: "/sp/search"),
         SearchEngineInstance("www.ecosia.org", path: "/search"),
         SearchEngineInstance("www.qwant.com"),
-        SearchEngineInstance("www.mojeek.com", path: "/search"),
-        SearchEngineInstance("searx.info"),
-        SearchEngineInstance("searx.tuxcloud.net"),
-        SearchEngineInstance("whoogle.sdf.org", path: "/search"),
+        SearchEngineInstance("searx.work"),
+        SearchEngineInstance("search.unlocked.link"),
     ]
     public let scribe = [
         "scribe.rip",
@@ -46,14 +45,14 @@ struct Instances {
         "scribe.citizen4.eu",
     ]
     public let proxiTok = [
-        "proxitok.herokuapp.com",
+        "proxitok.pabloferreiro.es",
         "proxitok.pussthecat.org",
     ]
     public let rimgo = [
         "i.bcow.xyz",
+        "rimgo.totaldarkness.net",
         "rimgo.pussthecat.org",
-        "img.riverside.rocks",
-        "rimgo.bus-hit.me",
+        "imgur.artemislena.eu",
     ]
     public let quetre = [
         "quetre.iket.me",
@@ -62,7 +61,7 @@ struct Instances {
     ]
     public let libremdb = [
         "libremdb.iket.me",
-        "ld.vern.cc",   
+        "ld.vern.cc",
         "libremdb.pussthecat.org",
     ]
 }
