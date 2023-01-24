@@ -20,7 +20,7 @@
 		3A71F3182673F606008ECB88 /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3142673F605008ECB88 /* pages */; };
 		3A71F3192673F606008ECB88 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3152673F605008ECB88 /* manifest.json */; };
 		3A71F31B2673F606008ECB88 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3172673F606008ECB88 /* assets */; };
-		3A7218BD270A5BB8000A271D /* Privacy Redirect Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A7218BC270A5BB8000A271D /* Privacy Redirect Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A7218BD270A5BB8000A271D /* Privacy Redirect Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3A7218BC270A5BB8000A271D /* Privacy Redirect Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3A7218C2270A5BB8000A271D /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7218C1270A5BB8000A271D /* SafariWebExtensionHandler.swift */; };
 		3A7218C9270A5BB8000A271D /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A7218C8270A5BB8000A271D /* manifest.json */; };
 		3A7218CB270A5BB8000A271D /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A7218CA270A5BB8000A271D /* background.js */; };
@@ -29,7 +29,7 @@
 		3A757AB72681136F00EE7CFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A757AB62681136F00EE7CFF /* ContentView.swift */; };
 		3A7954132718B0E30074E832 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 3A71F3172673F606008ECB88 /* assets */; };
 		3A9ADCA72673E3210051292A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9ADCA62673E3210051292A /* Assets.xcassets */; };
-		3A9ADCAE2673E3220051292A /* Privacy Redirect Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A9ADCAD2673E3220051292A /* Privacy Redirect Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A9ADCAE2673E3220051292A /* Privacy Redirect Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3A9ADCAD2673E3220051292A /* Privacy Redirect Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3A9ADCB32673E3220051292A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9ADCB22673E3220051292A /* Cocoa.framework */; };
 		3A9ADCB62673E3220051292A /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9ADCB52673E3220051292A /* SafariWebExtensionHandler.swift */; };
 		3A9D2FE228816F0C00707AAE /* InstancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9D2FE128816F0C00707AAE /* InstancesView.swift */; };
@@ -59,26 +59,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3A7218D8270A5BB8000A271D /* Embed App Extensions */ = {
+		3A7218D8270A5BB8000A271D /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3A7218BD270A5BB8000A271D /* Privacy Redirect Extension.appex in Embed App Extensions */,
+				3A7218BD270A5BB8000A271D /* Privacy Redirect Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A9ADCBE2673E3220051292A /* Embed App Extensions */ = {
+		3A9ADCBE2673E3220051292A /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3A9ADCAE2673E3220051292A /* Privacy Redirect Extension.appex in Embed App Extensions */,
+				3A9ADCAE2673E3220051292A /* Privacy Redirect Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -302,7 +302,7 @@
 				3A72189C270A5BB6000A271D /* Sources */,
 				3A72189D270A5BB6000A271D /* Frameworks */,
 				3A72189E270A5BB6000A271D /* Resources */,
-				3A7218D8270A5BB8000A271D /* Embed App Extensions */,
+				3A7218D8270A5BB8000A271D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -338,7 +338,7 @@
 				3A9ADC972673E3210051292A /* Sources */,
 				3A9ADC982673E3210051292A /* Frameworks */,
 				3A9ADC992673E3210051292A /* Resources */,
-				3A9ADCBE2673E3220051292A /* Embed App Extensions */,
+				3A9ADCBE2673E3220051292A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -374,7 +374,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					3A72189F270A5BB6000A271D = {
 						CreatedOnToolsVersion = 13.0;
@@ -698,6 +698,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -759,6 +760,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -786,6 +788,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.10.2.0;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
@@ -810,6 +813,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.10.2.0;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
@@ -838,6 +842,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.10.2.0;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (App)/Info.plist";
@@ -864,6 +869,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.10.2.0;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9WHCFZ6J4N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS (App)/Info.plist";
