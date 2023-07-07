@@ -21,7 +21,8 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
 
         if (
           !instances.invidious.startsWith("http://") &&
-          !instances.invidious.startsWith("https://")
+          !instances.invidious.startsWith("https://") &&
+          !instances.invidious.startsWith("yattee://")
         ) {
           redirect = "https://" + redirect;
         }
