@@ -22,7 +22,8 @@ browser.runtime.sendMessage({ type: "redirectSettings" })
         if (
           !instances.invidious.startsWith("http://") &&
           !instances.invidious.startsWith("https://") &&
-          !instances.invidious.startsWith("yattee://")
+          !instances.invidious.startsWith("yattee://") &&
+          !instances.invidious.startsWith("freetube://")
         ) {
           redirect = "https://" + redirect;
         }
