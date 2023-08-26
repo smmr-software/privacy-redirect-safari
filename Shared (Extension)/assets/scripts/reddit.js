@@ -1,6 +1,6 @@
 "use strict";
 
-const bypassPaths = /\/(gallery\/poll\/rpan\/settings\/topics)/;
+const bypassPaths = /\/(gallery|poll|rpan|settings|topics|media)/;
 
 function redirectReddit(instance, url) {
   if (url.host === "i.redd.it") {
